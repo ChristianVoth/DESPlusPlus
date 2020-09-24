@@ -1,4 +1,7 @@
-public abstract class Model {
+import statistics.Reportable;
+
+public abstract class Model extends Reportable {
+
 
     private EventListImpl eventListImpl;
 
@@ -65,7 +68,8 @@ public abstract class Model {
     public void report(){
 
     }
-    /* public void registerReportable(Reportable r){
 
-    }*/
+    public void registerReportable(Reportable r){
+
+    }
 }
