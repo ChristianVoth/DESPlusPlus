@@ -1,6 +1,10 @@
 package statistics;
 
+import java.util.Random;
+
+
 abstract class Distribution {
+    private Reportable reportable;
 
     public double sample(){
         return 0;

@@ -1,6 +1,7 @@
 package statistics;
 
-abstract class Statistic {
+abstract class Statistic  {
+    private Reportable reportable;
 
     public void update(double val){
 

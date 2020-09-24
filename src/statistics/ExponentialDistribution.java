@@ -1,9 +1,14 @@
 package statistics;
 
-public class ExponentialDistribution {
+public class ExponentialDistribution extends Distribution {
 
     public double sample() {
         return 0;
+    }
+
+    @Override
+    void nextRandomDouble() {
+
     }
 
     public double getMean(){

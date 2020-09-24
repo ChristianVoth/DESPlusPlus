@@ -1,6 +1,6 @@
 package statistics;
 
-public class Tally {
+public class Tally extends Statistic {
 
     public void update(double val){
 

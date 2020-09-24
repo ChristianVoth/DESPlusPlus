@@ -1,9 +1,14 @@
 package statistics;
 
-public class UniformDistribution {
+public class UniformDistribution extends Distribution{
 
     public double sample() {
         return 0;
+    }
+
+    @Override
+    void nextRandomDouble() {
+
     }
 
     public double getMin(){

@@ -1,12 +1,13 @@
 package statistics;
 
-abstract class Reportable {
+public abstract class Reportable {
+
     private int observation;
 
     abstract String getReport();
 
     public void reset(){
-
+        observation = 0;
     }
 
     public int getObservations(){

@@ -1,6 +1,6 @@
 package statistics;
 
-public class Count {
+public class Count  extends Statistic  {
     private double value;
 
     public void update(double val){

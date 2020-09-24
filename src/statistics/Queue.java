@@ -3,6 +3,7 @@ package statistics;
 import org.w3c.dom.Entity;
 
 public class Queue {
+    private Reportable reportable;
 
     public void enqueue(Entity e){
 

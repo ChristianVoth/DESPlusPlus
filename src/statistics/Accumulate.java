@@ -1,6 +1,6 @@
 package statistics;
 
-public class Accumulate {
+public class Accumulate extends Statistic {
 
     public void update(double val){
 
