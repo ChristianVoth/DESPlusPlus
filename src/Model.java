@@ -14,21 +14,35 @@ public abstract class Model {
 
     abstract void init();
 
+
+
     public void schedule(Event e){
-        while (running) {
+
             eventListImpl.insert(e);
-        }
 
     }
 
     public void cancel(Event e){
-
+        eventListImpl.remove(e);
     }
 
     public void run() {
-
+        Event currentEvent;
         init();
+        while (running) {
+            while (!eventListImpl.isEmpty() || currentTime >= stopTime) {
+
+                currentEvent = eventListImpl.getFirst();
+                currentEvent.eventRoutine();
+                currentTime = currentEvent.getTime();
+                eventListImpl.removeFirst();
+            }
+        }
+        //report
+        //finish
     }
+
+
 
     public void setStopTime(double time){
 
