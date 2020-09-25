@@ -1,11 +1,13 @@
-package statistics;
+import java.util.LinkedList;
+import java.util.Queue;
 
-import org.w3c.dom.Entity;
 
-public class Queue {
-    private Reportable reportable;
+public class Queue<Entity> {
+
 
     public void enqueue(Entity e){
+
+
 
     }
 

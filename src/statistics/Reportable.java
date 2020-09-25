@@ -6,6 +6,7 @@ public abstract class Reportable {
 
     abstract String getReport();
 
+
     public void reset(){
         observation = 0;
     }

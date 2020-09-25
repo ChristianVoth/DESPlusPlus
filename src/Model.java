@@ -1,6 +1,6 @@
 import statistics.Reportable;
 
-public abstract class Model extends Reportable {
+public abstract class Model {
 
 
     private EventListImpl eventListImpl;
