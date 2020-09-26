@@ -12,12 +12,11 @@ public abstract class Reportable {
     }
 
     public int getObservations(){
-
         return observation;
     }
 
     public int incObservations(){
-        return observation;
+        return observation++;
     }
 
     public double lastResetTime(){
