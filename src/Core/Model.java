@@ -1,3 +1,7 @@
+package Core;
+
+import Core.Event;
+import Core.EventListImpl;
 import statistics.Reportable;
 
 public abstract class Model {
@@ -18,7 +22,7 @@ public abstract class Model {
 
     }
 
-    abstract void init();
+    public abstract void init();
 
 
 

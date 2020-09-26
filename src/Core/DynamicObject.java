@@ -1,3 +1,6 @@
+package Core;
+
+import Core.BasicModelComponent;
 
 public abstract class DynamicObject extends BasicModelComponent implements Comparable<Event> {
 

@@ -1,3 +1,7 @@
+package Core;
+
+import Core.Model;
+
 public interface ModelComponent {
 
 

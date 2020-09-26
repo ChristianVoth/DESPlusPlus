@@ -1,16 +1,19 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+package MensaComponents;
 
-public class Mensa extends Model {
+import Core.Model;
+import MensaComponents.Events.*;
+import statistics.Queue;
+
+public class Mensa extends Core.Model {
     private static double startTime = 0.0;
     protected static int NUM_FD = 1;
-    protected Queue<Student> studentQueue;
-    protected Queue<FoodDistribution> freeFDQueue;
+    public Queue<Student> studentQueue;
+    public Queue<FoodDistribution> freeFDQueue;
 
     /**
      * protected static int NUM_CO = 1;
-     * protected FifoQueue<Student> studentCOQueue;
-     * protected FifoQueue<Checkout> freeCOQueue;
+     * protected FifoQueue<Model.Student> studentCOQueue;
+     * protected FifoQueue<Model.Checkout> freeCOQueue;
      *
      * private RANDOM studentArrivalTime;
      * private RANDOM choosingFoodTime;
@@ -37,8 +40,8 @@ public class Mensa extends Model {
 
 
 
-        StudentGeneratorEvent studentGenerator = new StudentGeneratorEvent(this, "StudentGeneratorEvent", 6.0, null);
-        System.out.println("studentGenerator" + studentGenerator.scheduledTime);
+        StudentGeneratorEvent studentGenerator = new StudentGeneratorEvent(this, "Model.Events.StudentGeneratorEvent", 6.0, null);
+        System.out.println("studentGenerator" + studentGenerator.getScheduledTime());
         schedule(studentGenerator);
         setStopTime(10.0);
 
@@ -48,7 +51,7 @@ public class Mensa extends Model {
     }
 
     public static void main(String[] args) {
-        Mensa mensa = new Mensa("Mensa Model");
+        Mensa mensa = new Mensa("Model.Mensa Core.Model");
         mensa.run();
     }
 

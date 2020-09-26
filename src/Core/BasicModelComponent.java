@@ -1,3 +1,5 @@
+package Core;
+
 public class BasicModelComponent implements ModelComponent {
 
     private Model parent;

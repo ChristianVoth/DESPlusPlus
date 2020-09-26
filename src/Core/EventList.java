@@ -1,3 +1,7 @@
+package Core;
+
+import Core.Event;
+
 public interface EventList {
 
 

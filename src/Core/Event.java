@@ -1,9 +1,13 @@
-public abstract class Event extends DynamicObject{
+package Core;
+
+
+
+public abstract class Event extends DynamicObject {
 
     private Entity entity;
     private String eventName;
 
-    public Event(Model parentModel, String name, double time,Entity entity) {
+    public Event(Model parentModel, String name, double time, Entity entity) {
         super(parentModel, name);
         this.entity = entity;
         this.scheduledTime = time;
@@ -20,7 +24,7 @@ public abstract class Event extends DynamicObject{
         return entity;
     }
 
-    abstract void eventRoutine();
+    protected abstract void eventRoutine();
 
     @Override
     public int compareTo(Event e) {

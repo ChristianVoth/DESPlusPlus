@@ -1,6 +1,10 @@
+package Core;
+
+import Core.Event;
+import Core.EventList;
+
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class EventListImpl implements EventList {
 

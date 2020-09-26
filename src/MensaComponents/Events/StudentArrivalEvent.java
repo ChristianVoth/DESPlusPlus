@@ -1,4 +1,9 @@
-public class StudentArrivalEvent extends Event{
+package MensaComponents.Events;
+
+import Core.*;
+import MensaComponents.*;
+
+public class StudentArrivalEvent extends Event {
 
     private Mensa currentModel;
     private Student currentStudent;
@@ -14,7 +19,7 @@ public class StudentArrivalEvent extends Event{
     }
 
     @Override
-    void eventRoutine() {
+    public void eventRoutine() {
 
 
         currentModel.studentQueue.enqueue(currentStudent);

@@ -1,3 +1,5 @@
+package statistics;
+
 import java.util.ArrayList;
 
 

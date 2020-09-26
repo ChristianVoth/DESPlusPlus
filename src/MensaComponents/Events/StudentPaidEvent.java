@@ -1,3 +1,8 @@
+package MensaComponents.Events;
+
+import Core.*;
+import MensaComponents.*;
+
 public class StudentPaidEvent extends Event {
 
     private Mensa currentModel;
@@ -12,7 +17,7 @@ public class StudentPaidEvent extends Event {
 
 
     @Override
-    void eventRoutine() {
+    public void eventRoutine() {
 
     }
 }
