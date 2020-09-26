@@ -1,19 +1,18 @@
 public abstract class Event extends DynamicObject{
 
     private Entity entity;
-    public double time;
     private String eventName;
 
     public Event(Model parentModel, String name, double time,Entity entity) {
         super(parentModel, name);
         this.entity = entity;
-        this.time = time;
-        eventName = name;
+        this.scheduledTime = time;
+        this.eventName = name;
     }
 
     public double getTime() {
 
-        return time;
+        return scheduledTime;
     }
 
     public Entity getEntity() {
@@ -26,6 +25,6 @@ public abstract class Event extends DynamicObject{
     @Override
     public int compareTo(Event e) {
 
-        return Double.compare(this.time,e.time);
+        return Double.compare(this.scheduledTime,e.scheduledTime);
     }
 }

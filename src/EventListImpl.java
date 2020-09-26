@@ -12,7 +12,6 @@ public class EventListImpl implements EventList {
     @Override
     public void insert(Event e) {
 
-
         eventList.add(e);
         Collections.sort(eventList);
 
@@ -25,9 +24,9 @@ public class EventListImpl implements EventList {
     }
 
     @Override
-    public Event removeFirst() {
+    public void removeFirst() {
 
-        return eventList.remove(0);
+         eventList.remove(0);
     }
 
     @Override
@@ -55,7 +54,7 @@ public class EventListImpl implements EventList {
     public void showList() {
         int count = 1;
         for (Event e : eventList) {
-            System.out.println(count + ": " + e.time );
+            System.out.println(count + ": " + e.scheduledTime + ""+ e.getName() + " " + e.getEntity());
             count++;
         }
     }

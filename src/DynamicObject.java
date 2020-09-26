@@ -2,7 +2,7 @@
 public abstract class DynamicObject extends BasicModelComponent implements Comparable<Event> {
 
     int priority;
-    double currentTime;
+    double scheduledTime;
 
     public DynamicObject(Model parentModel, String name) {
         super(parentModel, name);
@@ -23,9 +23,9 @@ public abstract class DynamicObject extends BasicModelComponent implements Compa
         priority = p;
     }
 
-    public double currentTime(){
+    public double getScheduledTime(){
 
-        return currentTime;
+        return scheduledTime;
     }
 
 

@@ -3,13 +3,16 @@ import statistics.Reportable;
 public abstract class Model {
 
 
-    private EventListImpl eventListImpl;
+    private EventListImpl eventListImpl = new EventListImpl();
+
 
     private double currentTime;
 
     private double stopTime;
 
-    private boolean running;
+    private boolean running = true;
+
+
 
     public Model(String name) {
 
@@ -32,15 +35,18 @@ public abstract class Model {
     public void run() {
         Event currentEvent;
         init();
-        while (running) {
-            while (!eventListImpl.isEmpty() || currentTime >= stopTime) {
 
+            while (running && !eventListImpl.isEmpty() && currentTime < stopTime) {
+                eventListImpl.showList();
                 currentEvent = eventListImpl.getFirst();
-                currentEvent.eventRoutine();
                 currentTime = currentEvent.getTime();
                 eventListImpl.removeFirst();
+                currentEvent.eventRoutine();
+              //  System.out.println(currentTime);
+
+
             }
-        }
+
         //report
         //finish
     }
@@ -64,6 +70,7 @@ public abstract class Model {
         return currentTime;
 
     }
+
 
     public void report(){
 

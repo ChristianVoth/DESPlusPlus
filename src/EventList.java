@@ -6,7 +6,7 @@ public interface EventList {
 
     public Event getFirst();
 
-    public Event removeFirst();
+    public void removeFirst();
 
     public int remove(Event e);
 

@@ -1,30 +1,43 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
 
 
 public class Queue<Entity> {
 
+    ArrayList<Entity> list = new ArrayList<>();
 
     public void enqueue(Entity e){
 
-
+        list.add(e);
 
     }
 
-    public void dequeue(Entity e){
+    public Entity dequeue(){
 
+       return list.remove(0);
     }
 
     public void remove(Entity e){
 
+        int indexOfE = list.indexOf(e);
+
+        list.remove(indexOfE);
+
     }
 
+    public Entity getFirst() {
+
+       return list.get(0);
+    }
+
+
     public int size(){
-        return 0;
+
+        return list.size();
     }
 
     public boolean isEmpty(){
-        return true;
+
+        return list.isEmpty();
     }
 
     public int getMaxQueueLength(){
