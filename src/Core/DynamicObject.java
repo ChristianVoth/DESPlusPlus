@@ -6,6 +6,7 @@ public abstract class DynamicObject extends BasicModelComponent implements Compa
 
     int priority;
     double scheduledTime;
+    long numberOfEntities;
 
     public DynamicObject(Model parentModel, String name) {
         super(parentModel, name);
@@ -21,12 +22,12 @@ public abstract class DynamicObject extends BasicModelComponent implements Compa
         return priority;
     }
 
-    public void setPriority(int p){
+    public void setPriority(int p) {
 
         priority = p;
     }
 
-    public double getScheduledTime(){
+    public double getScheduledTime() {
 
         return scheduledTime;
     }
@@ -36,4 +37,5 @@ public abstract class DynamicObject extends BasicModelComponent implements Compa
     public int compareTo(Event e) {
         return 0;
     }
+
 }

@@ -7,6 +7,7 @@ public class StudentArrivalEvent extends Event {
 
     private Mensa currentModel;
     private Student currentStudent;
+    private Entity currentOther;
     private int numStundents;
 
 
@@ -25,11 +26,13 @@ public class StudentArrivalEvent extends Event {
         currentModel.studentQueue.enqueue(currentStudent);
         if (!currentModel.freeFDQueue.isEmpty()) {
             FoodDistribution foodDistribution = currentModel.freeFDQueue.getFirst();
-
+            currentOther = foodDistribution;
             currentModel.freeFDQueue.remove(foodDistribution);
 
             currentModel.studentQueue.remove(currentStudent);
 
+            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 2.0, currentStudent, currentOther);
+            currentModel.schedule(studentGotFood);
 
 
 

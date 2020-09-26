@@ -12,6 +12,7 @@ public abstract class Event extends DynamicObject {
         this.entity = entity;
         this.scheduledTime = time;
         this.eventName = name;
+        this.numberOfEntities = 1;
     }
 
     public double getTime() {

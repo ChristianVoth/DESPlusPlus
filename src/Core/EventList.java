@@ -8,6 +8,7 @@ public interface EventList {
 
     public void insert(Event e);
 
+
     public Event getFirst();
 
     public void removeFirst();

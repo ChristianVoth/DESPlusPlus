@@ -32,6 +32,8 @@ public abstract class Model {
 
     }
 
+
+
     public void cancel(Event e){
         eventListImpl.remove(e);
     }
@@ -45,6 +47,9 @@ public abstract class Model {
                 currentEvent = eventListImpl.getFirst();
                 currentTime = currentEvent.getTime();
                 eventListImpl.removeFirst();
+
+
+
                 currentEvent.eventRoutine();
               //  System.out.println(currentTime);
 

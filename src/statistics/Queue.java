@@ -3,9 +3,11 @@ package statistics;
 import java.util.ArrayList;
 
 
-public class Queue<Entity> {
+public class Queue<Entity>{
 
     ArrayList<Entity> list = new ArrayList<>();
+
+    private Entity entity;
 
     public void enqueue(Entity e){
 
@@ -18,7 +20,7 @@ public class Queue<Entity> {
        return list.remove(0);
     }
 
-    public void remove(Entity e){
+    public void remove(Core.Entity e){
 
         int indexOfE = list.indexOf(e);
 
@@ -29,6 +31,15 @@ public class Queue<Entity> {
     public Entity getFirst() {
 
        return list.get(0);
+    }
+
+    public void showList() {
+        int count = 1;
+        for (Entity e : list) {
+
+            System.out.println(count + ": " + e);
+            count++;
+        }
     }
 
 
@@ -61,4 +72,6 @@ public class Queue<Entity> {
     public String getReport(){
         return "";
     }
+
+
 }
