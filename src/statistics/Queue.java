@@ -13,6 +13,7 @@ public class Queue<Entity>{
 
         list.add(e);
 
+
     }
 
     public Entity dequeue(){

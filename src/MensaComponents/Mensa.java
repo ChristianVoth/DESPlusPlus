@@ -54,7 +54,7 @@ public class Mensa extends Core.Model {
 
 
         schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
-        setStopTime(50.0);
+        setStopTime(20.0);
 
 
 

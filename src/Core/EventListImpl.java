@@ -60,10 +60,10 @@ public class EventListImpl implements EventList {
         for (Event e : eventList) {
 
             if (e.getEntity() != null){
-            System.out.println(count + ": " + e.scheduledTime + " "+ e.getName() + " " + e.getEntity().getName());
+            System.out.println(count + ". " +  e.getEntity().getName() + ": " +  e.getName() + " " + e.scheduledTime);
             count++;
         }else {
-                System.out.println(count + ": " + e.scheduledTime + " "+ e.getName());
+                System.out.println(count + ". " + "n/a: " + e.getName() + " " + e.scheduledTime);
                 count++;
             }
             }

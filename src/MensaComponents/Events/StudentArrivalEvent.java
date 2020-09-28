@@ -10,6 +10,7 @@ public class StudentArrivalEvent extends Event {
     private Student nextInLine;
     private Entity currentOther;
     private int numStundents;
+    private double zufallStudentGotFood;
 
 
     public StudentArrivalEvent(Model parentModel, String name, double time, Entity entity) {
@@ -28,10 +29,11 @@ public class StudentArrivalEvent extends Event {
         if (!currentModel.freeFDQueue.isEmpty()) {
             currentOther = currentModel.freeFDQueue.getFirst();
             currentModel.freeFDQueue.remove(currentOther);
-
+            zufallStudentGotFood = (double) (Math.random() * 5) +1;
             nextInLine = currentModel.studentQueue.getFirst();
             currentModel.studentQueue.remove(nextInLine);
-            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 2.0, nextInLine, currentOther);
+            System.out.println(currentModel.studentQueue.size());
+            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + zufallStudentGotFood, nextInLine, currentOther);
             currentModel.schedule(studentGotFood);
 
 

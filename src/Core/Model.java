@@ -2,6 +2,7 @@ package Core;
 
 import Core.Event;
 import Core.EventListImpl;
+import MensaComponents.Mensa;
 import statistics.Reportable;
 
 public abstract class Model {
@@ -15,6 +16,8 @@ public abstract class Model {
     private double stopTime;
 
     private boolean running = true;
+
+    public boolean isOpen = true;
 
 
 
@@ -42,22 +45,28 @@ public abstract class Model {
         Event currentEvent;
         init();
 
-            while (running && !eventListImpl.isEmpty() && currentTime < stopTime) {
+            while (running && !eventListImpl.isEmpty()) {
+                System.out.println(currentTime);
                 eventListImpl.showList();
+
+
                 currentEvent = eventListImpl.getFirst();
                 currentTime = currentEvent.getTime();
                 eventListImpl.removeFirst();
 
 
 
+
+
+
                 currentEvent.eventRoutine();
+
+                if (currentTime >= stopTime)
+                    isOpen = false;
               //  System.out.println(currentTime);
 
 
             }
-
-        //report
-        //finish
     }
 
 
@@ -78,6 +87,9 @@ public abstract class Model {
 
         return currentTime;
 
+    }
+    public double getStopTime() {
+        return stopTime;
     }
 
 

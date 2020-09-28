@@ -20,12 +20,13 @@ public class StudentGeneratorEvent extends Event {
     public void eventRoutine() {
 
 
-        Student student = new Student("S" + currentModel.getStudentBenamser());
+        Student student = new Student("Student" + currentModel.getStudentBenamser());
 
 
 
         currentModel.schedule(new StudentArrivalEvent(currentModel, "StudentArrivalEvent", currentModel.currentTime() +0.0, student));
-        currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime()+ 2.0, null));
+        if (currentModel.isOpen == true)
+        currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime()+ 2, null));
 
     }
 }
