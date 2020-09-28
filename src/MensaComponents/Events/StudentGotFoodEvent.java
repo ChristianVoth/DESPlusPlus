@@ -31,7 +31,7 @@ public class StudentGotFoodEvent extends Event {
                 Checkout checkout = currentModel.freeCOQueue.getFirst();
                 currentCheckout = checkout;
                 currentModel.freeCOQueue.remove(checkout);
-                currentModel.studentCOQUeue.remove(currentStudent);
+                currentModel.studentCOQUeue.dequeue();
 
                 StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + 2.0, currentStudent, currentCheckout);
                 currentModel.schedule(studentPaid);

@@ -29,7 +29,7 @@ public class StudentArrivalEvent extends Event {
             currentOther = foodDistribution;
             currentModel.freeFDQueue.remove(foodDistribution);
 
-            currentModel.studentQueue.remove(currentStudent);
+            currentModel.studentQueue.dequeue();
 
             StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 2.0, currentStudent, currentOther);
             currentModel.schedule(studentGotFood);

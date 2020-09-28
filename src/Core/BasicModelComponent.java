@@ -15,7 +15,11 @@ public class BasicModelComponent implements ModelComponent {
         parent = parentModel;
     }
 
-    public BasicModelComponent() {
+    public BasicModelComponent(String name) {
+        if (name == null)
+            basicModelComponentName = "unnamed";
+        else
+            basicModelComponentName = name;
 
     }
 

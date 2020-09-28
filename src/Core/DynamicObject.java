@@ -13,7 +13,7 @@ public abstract class DynamicObject extends BasicModelComponent implements Compa
     }
 
     public DynamicObject(String name) {
-        super();
+        super(name);
     }
 
 

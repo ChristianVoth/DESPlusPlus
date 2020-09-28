@@ -58,7 +58,9 @@ public class EventListImpl implements EventList {
     public void showList() {
         int count = 1;
         for (Event e : eventList) {
-            System.out.println(count + ": " + e.scheduledTime + ""+ e.getName() + " " + e.getEntity());
+
+
+            System.out.println(count + ": " + e.scheduledTime + ""+ e.getName());
             count++;
         }
     }
