@@ -11,7 +11,7 @@ public abstract class Event extends DynamicObject {
         super(parentModel, name);
         this.entity = entity;
         this.scheduledTime = time;
-        this.getEntity()z = name;
+        this.eventName = name;
         this.numberOfEntities = 1;
     }
 

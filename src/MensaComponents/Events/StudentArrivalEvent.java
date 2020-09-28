@@ -7,6 +7,7 @@ public class StudentArrivalEvent extends Event {
 
     private Mensa currentModel;
     private Student currentStudent;
+    private Student nextInLine;
     private Entity currentOther;
     private int numStundents;
 
@@ -29,16 +30,16 @@ public class StudentArrivalEvent extends Event {
             currentOther = foodDistribution;
             currentModel.freeFDQueue.remove(foodDistribution);
 
-            currentModel.studentQueue.dequeue();
-
-            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 2.0, currentStudent, currentOther);
+            nextInLine = currentModel.studentQueue.getFirst();
+            currentModel.studentQueue.remove(nextInLine);
+            System.out.println(nextInLine);
+            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 2.0, nextInLine, currentOther);
             currentModel.schedule(studentGotFood);
 
 
 
         }
-        System.out.println("HI");
-        System.out.println(currentModel.currentTime());
+        System.out.println(nextInLine.getName());
 
     }
 }
