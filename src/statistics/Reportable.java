@@ -1,7 +1,9 @@
 package statistics;
 
-public abstract class Reportable {
+import Core.Model;
 
+public abstract class Reportable {
+    private Model model;
     private int observation;
 
     abstract String getReport();
@@ -20,6 +22,6 @@ public abstract class Reportable {
     }
 
     public double lastResetTime(){
-        return 0;
+        return model.currentTime();
     }
 }

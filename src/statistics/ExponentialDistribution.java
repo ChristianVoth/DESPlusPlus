@@ -2,6 +2,10 @@ package statistics;
 
 public class ExponentialDistribution extends Distribution {
 
+    public ExponentialDistribution(long seed) {
+        super(seed);
+    }
+
     public double sample() {
         return 0;
     }
