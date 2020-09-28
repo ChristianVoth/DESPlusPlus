@@ -6,6 +6,7 @@ import java.util.List;
 public class Tally extends Statistic {
     private List<Double> tallyList;
     private Reportable r;
+    private double stdDev = 0;
 
     public void update(double val){
         tallyList.add(val);
@@ -21,12 +22,6 @@ public class Tally extends Statistic {
     }
 
     public double getStdDev(){
-        double sum = 0;
-        double stdDev = 0;
-
-        for(double val: tallyList){
-            sum += val;
-        }
 
         for(double val: tallyList){
             stdDev += Math.pow(val - getMean(),2);
