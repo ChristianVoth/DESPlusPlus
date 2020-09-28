@@ -8,7 +8,7 @@ public class StudentGeneratorEvent extends Event {
 
     private Mensa currentModel;
 
-    int studentBenamser = 1;
+   // public int studentBenamser = 1;
 
     public StudentGeneratorEvent(Model parentModel, String name, double time, Entity entity) {
         super(parentModel, name, time, entity);
@@ -20,13 +20,12 @@ public class StudentGeneratorEvent extends Event {
     public void eventRoutine() {
 
 
-        Student student = new Student("S" + studentBenamser);
+        Student student = new Student("S" + currentModel.getStudentBenamser());
 
-        System.out.println(studentBenamser);
-        StudentArrivalEvent studentArrival = new StudentArrivalEvent(currentModel, "Model.Events.StudentArrivalEvent", currentModel.currentTime() +0.0, student);
-        currentModel.schedule(studentArrival);
 
-        currentModel.schedule(new StudentGeneratorEvent(currentModel, "Model.Events.StudentGeneratorEvent", currentModel.currentTime()+ 2.0, student));
+
+        currentModel.schedule(new StudentArrivalEvent(currentModel, "StudentArrivalEvent", currentModel.currentTime() +0.0, student));
+        currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime()+ 2.0, null));
 
     }
 }

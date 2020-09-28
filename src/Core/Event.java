@@ -22,7 +22,7 @@ public abstract class Event extends DynamicObject {
 
     public Entity getEntity() {
 
-        return entity;
+        return this.entity;
     }
 
     protected abstract void eventRoutine();

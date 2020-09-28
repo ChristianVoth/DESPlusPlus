@@ -12,6 +12,7 @@ public class Mensa extends Core.Model {
     public Queue<FoodDistribution> freeFDQueue;
     public Queue<Student> studentCOQUeue;
     public Queue<Checkout> freeCOQueue;
+    private int studentBenamser = 0;
 
     /**
      * protected static int NUM_CO = 1;
@@ -51,9 +52,8 @@ public class Mensa extends Core.Model {
 
 
 
-        StudentGeneratorEvent studentGenerator = new StudentGeneratorEvent(this, "Model.Events.StudentGeneratorEvent", 6.0, null);
-        System.out.println("studentGenerator" + studentGenerator.getScheduledTime());
-        schedule(studentGenerator);
+
+        schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
         setStopTime(50.0);
 
 
@@ -62,8 +62,13 @@ public class Mensa extends Core.Model {
     }
 
     public static void main(String[] args) {
-        Mensa mensa = new Mensa("Model.Mensa Core.Model");
+        Mensa mensa = new Mensa("Mensa Model");
         mensa.run();
     }
 
+    public int getStudentBenamser(){
+        studentBenamser++;
+        return studentBenamser;
+
+    }
 }

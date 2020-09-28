@@ -9,6 +9,7 @@ public class StudentGotFoodEvent extends Event {
     private Mensa currentModel;
     private Student currentStudent;
     private Checkout currentCheckout;
+    private Student nextInLine;
 
     public StudentGotFoodEvent(Model parentModel, String name, double time, Entity student, Entity other) {
         super(parentModel, name, time, student);
@@ -24,16 +25,16 @@ public class StudentGotFoodEvent extends Event {
            currentModel.studentCOQUeue.enqueue(currentStudent);
            currentModel.freeFDQueue.enqueue(currentOther);
 
-            currentModel.freeFDQueue.showList();
 
             if (!currentModel.freeCOQueue.isEmpty()) {
 
-                Checkout checkout = currentModel.freeCOQueue.getFirst();
-                currentCheckout = checkout;
-                currentModel.freeCOQueue.remove(checkout);
-                currentModel.studentCOQUeue.dequeue();
+                currentCheckout = currentModel.freeCOQueue.getFirst();
 
-                StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + 2.0, currentStudent, currentCheckout);
+                currentModel.freeCOQueue.remove(currentCheckout);
+                nextInLine = currentModel.studentCOQUeue.getFirst();
+                currentModel.studentCOQUeue.remove(nextInLine);
+
+                StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + 2.0, nextInLine, currentCheckout);
                 currentModel.schedule(studentPaid);
             }
     }

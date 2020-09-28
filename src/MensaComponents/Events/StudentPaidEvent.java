@@ -24,8 +24,6 @@ public class StudentPaidEvent extends Event {
 
         currentModel.freeCOQueue.enqueue(currentCheckout);
 
-        currentModel.freeCOQueue.showList();
-
 
 
 
