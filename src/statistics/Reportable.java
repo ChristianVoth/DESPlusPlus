@@ -5,11 +5,13 @@ import Core.Model;
 public abstract class Reportable {
     private Model model;
     private int observation;
+    private double timeAtReset;
 
     abstract String getReport();
 
 
     public void reset(){
+        timeAtReset = model.currentTime();
         observation = 0;
     }
 
@@ -22,6 +24,6 @@ public abstract class Reportable {
     }
 
     public double lastResetTime(){
-        return model.currentTime();
+        return timeAtReset;
     }
 }

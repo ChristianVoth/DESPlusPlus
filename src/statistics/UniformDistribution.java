@@ -13,10 +13,6 @@ public class UniformDistribution extends Distribution{
         return 0;
     }
 
-    @Override
-    void nextRandomDouble() {
-
-    }
 
     public double getMin(){
         return this.min;

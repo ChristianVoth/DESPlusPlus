@@ -6,14 +6,13 @@ import java.util.Random;
 abstract class Distribution extends Reportable {
     private Reportable reportable;
     private long seed;
+    private Random random = new Random(seed);
 
     public Distribution(long seed) {
         this.seed = seed;
     }
 
-    public double sample(){
-        return 0;
-    }
+    public abstract double sample();
 
     public long getSeed(){
         return this.seed;
@@ -24,6 +23,7 @@ abstract class Distribution extends Reportable {
         this.seed = 0L;
 
     }
-
-    abstract void nextRandomDouble();
+    protected double nextRandomDouble(){
+        return random.nextDouble();
+    }
 }

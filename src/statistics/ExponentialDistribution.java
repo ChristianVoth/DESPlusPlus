@@ -2,24 +2,28 @@ package statistics;
 
 public class ExponentialDistribution extends Distribution {
 
-    public ExponentialDistribution(long seed) {
+    public double mean;
+    private double sample;
+
+    public ExponentialDistribution(long seed, double mean)
+    {
         super(seed);
+        this.mean = mean;
+
     }
 
     public double sample() {
-        return 0;
-    }
-
-    @Override
-    void nextRandomDouble() {
+        return sample = Math.log(1 - nextRandomDouble()) / (-mean);
 
     }
 
-    public double getMean(){
-        return 0;
+     double getMean(){
+        return this.mean;
+
     }
 
     public String getReport(){
+
         return "";
     }
 

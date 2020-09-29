@@ -5,6 +5,8 @@ import Core.EventListImpl;
 import MensaComponents.Mensa;
 import statistics.Reportable;
 
+import java.util.ArrayList;
+
 public abstract class Model {
 
 
@@ -18,6 +20,8 @@ public abstract class Model {
     private boolean running = true;
 
     public boolean isOpen = true;
+
+    public ArrayList<Reportable> reportables = new ArrayList<>();
 
 
 
@@ -99,5 +103,10 @@ public abstract class Model {
 
     public void registerReportable(Reportable r){
 
+        reportables.add(r);
+
     }
+
+
 }
+
