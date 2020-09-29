@@ -2,6 +2,7 @@ package MensaComponents.Events;
 
 import Core.*;
 import MensaComponents.*;
+import statistics.UniformDistribution;
 
 public class StudentArrivalEvent extends Event {
 
@@ -29,11 +30,10 @@ public class StudentArrivalEvent extends Event {
         if (!currentModel.idleFDQueue.isEmpty()) {
             currentOther = currentModel.idleFDQueue.getFirst();
             currentModel.idleFDQueue.remove(currentOther);
-            zufallStudentGotFood = (double) (Math.random() * 5) +1;
             nextInLine = currentModel.studentFDQueue.getFirst();
             currentModel.studentFDQueue.remove(nextInLine);
             System.out.println(currentModel.studentFDQueue.size());
-            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + zufallStudentGotFood, nextInLine, currentOther);
+            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + currentModel.getChoosingFoodTime(), nextInLine, currentOther);
             currentModel.schedule(studentGotFood);
 
 

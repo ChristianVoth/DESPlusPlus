@@ -1,23 +1,38 @@
 package MensaComponents;
 
 import MensaComponents.Events.*;
+import statistics.ExponentialDistribution;
 import statistics.Queue;
+import statistics.UniformDistribution;
 
 public class Mensa extends Core.Model {
     private static double startTime = 0.0;
-    protected static int NUM_FD = 1;
-    protected static int NUM_CO = 1;
+    protected static int NUM_FD = 2;
+    protected static int NUM_CO = 2;
     public Queue<Student> studentFDQueue;
     public Queue<FoodDistribution> idleFDQueue;
     public Queue<Student> studentCOQueue;
     public Queue<Checkout> idleCOQueue;
     private int nameExtension = 0;
 
-    /**
-     * private RANDOM studentArrivalTime;
-     * private RANDOM choosingFoodTime;
-     * private RANDOM studentPayTime;
-     */
+    private ExponentialDistribution studentArrivalTime;
+    private UniformDistribution choosingFoodTime;
+    private UniformDistribution studentPayTime;
+
+    public double getStudentArrivalTime(){
+        return studentArrivalTime.sample();
+    }
+
+    public double getChoosingFoodTime(){
+        return choosingFoodTime.sample();
+    }
+
+    public double getStudentPayTime(){
+        return studentPayTime.sample();
+    }
+
+
+
 
     public Mensa(String name) {
         super(name);
@@ -26,7 +41,9 @@ public class Mensa extends Core.Model {
     @Override
     public void init() {
 
-
+        studentArrivalTime = new ExponentialDistribution(1, 3.0);
+        choosingFoodTime = new UniformDistribution(1, 0.25, 1.0);
+        studentPayTime = new UniformDistribution(1, 0.5, 1.25);
 
         idleFDQueue = new Queue<>();
         studentFDQueue = new Queue<>();
@@ -49,7 +66,7 @@ public class Mensa extends Core.Model {
 
 
         schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
-        setStopTime(0.0);
+        setStopTime(20.0);
 
 
 
@@ -58,7 +75,7 @@ public class Mensa extends Core.Model {
 
     public static void main(String[] args) {
         Mensa mensa = new Mensa("Mensa Model");
-        if (startTime >= mensa.getStopTime()) {
+        if (startTime > mensa.getStopTime()) {
             System.out.println("The start time cannot be larger than the stop time. Please make sure to change one of the values before starting the simulation!");
         } else {
             mensa.run();

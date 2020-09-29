@@ -24,7 +24,7 @@ public class StudentPaidEvent extends Event {
 
 
         if (!currentModel.studentCOQueue.isEmpty()) {
-            currentModel.schedule(new StudentPaidEvent(currentModel, "StudentPaidEvent", currentModel.currentTime() + 3, currentModel.studentCOQueue.getFirst(), currentCheckout));
+            currentModel.schedule(new StudentPaidEvent(currentModel, "StudentPaidEvent", currentModel.currentTime() + currentModel.getStudentPayTime(), currentModel.studentCOQueue.getFirst(), currentCheckout));
             currentModel.studentCOQueue.remove(currentModel.studentCOQueue.getFirst());
 
         } else {

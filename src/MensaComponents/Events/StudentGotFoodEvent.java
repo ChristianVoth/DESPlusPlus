@@ -34,12 +34,12 @@ public class StudentGotFoodEvent extends Event {
             nextInLine = currentModel.studentCOQueue.getFirst();
             currentModel.studentCOQueue.remove(nextInLine);
 
-            StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + 2.0, nextInLine, currentCheckout);
+            StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + currentModel.getStudentPayTime(), nextInLine, currentCheckout);
             currentModel.schedule(studentPaid);
         }
             if (!currentModel.studentFDQueue.isEmpty() && currentModel.currentTime() >= currentModel
             .getStopTime()) {
-                currentModel.schedule(new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 3, currentModel.studentFDQueue.getFirst(), currentModel.idleFDQueue.getFirst()));
+                currentModel.schedule(new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + currentModel.getChoosingFoodTime(), currentModel.studentFDQueue.getFirst(), currentModel.idleFDQueue.getFirst()));
                 currentModel.studentFDQueue.remove(currentModel.studentFDQueue.getFirst());
             }
 

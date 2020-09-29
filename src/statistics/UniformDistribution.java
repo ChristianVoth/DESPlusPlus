@@ -4,13 +4,18 @@ public class UniformDistribution extends Distribution{
     private Reportable r;
     private double max;
     private double min;
+    private double sample;
 
-    public UniformDistribution(long seed) {
+    public UniformDistribution(long seed, double min, double max)
+    {
         super(seed);
+        this.min = min;
+        this.max = max;
     }
 
     public double sample() {
-        return 0;
+        return sample = min + ((max-min) * nextRandomDouble());
+
     }
 
 
