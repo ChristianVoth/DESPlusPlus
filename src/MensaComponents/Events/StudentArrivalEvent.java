@@ -25,14 +25,14 @@ public class StudentArrivalEvent extends Event {
     public void eventRoutine() {
 
 
-        currentModel.studentQueue.enqueue(currentStudent);
-        if (!currentModel.freeFDQueue.isEmpty()) {
-            currentOther = currentModel.freeFDQueue.getFirst();
-            currentModel.freeFDQueue.remove(currentOther);
+        currentModel.studentFDQueue.enqueue(currentStudent);
+        if (!currentModel.idleFDQueue.isEmpty()) {
+            currentOther = currentModel.idleFDQueue.getFirst();
+            currentModel.idleFDQueue.remove(currentOther);
             zufallStudentGotFood = (double) (Math.random() * 5) +1;
-            nextInLine = currentModel.studentQueue.getFirst();
-            currentModel.studentQueue.remove(nextInLine);
-            System.out.println(currentModel.studentQueue.size());
+            nextInLine = currentModel.studentFDQueue.getFirst();
+            currentModel.studentFDQueue.remove(nextInLine);
+            System.out.println(currentModel.studentFDQueue.size());
             StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + zufallStudentGotFood, nextInLine, currentOther);
             currentModel.schedule(studentGotFood);
 

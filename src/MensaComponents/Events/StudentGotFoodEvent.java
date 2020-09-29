@@ -22,25 +22,25 @@ public class StudentGotFoodEvent extends Event {
     @Override
     public void eventRoutine() {
 
-        currentModel.studentCOQUeue.enqueue(currentStudent);
-        currentModel.freeFDQueue.enqueue(currentOther);
+        currentModel.studentCOQueue.enqueue(currentStudent);
+        currentModel.idleFDQueue.enqueue(currentOther);
 
 
-        if (!currentModel.freeCOQueue.isEmpty()) {
+        if (!currentModel.idleCOQueue.isEmpty()) {
 
-            currentCheckout = currentModel.freeCOQueue.getFirst();
+            currentCheckout = currentModel.idleCOQueue.getFirst();
 
-            currentModel.freeCOQueue.remove(currentCheckout);
-            nextInLine = currentModel.studentCOQUeue.getFirst();
-            currentModel.studentCOQUeue.remove(nextInLine);
+            currentModel.idleCOQueue.remove(currentCheckout);
+            nextInLine = currentModel.studentCOQueue.getFirst();
+            currentModel.studentCOQueue.remove(nextInLine);
 
             StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel, "StudenPaidEvent", currentModel.currentTime() + 2.0, nextInLine, currentCheckout);
             currentModel.schedule(studentPaid);
         }
-            if (!currentModel.studentQueue.isEmpty() && currentModel.currentTime() >= currentModel
+            if (!currentModel.studentFDQueue.isEmpty() && currentModel.currentTime() >= currentModel
             .getStopTime()) {
-                currentModel.schedule(new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 3, currentModel.studentQueue.getFirst(), currentModel.freeFDQueue.getFirst()));
-                currentModel.studentQueue.remove(currentModel.studentQueue.getFirst());
+                currentModel.schedule(new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 3, currentModel.studentFDQueue.getFirst(), currentModel.idleFDQueue.getFirst()));
+                currentModel.studentFDQueue.remove(currentModel.studentFDQueue.getFirst());
             }
 
     }

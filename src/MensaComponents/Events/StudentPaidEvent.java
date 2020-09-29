@@ -23,12 +23,12 @@ public class StudentPaidEvent extends Event {
     public void eventRoutine() {
 
 
-        if (!currentModel.studentCOQUeue.isEmpty()) {
-            currentModel.schedule(new StudentPaidEvent(currentModel, "StudentPaidEvent", currentModel.currentTime() + 3, currentModel.studentCOQUeue.getFirst(), currentCheckout));
-            currentModel.studentCOQUeue.remove(currentModel.studentCOQUeue.getFirst());
+        if (!currentModel.studentCOQueue.isEmpty()) {
+            currentModel.schedule(new StudentPaidEvent(currentModel, "StudentPaidEvent", currentModel.currentTime() + 3, currentModel.studentCOQueue.getFirst(), currentCheckout));
+            currentModel.studentCOQueue.remove(currentModel.studentCOQueue.getFirst());
 
         } else {
-            currentModel.freeCOQueue.enqueue(currentCheckout);
+            currentModel.idleCOQueue.enqueue(currentCheckout);
         }
 
 

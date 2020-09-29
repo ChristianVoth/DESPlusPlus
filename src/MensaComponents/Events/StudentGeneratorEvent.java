@@ -20,7 +20,7 @@ public class StudentGeneratorEvent extends Event {
     public void eventRoutine() {
 
 
-        Student student = new Student("Student" + currentModel.getStudentBenamser());
+        Student student = new Student("Student" + currentModel.getNameExtension());
 
 
 
