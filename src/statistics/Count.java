@@ -27,6 +27,13 @@ public class Count  extends Statistic  {
         }
     }
 
+    public void reset(){
+       r.reset();
+
+       this.min = 0d;
+       this.max = 0d;
+       this.value = 0d;
+    }
 
     public double getValue(){
         return this.value;

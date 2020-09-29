@@ -16,7 +16,7 @@ public abstract class Reportable {
     public void reset(){
         timeAtReset = model.currentTime();
         observation = 0;
-        count.update(-count.getValue());
+
     }
 
     public int getObservations(){

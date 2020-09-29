@@ -11,7 +11,6 @@ public class ExponentialDistribution extends Distribution {
     {
         super(parentModel,seed, name);
         this.mean = mean;
-
     }
 
     public double sample() {
@@ -19,13 +18,13 @@ public class ExponentialDistribution extends Distribution {
 
     }
 
-     double getMean(){
+    public double getMean(){
         return this.mean;
 
     }
 
-    public String getReport(){
 
+    public String getReport(){
         return "";
     }
 

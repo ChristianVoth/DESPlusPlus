@@ -29,6 +29,8 @@ public class UniformDistribution extends Distribution{
         return this.max;
     }
 
+
+
     public String getReport(){
         return "Num. of observation: "
                 + r.getObservations() + " Maximum: " + getMax() + " Minumum: " + getMin()
