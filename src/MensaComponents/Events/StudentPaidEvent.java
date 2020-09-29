@@ -10,6 +10,7 @@ public class StudentPaidEvent extends Event {
     private Student currentStudent;
 
 
+
     public StudentPaidEvent(Model parentModel, String name, double time, Entity entity, Entity other) {
         super(parentModel, name, time, entity);
         currentModel = (Mensa)parentModel;
@@ -30,9 +31,9 @@ public class StudentPaidEvent extends Event {
         } else {
             currentModel.idleCOQueue.enqueue(currentCheckout);
         }
-
-
-
+        if (!currentModel.studentCOQueue.isEmpty()) {
+            currentModel.schedule(new StudentPaidEvent(currentModel, "StudentPaidEvent", currentModel.currentTime() + 5, currentModel.studentCOQueue.getFirst(), currentCheckout ));
+        }
       /*  if(currentModel.currentTime() >= currentModel.getStopTime())
             if (!currentModel.studentQueue.isEmpty()){
             currentModel.schedule(new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + 3, currentModel.studentQueue.getFirst(), null ));

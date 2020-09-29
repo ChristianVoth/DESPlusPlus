@@ -6,13 +6,17 @@ public abstract class Reportable {
     private Model model;
     private int observation;
     private double timeAtReset;
+    private Count count;
 
-    abstract String getReport();
+
+
+    public abstract String getReport();
 
 
     public void reset(){
         timeAtReset = model.currentTime();
         observation = 0;
+        count.update(-count.getValue());
     }
 
     public int getObservations(){

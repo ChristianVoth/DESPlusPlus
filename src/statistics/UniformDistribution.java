@@ -1,14 +1,16 @@
 package statistics;
 
+import Core.Model;
+
 public class UniformDistribution extends Distribution{
     private Reportable r;
     private double max;
     private double min;
     private double sample;
 
-    public UniformDistribution(long seed, double min, double max)
+    public UniformDistribution(Model parentModel, String name, long seed, double min, double max)
     {
-        super(seed);
+        super(parentModel, seed, name);
         this.min = min;
         this.max = max;
     }

@@ -41,9 +41,9 @@ public class Mensa extends Core.Model {
     @Override
     public void init() {
 
-        studentArrivalTime = new ExponentialDistribution(1, 3.0);
-        choosingFoodTime = new UniformDistribution(1, 0.25, 1.0);
-        studentPayTime = new UniformDistribution(1, 0.5, 1.25);
+        studentArrivalTime = new ExponentialDistribution(this, "Student Arrival Generator", 1, 3.0);
+        choosingFoodTime = new UniformDistribution(this, "Choosing Food Duration-Generator" , 1, 0.25, 1.0);
+        studentPayTime = new UniformDistribution(this, "Student Pay Duration-Generator", 1, 0.5, 1.25);
 
         idleFDQueue = new Queue<>();
         studentFDQueue = new Queue<>();

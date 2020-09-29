@@ -1,16 +1,17 @@
 package statistics;
 
+import Core.Model;
+
 abstract class Statistic  {
     private Reportable r;
     private double min;
     private double max;
 
-    public Statistic(double min, double max) {
-        this.min = min;
-        this.max = max;
+    public Statistic(Model parentModel, String name) {
+
     }
 
-    public void update(double val){  }
+    public abstract void update(double val);
 
     public double getMax(){
         return this.max;

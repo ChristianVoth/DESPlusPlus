@@ -1,13 +1,15 @@
 package statistics;
 
+import Core.Model;
+
 public class ExponentialDistribution extends Distribution {
 
     public double mean;
     private double sample;
 
-    public ExponentialDistribution(long seed, double mean)
+    public ExponentialDistribution(Model parentModel,String name, long seed, double mean)
     {
-        super(seed);
+        super(parentModel,seed, name);
         this.mean = mean;
 
     }

@@ -1,20 +1,20 @@
 package statistics;
 
+import Core.Model;
+
 public class Count  extends Statistic  {
     private double value;
     private Reportable r;
     private double max;
     private double min;
 
-    public Count(double value, double max, double min) {
-        super(min, max);
-        this.value = 0d;
+    public Count(Model parentModel, String name) {
+        super(parentModel, name);
     }
 
+    @Override
     public void update(double val){
-        if(val < 0 ){
-            this.value -= val;
-        }
+
         this.value += val;
 
         if (this.value < this.min) {
@@ -27,9 +27,6 @@ public class Count  extends Statistic  {
         }
     }
 
-    public double getMax(){return this.max;}
-
-    public double getMin(){return this.min;}
 
     public double getValue(){
         return this.value;

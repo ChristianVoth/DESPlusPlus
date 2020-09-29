@@ -1,17 +1,29 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package Core;
 
-import Core.Event;
-import Core.EventListImpl;
-import MensaComponents.Mensa;
 import statistics.Reportable;
-
 import java.util.ArrayList;
 
 public abstract class Model {
 
+    public boolean isOpen = true;
+
+    public ArrayList<Reportable> reportables = new ArrayList<>();
+
+    public Model(String name) {
+
+    }
 
     private EventListImpl eventListImpl = new EventListImpl();
-
 
     private double currentTime;
 
@@ -19,23 +31,13 @@ public abstract class Model {
 
     private boolean running = true;
 
-    public boolean isOpen = true;
 
-    public ArrayList<Reportable> reportables = new ArrayList<>();
-
-
-
-    public Model(String name) {
-
-    }
 
     public abstract void init();
 
-
-
     public void schedule(Event e){
 
-            eventListImpl.insert(e);
+        eventListImpl.insert(e);
 
     }
 
@@ -97,7 +99,11 @@ public abstract class Model {
     }
 
 
-    public void report(){
+    public void report() {
+
+        for (Reportable r : reportables) {
+            r.getReport();
+        }
 
     }
 

@@ -1,5 +1,7 @@
 package statistics;
 
+import Core.Model;
+
 import java.util.Random;
 
 
@@ -8,7 +10,8 @@ abstract class Distribution extends Reportable {
     private long seed;
     private Random random = new Random(seed);
 
-    public Distribution(long seed) {
+    public Distribution(Model parentModel, long seed, String name) {
+
         this.seed = seed;
     }
 
@@ -24,6 +27,7 @@ abstract class Distribution extends Reportable {
 
     }
     protected double nextRandomDouble(){
+
         return random.nextDouble();
     }
 }

@@ -1,6 +1,14 @@
-package Core;
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
 
-import Core.BasicModelComponent;
+package Core;
 
 public abstract class DynamicObject extends BasicModelComponent implements Comparable<Event> {
 
