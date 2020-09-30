@@ -13,13 +13,9 @@ abstract class Statistic  {
 
     public abstract void update(double val);
 
-    public double getMax(){
-        return this.max;
-    }
+    public abstract double getMax();
 
-    public double getMin(){
-        return this.min;
-    }
+    public abstract double getMin();
 
 
 }

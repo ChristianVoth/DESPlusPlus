@@ -25,6 +25,17 @@ public class Count  extends Statistic  {
             this.max = this.value;
 
         }
+
+    }
+
+    @Override
+    public double getMax() {
+        return max;
+    }
+
+    @Override
+    public double getMin() {
+        return min;
     }
 
     public void reset(){
