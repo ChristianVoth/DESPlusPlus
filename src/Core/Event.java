@@ -10,11 +10,26 @@
 
 package Core;
 
+/**
+ * The Event class abstracts general functionality for events. All events store their time and a reference to the
+ * entity they are associated with. Both values are passed as parameters to the event´s constructor function.
+ */
 public abstract class Event extends DynamicObject {
 
     private Entity entity;
     private String eventName;
 
+    /**
+     * Creates a new event of the given model , with the given name and a given time and a given entity.
+     * @param parentModel
+     *                Model :  The model this event is associated to
+     * @param name
+     *                java.lang.String : The name of this event
+     * @param time
+     *                double : The time when the event will occur
+     * @param entity
+     *                Entity : The entity which the event is associated with ??????
+     */
     public Event(Model parentModel, String name, double time, Entity entity) {
         super(parentModel, name);
         this.entity = entity;
@@ -23,16 +38,28 @@ public abstract class Event extends DynamicObject {
         this.numberOfEntities = 1;
     }
 
+    /**
+     * The method getTime() returns the time when the event is scheduled for.
+     * @return
+     */
     public double getTime() {
 
         return scheduledTime;
     }
 
+    /**
+     * The method getEntity() returns the entity which is associated to the specific event.
+     * @return
+     */
     public Entity getEntity() {
 
         return this.entity;
     }
 
+    /**
+     * The abstract method eventRoutine() must be implemented by the modeller in form of the model specific subclasses
+     * for making all relevant changes of state.
+     */
     protected abstract void eventRoutine();
 
     @Override

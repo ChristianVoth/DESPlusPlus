@@ -7,8 +7,8 @@ import statistics.UniformDistribution;
 
 public class Mensa extends Core.Model {
     private static double startTime = 0.0;
-    protected static int NUM_FD = 2;
-    protected static int NUM_CO = 2;
+    protected static int NUM_FD = 4;
+    protected static int NUM_CO = 4;
     public Queue<Student> studentFDQueue;
     public Queue<FoodDistribution> idleFDQueue;
     public Queue<Student> studentCOQueue;
@@ -63,12 +63,8 @@ public class Mensa extends Core.Model {
         }
 
 
-
-
         schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
         setStopTime(50.0);
-
-
 
 
     }
