@@ -44,6 +44,7 @@ public abstract class Model {
 
 
     public void cancel(Event e){
+
         eventListImpl.remove(e);
     }
 

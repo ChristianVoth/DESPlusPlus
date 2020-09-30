@@ -73,7 +73,8 @@ public class Mensa extends Core.Model {
 
     }
 
-    public static void main(String[] args) {
+    public static void simulate() {
+
         Mensa mensa = new Mensa("Mensa Model");
         if (startTime > mensa.getStopTime()) {
             System.out.println("The start time cannot be larger than the stop time. Please make sure to change one of the values before starting the simulation!");
