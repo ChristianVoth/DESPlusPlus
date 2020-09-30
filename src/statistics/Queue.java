@@ -16,8 +16,8 @@ public class Queue<Entity>{
     public void enqueue(Entity e){
 
         list.add(e);
-        tally.update(list.size());
-        accumulate.update(list.size());
+//        tally.update(list.size());
+  //      accumulate.update(list.size());
 
     }
 
@@ -33,8 +33,8 @@ public class Queue<Entity>{
         int indexOfE = list.indexOf(e);
 
         list.remove(indexOfE);
-        tally.update(list.size());
-        accumulate.update(list.size());
+    //    tally.update(list.size());
+     //   accumulate.update(list.size());
     }
 
     public Entity getFirst() {
