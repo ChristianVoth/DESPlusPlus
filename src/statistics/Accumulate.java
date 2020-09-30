@@ -20,13 +20,24 @@ public class Accumulate extends Statistic {
 
     }
 
+    @Override
+    public double getMax() {
+        return 0;
+    }
+
+    @Override
+    public double getMin() {
+        return 0;
+    }
 
 
-   public double getMean(){
+    public double getMean(){
+
         return this.mean;
     }
 
     public double getStdDev(){
+
         return this.stdDev;
     }
 

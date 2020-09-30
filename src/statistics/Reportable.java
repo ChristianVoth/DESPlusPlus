@@ -20,14 +20,17 @@ public abstract class Reportable {
     }
 
     public int getObservations(){
+
         return observation;
     }
 
     public int incObservations(){
+
         return observation++;
     }
 
     public double lastResetTime(){
+
         return timeAtReset;
     }
 }

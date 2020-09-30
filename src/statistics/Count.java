@@ -9,12 +9,12 @@ public class Count  extends Statistic  {
     private double min;
 
     public Count(Model parentModel, String name) {
+
         super(parentModel, name);
     }
 
     @Override
     public void update(double val){
-
         this.value += val;
 
         if (this.value < this.min) {
@@ -27,6 +27,16 @@ public class Count  extends Statistic  {
         }
     }
 
+    @Override
+    public double getMax() {
+        return max;
+    }
+
+    @Override
+    public double getMin() {
+        return min;
+    }
+
     public void reset(){
        r.reset();
 
@@ -35,7 +45,7 @@ public class Count  extends Statistic  {
        this.value = 0d;
     }
 
-    public double getValue(){
+    public double getValue() {
         return this.value;
     }
 
