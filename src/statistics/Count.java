@@ -38,15 +38,6 @@ public class Count  extends Statistic  {
         return min;
     }
 
-    @Override
-    public double getMax() {
-        return max;
-    }
-
-    @Override
-    public double getMin() {
-        return min;
-    }
 
     public void reset(){
        r.reset();
