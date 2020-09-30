@@ -1,31 +1,41 @@
 package statistics;
 
+import Core.Model;
+import MensaComponents.Mensa;
+import MensaComponents.Student;
+
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Queue<Entity>{
 
     ArrayList<Entity> list = new ArrayList<>();
+    List<Double> currentWaitingTimeList = new ArrayList<Double>();
+
 
     private Entity entity;
+    private Model model;
     private int maxQueue = 0;
-    private Tally tally;
+    private Tally queueLength;
+    private Tally finalWaitingTime;
+    private Tally currentWaitingTime = new Tally(model,"wasEinName");
     private Accumulate accumulate;
     private Reportable reportable;
+    private double timeSinceLastUpdate = 0;
 
     public void enqueue(Entity e){
 
         list.add(e);
-        tally.update(list.size());
-        accumulate.update(list.size());
 
+        if(e instanceof Student) {
+            currentWaitingTime.insertIntoTally();
+        }
     }
 
     public Entity dequeue(){
-        tally.update(list.size());
-        accumulate.update(list.size());
-        return list.remove(0);
 
+        return list.remove(0) ;
     }
 
     public void remove(Core.Entity e){
@@ -33,8 +43,10 @@ public class Queue<Entity>{
         int indexOfE = list.indexOf(e);
 
         list.remove(indexOfE);
-        tally.update(list.size());
-        accumulate.update(list.size());
+        if(e instanceof Student){
+            finalWaitingTime.update(currentWaitingTime.removeFromTally());
+        }
+
     }
 
     public Entity getFirst() {
@@ -84,7 +96,7 @@ public class Queue<Entity>{
 
     public double getMeanQueueLength(){
 
-        return tally.getMean();
+        return queueLength.getMean();
     }
 
     public String getReport(){

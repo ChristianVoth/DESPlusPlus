@@ -2,22 +2,26 @@ package statistics;
 
 
 import Core.Model;
+import MensaComponents.Mensa;
 
 import java.util.Collections;
 import java.util.List;
 
-public class Tally extends Statistic {
+public class Tally extends Statistic  {
 
     private List<Double> tallyList = null;
     private Reportable reportable;
     private double standardDeviation;
     private double mean;
+    private Mensa model;
+    private double timeSinceLastUpdate;
 
 
     public Tally(Model parentModel, String name) {
         super(parentModel, name);
-
+        this.model = (Mensa)parentModel;
     }
+
 
 
     public void update(double val){
@@ -54,7 +58,47 @@ public class Tally extends Statistic {
         return mean;
     }
 
-    public double getStdDev() {
+        public void updateTally() {
+           /* if(tallyList == null) {
+                update(0);
+                timeSinceLastUpdate = model.currentTime();
+            } else {
+
+                }
+
+
+                /*for (double val : tallyList) {
+                    tallyList.remove(val);
+                    val += (model.currentTime() - timeSinceLastUpdate);
+                    update(val);
+                }
+                update(0);
+                timeSinceLastUpdate = model.currentTime();
+            }*/
+
+                for (int i = 0; i < tallyList.size(); i++) {
+                    tallyList.set(i, tallyList.get(i) + (model.currentTime() - timeSinceLastUpdate));
+                }
+        }
+
+        public void insertIntoTally() {
+            if (tallyList != null) {
+                updateTally();
+            }
+            update(0);
+            timeSinceLastUpdate = model.currentTime();
+        }
+
+        public double removeFromTally(){
+               double toRemove = tallyList.get(0);
+                updateTally();
+                tallyList.remove(0);
+
+                return toRemove;
+        }
+
+
+        public double getStdDev() {
         double stdDev = 0;
         if(tallyList == null) {
             System.out.println("Can't get StdDev. The list is empty.");
@@ -65,6 +109,14 @@ public class Tally extends Statistic {
             standardDeviation =  Math.sqrt( stdDev / tallyList.size());
         }
         return standardDeviation;
+    }
+
+    public boolean isEmpty(){
+        if(tallyList.size() == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void reset() {
