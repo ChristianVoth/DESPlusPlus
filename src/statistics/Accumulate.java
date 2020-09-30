@@ -32,13 +32,11 @@ public class Accumulate extends Statistic {
 
 
     public double getMean(){
-
-        return this.mean;
+        return mean;
     }
 
     public double getStdDev(){
-
-        return this.stdDev;
+        return stdDev;
     }
 
     public void reset() {
