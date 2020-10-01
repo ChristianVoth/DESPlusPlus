@@ -26,8 +26,13 @@ public class StudentGeneratorEvent extends Event {
 
 
         currentModel.schedule(new StudentArrivalEvent(currentModel, "StudentArrivalEvent", currentModel.currentTime(), student));
-        if (currentModel.isOpen == true)
-        currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime() + currentModel.getStudentArrivalTime(), null));
+        if (currentModel.isOpen == true){
+            double testTime = currentModel.getStudentArrivalTime();
+            currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime() + testTime, null));
+            System.out.println("Test: " + testTime);
+        }
+
+
 
     }
 }

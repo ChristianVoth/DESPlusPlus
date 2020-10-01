@@ -2,83 +2,53 @@ package statistics;
 
 import Core.Model;
 
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-public class Accumulate extends Statistic {
+class ListEntry {
+    double value;
+    double timeOfChange;
 
-    private HashMap<Double, Double> accumulateMap;
-    private Reportable r;
-    private double mean;
-    private double timeOfChange;
-    private double standardDeviation;
+    ListEntry(double v1, double v2){
+        value = v1;
+        timeOfChange = v2;
+    }
 
+}
+
+
+public class Accumulate extends Statistic{
+
+
+
+    private List<ListEntry> accumulate = new ArrayList<>();
     public Accumulate(Model parentModel, String name) {
         super(parentModel, name);
-
     }
-
 
     public void update(double val){
-        accumulateMap.put(val,timeOfChange);
+        ListEntry entry = new ListEntry(val, getModel().currentTime());
+        accumulate.add(entry);
+        super.update(val);
     }
-
-    @Override
-    public double getMax() {
-        return 0;
-    }
-
-    @Override
-    public double getMin() {
-        return 0;
-    }
-
 
     public double getMean(){
-        double sum = 0;
+            double timeWeightedSum = 0;
+            double sumWeights = 0;
+            for(int i = 0; i < accumulate.size() - 1; i++){
+               timeWeightedSum += accumulate.get(i).value * (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
 
-        if(accumulateMap == null){
-            System.out.println("List is empty.");
-        } else {
-            if(r.getObservations() == 1) {
-                return r.getObservations();
-            } else {
-                for (Map.Entry val: accumulateMap.entrySet()) {
-
-                }
-
-                mean = sum / accumulateMap.size();
             }
-        }
-        return mean;
-    }
-
-    public double getStdDev(){
-      /*  double stdDev = 0;
-        if(accumulateMap == null){
-            System.out.println("Can't get StdDev. The list is empty.");
-        }else{
-            for(double val: accumulateMap){
-                stdDev += Math.pow(val - getMean(),2);
+            for (int i = 0; i < accumulate.size() - 1; i++){
+                sumWeights += accumulate.get(i + 1).timeOfChange - accumulate.get(i).timeOfChange;
             }
-            standardDeviation = Math.sqrt(stdDev/ accumulateMap.size());
+
+            return timeWeightedSum / sumWeights;
         }
 
-        return standardDeviation;
-    }*/ return 0; }
 
-    public void reset() {
-        r.reset();
-        this.mean = 0d;
-        this.standardDeviation = 0d;
-    }
-
-
-
-    public String getReport(){
-        return "Maximum: " +getMax() + "Minimum: " + getMin() + "Num. of Observations: " + r.getObservations()
-                + "Last reset Time: " + r.lastResetTime() + "Mean: " + getMean() +" Standard Deviation: " + getStdDev();
+    @Override
+    public String getReport() {
+        return null;
     }
 }

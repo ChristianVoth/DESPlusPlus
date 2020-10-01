@@ -4,12 +4,12 @@ import Core.Model;
 
 public class ExponentialDistribution extends Distribution {
 
-    public double mean;
+    private double mean;
     private double sample;
 
     public ExponentialDistribution(Model parentModel,String name, long seed, double mean)
     {
-        super(parentModel,seed, name);
+        super(parentModel,name, seed);
         this.mean = mean;
     }
 
@@ -23,9 +23,10 @@ public class ExponentialDistribution extends Distribution {
 
     }
 
-
+    // if wenn kein Seed angegeben
     public String getReport(){
-        return "";
+        return "Distribution Parameters: " + mean + "Seed for Generator: " + getSeed()
+                + "Number of Observations: " + getObservations() + "Time at last reset: " + getLastReset();
     }
 
 

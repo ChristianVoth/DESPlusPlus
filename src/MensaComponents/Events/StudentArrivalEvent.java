@@ -27,17 +27,21 @@ public class StudentArrivalEvent extends Event {
 
 
         currentModel.studentFDQueue.enqueue(currentStudent);
+
+
         if (!currentModel.idleFDQueue.isEmpty()) {
+
+
             currentOther = currentModel.idleFDQueue.getFirst();
             currentModel.idleFDQueue.remove(currentOther);
+
             nextInLine = currentModel.studentFDQueue.getFirst();
             currentModel.studentFDQueue.remove(nextInLine);
+
             System.out.println(currentModel.studentFDQueue.size());
+
             StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(currentModel, "StudentGotFoodEvent", currentModel.currentTime() + currentModel.getChoosingFoodTime(), nextInLine, currentOther);
             currentModel.schedule(studentGotFood);
-
-
-
 
         }
 

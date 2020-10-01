@@ -12,7 +12,7 @@ package Core;
 
 /**
  * The Event class abstracts general functionality for events. All events store their time and a reference to the
- * entity they are associated with. Both values are passed as parameters to the event´s constructor function.
+ * entity they are associated with. Both values are passed as parameters to the event´s constructor.
  */
 public abstract class Event extends DynamicObject {
 

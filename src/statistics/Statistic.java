@@ -1,22 +1,29 @@
 package statistics;
 
 import Core.Model;
-import MensaComponents.Mensa;
 
-abstract class Statistic  {
-    private Reportable r;
-    private Mensa model;
+public abstract class Statistic extends Reportable {
 
+    private double min = 0;
+    private double max = 0;
 
     public Statistic(Model parentModel, String name) {
-        this.model = (Mensa)parentModel;
+        super(parentModel, name);
     }
 
-    public abstract void update(double val);
+    public void update(double val) {
+        if (val > max)
+            max = val;
+        if (val < min)
+            min = val;
+        incObservations();
+    }
 
-    public abstract double getMax();
+    public double getMin() {
+        return min;
+    }
 
-    public abstract double getMin();
-
-
+    public double getMax() {
+        return max;
+    }
 }

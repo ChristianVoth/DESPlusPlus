@@ -15,22 +15,14 @@ public class Queue<Entity>{
 
 
     private Entity entity;
-    private Model model;
+    private Mensa model;
     private int maxQueue = 0;
-    private Tally queueLength;
-    private Tally finalWaitingTime;
-    private Tally currentWaitingTime = new Tally(model,"wasEinName");
-    private Accumulate accumulate;
     private Reportable reportable;
     private double timeSinceLastUpdate = 0;
 
     public void enqueue(Entity e){
 
         list.add(e);
-
-        if(e instanceof Student) {
-            currentWaitingTime.insertIntoTally();
-        }
     }
 
     public Entity dequeue(){
@@ -43,10 +35,6 @@ public class Queue<Entity>{
         int indexOfE = list.indexOf(e);
 
         list.remove(indexOfE);
-        if(e instanceof Student){
-            finalWaitingTime.update(currentWaitingTime.removeFromTally());
-        }
-
     }
 
     public Entity getFirst() {
@@ -86,7 +74,7 @@ public class Queue<Entity>{
     public double getMeanWaitTime(){
 
 
-        return accumulate.getMean();
+        return 0;
     }
 
     public int getCurrentQueueLength() {
@@ -96,7 +84,7 @@ public class Queue<Entity>{
 
     public double getMeanQueueLength(){
 
-        return queueLength.getMean();
+        return 0;
     }
 
     public String getReport(){

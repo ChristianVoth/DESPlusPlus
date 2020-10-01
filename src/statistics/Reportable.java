@@ -1,36 +1,37 @@
 package statistics;
 
+import Core.BasicModelComponent;
 import Core.Model;
 
-public abstract class Reportable {
-    private Model model;
-    private int observation;
-    private double timeAtReset;
-    private Count count;
+public abstract class Reportable extends BasicModelComponent {
+    private int observations;
+    private double lastReset;
 
+    public Reportable(Model parentModel, String name) {
+        super(parentModel, name);
+    }
 
 
     public abstract String getReport();
 
 
     public void reset(){
-        timeAtReset = model.currentTime();
-        observation = 0;
-
+        lastReset = getModel().currentTime();
+        observations = 0;
     }
 
     public int getObservations(){
 
-        return observation;
+        return observations;
     }
 
     public int incObservations(){
 
-        return observation++;
+        return observations++;
     }
 
-    public double lastResetTime(){
+    public double getLastReset(){
 
-        return timeAtReset;
+        return lastReset;
     }
 }

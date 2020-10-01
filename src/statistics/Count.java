@@ -2,58 +2,26 @@ package statistics;
 
 import Core.Model;
 
-public class Count  extends Statistic  {
-    private double value;
-    private Reportable r;
-    private double max;
-    private double min;
+public class Count extends Statistic {
+
+    private double value = 0;
+
 
     public Count(Model parentModel, String name) {
-
         super(parentModel, name);
     }
 
-    @Override
     public void update(double val){
-        this.value += val;
+        value += val;
+        super.update(value);
+    }
 
-        if (this.value < this.min) {
-            this.min = this.value;
-        }
-
-        if (this.value > this.max) {
-            this.max = this.value;
-
-        }
-
+    public double getValue(){
+        return value;
     }
 
     @Override
-    public double getMax() {
-        return max;
+    public String getReport() {
+        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax() + "since last Reset at: " + getLastReset();
     }
-
-    @Override
-    public double getMin() {
-        return min;
-    }
-
-
-    public void reset(){
-       r.reset();
-
-       this.min = 0d;
-       this.max = 0d;
-       this.value = 0d;
-    }
-
-    public double getValue() {
-        return this.value;
-    }
-
-    public String getReport(){
-        return "Current Value: " + getValue() + " Minimum: " + getMin() + " Maximum: " + getMax() +
-                " Number of Observation: " + r.getObservations();
-    }
-
 }

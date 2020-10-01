@@ -6,11 +6,11 @@ import java.util.Random;
 
 
 abstract class Distribution extends Reportable {
-    private Reportable reportable;
     private long seed;
     private Random random = new Random(seed);
 
-    public Distribution(Model parentModel, long seed, String name) {
+    public Distribution(Model parentModel, String name, long seed) {
+        super(parentModel, name);
 
         this.seed = seed;
     }
@@ -18,6 +18,7 @@ abstract class Distribution extends Reportable {
     public abstract double sample();
 
     public long getSeed(){
+
         return this.seed;
     }
 

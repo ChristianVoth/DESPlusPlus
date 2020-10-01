@@ -3,14 +3,13 @@ package statistics;
 import Core.Model;
 
 public class UniformDistribution extends Distribution{
-    private Reportable r;
     private double max;
     private double min;
     private double sample;
 
     public UniformDistribution(Model parentModel, String name, long seed, double min, double max)
     {
-        super(parentModel, seed, name);
+        super(parentModel, name, seed);
         this.min = min;
         this.max = max;
     }
@@ -32,9 +31,8 @@ public class UniformDistribution extends Distribution{
 
 
     public String getReport(){
-        return "Num. of observation: "
-                + r.getObservations() + " Maximum: " + getMax() + " Minumum: " + getMin()
-                + " Time of last reset: " + r.lastResetTime() + " Seed: " + getSeed();
+        return "Distribution Parameters: Min: " + getMin() + ", Max: " + getMax()  + "Seed for Generator: " + getSeed()
+                + "Number of Observations: " + getObservations() + "Time at last reset: " + getLastReset();
     }
 
 }

@@ -19,6 +19,7 @@ public class Mensa extends Core.Model {
     private UniformDistribution choosingFoodTime;
     private UniformDistribution studentPayTime;
 
+
     public double getStudentArrivalTime(){
         return studentArrivalTime.sample();
     }
