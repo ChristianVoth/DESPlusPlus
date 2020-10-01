@@ -1,4 +1,4 @@
-package MensaComponents;
+package mensaComponents;
 
 
 

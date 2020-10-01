@@ -1,7 +1,7 @@
 package statistics;
 
-import Core.BasicModelComponent;
-import Core.Model;
+import core.BasicModelComponent;
+import core.Model;
 
 public abstract class Reportable extends BasicModelComponent {
     private int observations;

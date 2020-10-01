@@ -1,6 +1,6 @@
 package statistics;
 
-import Core.Model;
+import core.Model;
 
 public abstract class Statistic extends Reportable {
 

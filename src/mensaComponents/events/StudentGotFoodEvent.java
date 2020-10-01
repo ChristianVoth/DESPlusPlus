@@ -1,7 +1,7 @@
-package MensaComponents.Events;
+package mensaComponents.events;
 
-import Core.*;
-import MensaComponents.*;
+import core.*;
+import mensaComponents.*;
 
 public class StudentGotFoodEvent extends Event {
 

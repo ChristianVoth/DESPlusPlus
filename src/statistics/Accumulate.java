@@ -1,6 +1,6 @@
 package statistics;
 
-import Core.Model;
+import core.Model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package MensaComponents;
+package mensaComponents;
 
-import Core.Entity;
+import core.Entity;
 
 public class Checkout extends Entity {
 

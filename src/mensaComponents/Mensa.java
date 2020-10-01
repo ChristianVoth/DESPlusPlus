@@ -1,11 +1,11 @@
-package MensaComponents;
+package mensaComponents;
 
-import MensaComponents.Events.*;
+import mensaComponents.events.*;
 import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
 
-public class Mensa extends Core.Model {
+public class Mensa extends core.Model {
     private static double startTime = 0.0;
     protected static int NUM_FD = 2;
     protected static int NUM_CO = 2;

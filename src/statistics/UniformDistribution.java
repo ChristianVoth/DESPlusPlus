@@ -1,6 +1,6 @@
 package statistics;
 
-import Core.Model;
+import core.Model;
 
 public class UniformDistribution extends Distribution{
     private double max;

@@ -1,8 +1,7 @@
-package MensaComponents.Events;
+package mensaComponents.events;
 
-import Core.*;
-import MensaComponents.*;
-import statistics.UniformDistribution;
+import core.*;
+import mensaComponents.*;
 
 public class StudentArrivalEvent extends Event {
 

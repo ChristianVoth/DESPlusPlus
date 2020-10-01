@@ -1,9 +1,9 @@
-package MensaComponents.Events;
+/*package mensaComponents.events;
 
-import Core.Entity;
-import Core.Event;
-import Core.Model;
-import MensaComponents.Mensa;
+import core.Entity;
+import core.Event;
+import core.Model;
+import mensaComponents.Mensa;
 
 public class StopEvent extends Event {
     private Mensa currentModel;
@@ -14,14 +14,15 @@ public class StopEvent extends Event {
 
     @Override
     protected void eventRoutine() {
-        currentModel.isOpen = false;
+        currentModel.getIsOpen() = false;
 
-       /* for (int i = 0 ; i < currentModel.studentQueue.size() + currentModel.studentCOQUeue.size(); i++) {
+        for (int i = 0 ; i < currentModel.studentQueue.size() + currentModel.studentCOQUeue.size(); i++) {
             currentModel.schedule(new StudentArrivalEvent(currentModel, "Lappen" + i, currentModel.currentTime(), null));
             currentModel.schedule(new StudentGotFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime() + 0.1, null, null));
-        }*/
+        }
         //for (int i = 0 ; i < currentModel.studentCOQUeue.size(); i++)
           //  currentModel.schedule(new StudentGotFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime(), null, null));
 
     }
 }
+*/

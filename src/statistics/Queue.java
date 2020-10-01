@@ -1,6 +1,6 @@
 package statistics;
 
-import Core.Model;
+import core.Model;
 
 import java.util.ArrayList;
 
@@ -37,7 +37,7 @@ public class Queue<Entity> extends Reportable{
 
     }
 
-    public void remove(Core.Entity e){
+    public void remove(core.Entity e){
 
         int indexOfE = list.indexOf(e);
 

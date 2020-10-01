@@ -1,8 +1,7 @@
-package MensaComponents.Events;
+package mensaComponents.events;
 
-import Core.*;
-import MensaComponents.*;
-import statistics.ExponentialDistribution;
+import core.*;
+import mensaComponents.*;
 
 
 public class StudentGeneratorEvent extends Event {
@@ -26,7 +25,7 @@ public class StudentGeneratorEvent extends Event {
 
 
         currentModel.schedule(new StudentArrivalEvent(currentModel, "StudentArrivalEvent", currentModel.currentTime(), student));
-        if (currentModel.isOpen == true){
+        if (currentModel.getIsOpen() == true){
             double testTime = currentModel.getStudentArrivalTime();
             currentModel.schedule(new StudentGeneratorEvent(currentModel, "StudentGeneratorEvent", currentModel.currentTime() + testTime, null));
             System.out.println("Test: " + testTime);
