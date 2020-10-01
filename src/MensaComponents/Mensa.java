@@ -7,8 +7,8 @@ import statistics.UniformDistribution;
 
 public class Mensa extends Core.Model {
     private static double startTime = 0.0;
-    protected static int NUM_FD = 4;
-    protected static int NUM_CO = 4;
+    protected static int NUM_FD = 2;
+    protected static int NUM_CO = 2;
     public Queue<Student> studentFDQueue;
     public Queue<FoodDistribution> idleFDQueue;
     public Queue<Student> studentCOQueue;
@@ -52,6 +52,7 @@ public class Mensa extends Core.Model {
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
 
         registerReportable(studentFDQueue);
+        registerReportable(studentCOQueue);
 
         FoodDistribution FD;
         for (int i = 0; i < NUM_FD; i++) {
