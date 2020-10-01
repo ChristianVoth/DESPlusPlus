@@ -5,16 +5,7 @@ import Core.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-class ListEntry {
-    double value;
-    double timeOfChange;
 
-    ListEntry(double v1, double v2){
-        value = v1;
-        timeOfChange = v2;
-    }
-
-}
 
 
 public class Accumulate extends Statistic{
@@ -46,9 +37,20 @@ public class Accumulate extends Statistic{
             return timeWeightedSum / sumWeights;
         }
 
+    public double getStdDev(){
+
+        double intermediateResult = 0;
+
+        for (int i = 0; i < accumulate.size(); i++){
+        intermediateResult += (Math.pow(accumulate.get(i).value - getMean(), 2));
+        }
+        return Math.sqrt(intermediateResult / accumulate.size());
+    }
 
     @Override
     public String getReport() {
-        return null;
+        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
+                + ", Weighted Mean: " + getMean() + ", Weighted Standard Deviation: " + getStdDev()
+                + " since last Reset at: " + getLastReset();
     }
 }

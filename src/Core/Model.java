@@ -157,7 +157,7 @@ public abstract class Model {
     public void report() {
 
         for (Reportable r : reportables) {
-            r.getReport();
+            System.out.println(r.getReport());
         }
 
     }

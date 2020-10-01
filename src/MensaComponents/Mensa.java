@@ -46,10 +46,12 @@ public class Mensa extends Core.Model {
         choosingFoodTime = new UniformDistribution(this, "Choosing Food Duration-Generator" , 1, 0.25, 1.0);
         studentPayTime = new UniformDistribution(this, "Student Pay Duration-Generator", 1, 0.5, 1.25);
 
-        idleFDQueue = new Queue<>();
-        studentFDQueue = new Queue<>();
-        idleCOQueue = new Queue<>();
-        studentCOQueue = new Queue<>();
+        idleFDQueue = new Queue<>(this, "Idle Food Distribution Queue");
+        studentFDQueue = new Queue<>(this, "Student Food Distribution Queue");
+        idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
+        studentCOQueue = new Queue<>(this, "Student Checkout Queue");
+
+        registerReportable(studentFDQueue);
 
         FoodDistribution FD;
         for (int i = 0; i < NUM_FD; i++) {
@@ -78,6 +80,7 @@ public class Mensa extends Core.Model {
         } else {
             mensa.run();
         }
+        mensa.report();
     }
 
     public int getNameExtension(){

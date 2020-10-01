@@ -1,33 +1,40 @@
 package statistics;
 
 import Core.Model;
-import MensaComponents.Mensa;
-import MensaComponents.Student;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-public class Queue<Entity>{
+public class Queue<Entity> extends Reportable{
 
     ArrayList<Entity> list = new ArrayList<>();
-    List<Double> currentWaitingTimeList = new ArrayList<Double>();
-
-
-    private Entity entity;
-    private Mensa model;
     private int maxQueue = 0;
-    private Reportable reportable;
-    private double timeSinceLastUpdate = 0;
+
+    public Queue(Model parentModel, String name) {
+        super(parentModel, name);
+    }
+
+    private Tally queueLength = new Tally(getModel(), this.getName() + "-Tally");
+    private Accumulate waitingTime = new Accumulate(getModel(), this.getName() + "-Accumulate");
 
     public void enqueue(Entity e){
 
+
         list.add(e);
+        queueLength.update(list.size());
+        waitingTime.update(list.size());
     }
 
-    public Entity dequeue(){
+    public void dequeue(){
 
-        return list.remove(0) ;
+        if(list.isEmpty()) {
+            return;
+        }
+
+            list.remove(0);
+            queueLength.update(list.size());
+            waitingTime.update(list.size());
+
     }
 
     public void remove(Core.Entity e){
@@ -35,20 +42,13 @@ public class Queue<Entity>{
         int indexOfE = list.indexOf(e);
 
         list.remove(indexOfE);
+        queueLength.update(list.size());
+        waitingTime.update(list.size());
     }
 
     public Entity getFirst() {
 
        return list.get(0);
-    }
-
-    public void showList() {
-        int count = 1;
-        for (Entity e : list) {
-
-            System.out.println(count + ": " + e);
-            count++;
-        }
     }
 
 
@@ -64,17 +64,14 @@ public class Queue<Entity>{
 
     public int getMaxQueueLength() {
 
-        if (maxQueue < list.size()) {
-            maxQueue = list.size();
-        }
-
-        return maxQueue;
+        return (int) queueLength.getMax();
     }
 
     public double getMeanWaitTime(){
 
 
-        return 0;
+
+        return waitingTime.getMean();
     }
 
     public int getCurrentQueueLength() {
@@ -84,7 +81,7 @@ public class Queue<Entity>{
 
     public double getMeanQueueLength(){
 
-        return 0;
+        return queueLength.getMean();
     }
 
     public String getReport(){
