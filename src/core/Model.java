@@ -18,6 +18,8 @@ import java.util.ArrayList;
  */
 public abstract class Model {
 
+    private String name;
+
     /**
      * If false it turns the Student Generator off.
      */
@@ -34,6 +36,7 @@ public abstract class Model {
      *              java.lang.String : The name of this model
      */
     public Model(String name) {
+        this.name = name;
 
     }
 
@@ -98,9 +101,23 @@ public abstract class Model {
 
 
             currentEvent = eventListImpl.getFirst();
-            currentTime = currentEvent.getTime();
-            eventListImpl.removeFirst();
-            currentEvent.eventRoutine();
+
+
+            if(currentEvent.getTime() < currentTime){
+
+                ErrorMessage error = new ErrorMessage(this, "The next Event seems to lie in the past!",
+                        currentEvent.getName() + " for Entity: " + currentEvent.getEntity().getName(),
+                        "The Time this Event was scheduled for, has been wrongly calculated",
+                        "Make sure Distributions are used properly!", currentTime);
+                throw new NegativeRunTimeException(error);
+            } else {
+
+                currentTime = currentEvent.getTime();
+
+                eventListImpl.removeFirst();
+                currentEvent.eventRoutine();
+
+            }
 
             if (currentTime >= stopTime) {
                 isOpen = false;
@@ -178,5 +195,11 @@ public abstract class Model {
     public void setIsOpen(boolean b) {
         isOpen = b;
     }
+
+    public String getName(){
+        return name;
+    }
+
+
 }
 
