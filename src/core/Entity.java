@@ -17,21 +17,24 @@ public class Entity extends DynamicObject {
      * The name of the entity.
      */
     private String entityName;
+    private Model parentModel;
 
     /**
      * Creates a new Entity with a given name.
      * @param name
      *          java.lang.String : The name of the entity
      */
-    public Entity(String name) {
+    public Entity(Model parentModel, String name) {
         super(name);
         this.entityName = name;
+        this.parentModel = parentModel;
         this.priority = 100;
 
     }
 
-    public Entity(String name, int priority) {
+    public Entity(Model parentModel, String name, int priority) {
         super(name);
+        this.parentModel = parentModel;
         this.entityName = name;
         this.priority = priority;
 

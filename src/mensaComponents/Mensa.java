@@ -6,91 +6,223 @@ import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
 
+/**
+ * This is the model class. It is the main class of the event-oriented model of
+ * a mensa.Student arrive at the food distribution to get food. They wait in
+ * line until a food distribution is available. After the students got their
+ * food, they move on to the checkout. They wait in line in front of the
+ * checkout till one is available. After the student paid the student
+ * will leave the mensa.
+ */
 public class Mensa extends core.Model {
+
+    /**
+     * model parameter : the start time.
+     */
     private static double startTime = 0.0;
+
+    /**
+     * model parameter : the number of food distributions.
+     */
     protected static int NUM_FD = 2;
+
+    /**
+     * model parameter : the number of checkouts.
+     */
     protected static int NUM_CO = 2;
+
+    /**
+     * A waiting queue object is used to represent the waiting line in front of
+     * the food distributions.
+     * Every time a student arrives it is inserted into this queue
+     * (in front of FD) and will be remove if a FD is available.
+     */
     public Queue<Student> studentFDQueue;
+
+    /**
+     * A waiting queue object is used to represent the available
+     * food distributions.
+     *
+     * If there is no student waiting for service the FD will
+     * return here and wait for the next student to come.
+     */
     public Queue<FoodDistribution> idleFDQueue;
+
+    /**
+     * A waiting queue object is used to represent the waiting line
+     * in front of the checkouts.
+     * Every time a student arrives it is inserted into this queue
+     * (in front of CO) and will be remove if a CO is available.
+     */
     public Queue<Student> studentCOQueue;
+
+    /**
+     * A waiting queue object is used to represent the available checkouts.
+     *
+     * If there is no student waiting for service the CO will return
+     * here and wait for the next student to come.
+     */
     public Queue<Checkout> idleCOQueue;
+
+    /**
+     * Variable to name the students.
+     */
     private int nameExtension = 0;
 
+    /**
+     * Random number stream used to draw an arrival time for the next student.
+     */
     private ExponentialDistribution studentArrivalTime;
+    /**
+     * Random number stream used to draw a choosing food time for a student.
+     * Describes the time the student need to choose his food.
+     */
     private UniformDistribution choosingFoodTime;
+    /**
+     * Random number stream used to draw a pay time for a student.
+     * Describes the time the student need to pay his meal.
+     */
     private UniformDistribution studentPayTime;
+
+    /**
+     * A simple count how many students got served.
+     */
     public Count studentsServed;
 
-
-    public double getStudentArrivalTime(){
+    /**
+     * Returns a sample of the random stream used to determine the next
+     * truck arrival time.
+     * @return double a studentArrivalTime sample
+     */
+    public double getStudentArrivalTime() {
         return studentArrivalTime.sample();
     }
 
-    public double getChoosingFoodTime(){
+    /**
+     * Returns a sample of the random stream used to determine
+     * the time the student needs to choose food.
+     * @return double a choosingFoodTime sample
+     */
+    public double getChoosingFoodTime() {
         return choosingFoodTime.sample();
     }
 
-    public double getStudentPayTime(){
+    /**
+     * Returns a sample of the random stream used to determine
+     * the time the student needs to pay for the food.
+     * @return double a studentPayTime sample
+     */
+    public double getStudentPayTime() {
         return studentPayTime.sample();
     }
 
 
-
-
+    /**
+     * Mensa constructor.
+     *
+     * Creates a new Mensa model via calling the constructor of the superclass.
+     * @param name
+     *          java.lang.String : The name of the model
+     */
     public Mensa(String name) {
         super(name);
     }
 
+    /**
+     * Activates dynamic model components (events).
+     *
+     * This method is used to place all events on the event
+     * list of the simulator which are necessary to start the simulation.
+     *
+     * In this case, the student generator event will have
+     * to be created and scheduled for the start time of the simulation.
+     *
+     * Also, it initialises static model components like distributions
+     * and queues.
+     */
     @Override
     public void init() {
 
-        studentArrivalTime = new ExponentialDistribution(this, "Student Arrival Generator", 1, 3.0);
-        choosingFoodTime = new UniformDistribution(this, "Choosing Food Duration-Generator" , 1, 0.25, 1.0);
-        studentPayTime = new UniformDistribution(this, "Student Pay Duration-Generator", 1, 0.5, 1.25);
-
+        // initialise the studentArrivalTime
+        studentArrivalTime = new ExponentialDistribution(this,
+                "Student Arrival Generator", 1, 3.0);
+        // initialise the choosingFoodTime
+        choosingFoodTime = new UniformDistribution(this,
+                "Choosing Food Duration-Generator", 1, 0.25, 1.0);
+        // initialise the studentPayTime
+        studentPayTime = new UniformDistribution(this,
+                "Student Pay Duration-Generator", 1, 0.5, 1.25);
+        // initialise the studentsServed count
         studentsServed = new Count(this, "Students Served Count");
-
+        // initialise the idleFDQueue
         idleFDQueue = new Queue<>(this, "Idle Food Distribution Queue");
+        // initialise the studentFDQueue
         studentFDQueue = new Queue<>(this, "Student Food Distribution Queue");
+        // initialise the idleCOQueue
         idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
+        // initialise the studentCOQueue
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
+
 
         registerReportable(studentFDQueue);
         registerReportable(studentCOQueue);
         registerReportable(studentsServed);
 
+        // place the food distributions into the idleFDQueue
         FoodDistribution FD;
         for (int i = 0; i < NUM_FD; i++) {
-            FD = new FoodDistribution("FD" + i);
+            // create a new food distribution
+            FD = new FoodDistribution(this,"FD" + i);
+            // put it in the idleFDQUeue
             idleFDQueue.enqueue(FD);
         }
 
+        // place the checkouts into the idleCOQueue
         Checkout CO;
         for (int i = 0; i < NUM_CO; i++) {
-            CO = new Checkout("CO" + i);
+            // create a new checkout
+            CO = new Checkout(this,"CO" + i);
+            // put it in the idleCOQueue
             idleCOQueue.enqueue(CO);
         }
 
-
-        schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
+        // create and schedule a Student Generator Event for the start
+        // time of the simulation
+        schedule(new StudentGeneratorEvent(this,
+                "StudentGeneratorEvent", 0.0, null));
+       // set the stop time of the simulation
         setStopTime(50.0);
-
-
     }
 
+    /**
+     * Runs the model.
+     */
     public static void simulate() {
-
+        // create model
         Mensa mensa = new Mensa("Mensa Model");
+        // check if start time is bigger than the stop time
         if (startTime > mensa.getStopTime()) {
-            System.out.println("The start time cannot be larger than the stop time." +
-                    " Please make sure to change one of the values before starting the simulation!");
+            // yes, it is
+            // print error
+            System.out.println("The start time cannot be larger "
+                                + "than the stop time."
+                                + " Please make sure to change one of the"
+                                + " values before starting the simulation!");
         } else {
+            // it is not
+
+            // start the simulation
             mensa.run();
         }
+        // generate the report
         mensa.report();
     }
 
-    public int getNameExtension(){
+    /**
+     * Get Method to get the name extension for the students.
+     * @return integer the name extension
+     */
+    public int getNameExtension() {
         nameExtension++;
         return nameExtension;
 

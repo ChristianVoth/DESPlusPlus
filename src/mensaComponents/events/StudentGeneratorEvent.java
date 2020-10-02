@@ -44,7 +44,7 @@ public class StudentGeneratorEvent extends Event {
     public void eventRoutine() {
 
         // create a new student
-        Student student = new Student("Student"
+        Student student = new Student(currentModel, "Student"
                                       + currentModel.getNameExtension());
 
         // create a new student arrival event and schedule it for the current
