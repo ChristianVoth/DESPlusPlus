@@ -7,8 +7,6 @@
  *      date: $Date:
  * Copyright (c): DES++, 2020
  */
-
-
 package core;
 
 /**

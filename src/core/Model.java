@@ -162,6 +162,7 @@ public abstract class Model {
     }
 
     /**
+     * Get Method for the variable isOpen
      * @return
      *      a boolean
      */

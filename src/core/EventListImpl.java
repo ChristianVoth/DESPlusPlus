@@ -19,11 +19,6 @@ import java.util.Collections;
 public class EventListImpl implements EventList {
 
     /**
-     * ??
-     */
-    private Event event;
-
-    /**
      * The event list used to store events.
      */
     ArrayList<Event> eventList = new ArrayList<>();
