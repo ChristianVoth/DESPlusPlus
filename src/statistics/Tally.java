@@ -26,17 +26,21 @@ public class Tally extends Statistic {
     }
 
     public double getStdDev(){
+        double stdDev;
         double intermediateResult = 0;
         for (double val : tally){
             intermediateResult += (Math.pow(val - getMean(), 2));
         }
-        return Math.sqrt(intermediateResult / tally.size());
+
+        stdDev = Math.sqrt(intermediateResult / tally.size());
+
+        return Math.round(stdDev * 10000d) / 10000d;
     }
 
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
-                + ", Mean: " + getMean() + ", Standard Deviation: " + getStdDev()
+        return "Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax()
+                + " Mean: " + getMean() + " Standard Deviation: " + getStdDev()
                 + " since last Reset at: " + getLastReset();
     }
 }

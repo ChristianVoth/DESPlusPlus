@@ -27,6 +27,6 @@ public class Count extends Statistic {
 
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax() + " since last Reset at: " + getLastReset();
+        return "Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax() + " since last Reset at: " + getLastReset();
     }
 }
