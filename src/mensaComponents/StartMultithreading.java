@@ -18,7 +18,6 @@ public class StartMultithreading {
             CustomThread thread = new CustomThread("Thread " + i);
             // start this thread
             thread.start();
-
-    }
+        }
     }
 }
