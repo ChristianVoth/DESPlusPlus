@@ -11,32 +11,26 @@
 package core;
 
 /**
- * DynamicObject provides an abstract base for temporary simulation objects,
+ * DynamicObject provides an abstract template for temporary simulation objects,
  * such as events and entities.
  */
 public abstract class DynamicObject extends BasicModelComponent
-                                    implements Comparable<Event> {
+                                    implements Comparable<Object> {
     /**
      *
      */
     int priority;
 
     /**
-     * The Time when the event is scheduled for ?
+     * The Time for which the event is scheduled.
      */
     double scheduledTime;
 
     /**
-     * do we really need this?
-     */
-    long numberOfEntities;
-
-    /**
      * Constructs a Dynamic Object for a specific model, with a specific name.
-     * @param parentModel
-     *              Model : Model :  The model this object is associated to
-     * @param name
-     *              java.lang.String : The name of the object
+     *
+     * @param parentModel Model : Model :  The model this object is associated to
+     * @param name        java.lang.String : The name of the object
      */
     public DynamicObject(Model parentModel, String name) {
         super(parentModel, name);
@@ -44,15 +38,14 @@ public abstract class DynamicObject extends BasicModelComponent
 
     /**
      * Constructs a Dynamic Object with a specific name.
-     * @param name
-     *              java.lang.String : The name of the object
+     *
+     * @param name java.lang.String : The name of the object
      */
     public DynamicObject(String name) {
         super(name);
     }
 
     /**
-     *
      * @return
      */
     public int getPriority() {
@@ -60,7 +53,6 @@ public abstract class DynamicObject extends BasicModelComponent
     }
 
     /**
-     *
      * @param p
      */
     public void setPriority(int p) {
@@ -68,20 +60,9 @@ public abstract class DynamicObject extends BasicModelComponent
     }
 
     /**
-     *
      * @return
      */
     public double getScheduledTime() {
         return scheduledTime;
-    }
-
-    /**
-     *
-     * @param e
-     * @return
-     */
-    @Override
-    public int compareTo(Event e) {
-        return 0;
     }
 }

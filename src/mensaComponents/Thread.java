@@ -9,10 +9,10 @@ public class Thread {
 
         System.out.println("Hauptthread gestartet");
         Mensa.simulate();
-        for(int i = 1; i <= processors; i++) {
+        /*for(int i = 1; i <= processors; i++) {
             CustomThread thread = new CustomThread("Thread " + i);
             thread.start();
 
-    }
+    }*/
     }
 }

@@ -11,31 +11,31 @@
 package core;
 
 /**
- * Defines an interface to design the event list for the model.
+ * Defines an interface to design the event list for a model.
  */
 public interface EventList {
 
     /**
      *  Method to insert an event into the event list.
      * @param e
-     *      Event : The event which will be added to the event list
+     *      Event : The event which will be inserted into the event list
      */
      void insert(Event e);
 
     /**
-     * Method to return the first index of the event list.
+     * Method to return the first entry of the event list.
      * @return
      *      the event
      */
      Event getFirst();
 
     /**
-     * Method to remove the first index of the event list.
+     * Method to remove the first entry of the event list.
      */
      void removeFirst();
 
     /**
-     * Method to remove a specific event from the event list.
+     * Method to remove a specific entry from the event list.
      * @param e
      *      Event : The specific event to be removed
      * @return

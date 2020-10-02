@@ -1,4 +1,4 @@
-/*package mensaComponents.events;
+package mensaComponents.events;
 
 import core.Entity;
 import core.Event;
@@ -14,9 +14,9 @@ public class StopEvent extends Event {
 
     @Override
     protected void eventRoutine() {
-        currentModel.getIsOpen() = false;
+        currentModel.setIsOpen(false);
 
-        for (int i = 0 ; i < currentModel.studentQueue.size() + currentModel.studentCOQUeue.size(); i++) {
+        for (int i = 0 ; i < currentModel.studentFDQueue.size() + currentModel.studentCOQueue.size(); i++) {
             currentModel.schedule(new StudentArrivalEvent(currentModel, "Lappen" + i, currentModel.currentTime(), null));
             currentModel.schedule(new StudentGotFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime() + 0.1, null, null));
         }
@@ -25,4 +25,4 @@ public class StopEvent extends Event {
 
     }
 }
-*/
+

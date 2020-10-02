@@ -43,7 +43,6 @@ public abstract class Event extends DynamicObject {
         this.entity = entity;
         this.scheduledTime = time;
         this.eventName = name;
-        this.numberOfEntities = 1;
     }
 
     /**
@@ -73,7 +72,7 @@ public abstract class Event extends DynamicObject {
     protected abstract void eventRoutine();
 
     @Override
-    public int compareTo(Event e) {
-        return Double.compare(this.scheduledTime, e.scheduledTime);
+    public int compareTo(Object o) {
+        return Double.compare(this.scheduledTime, ((Event) o).scheduledTime);
     }
 }

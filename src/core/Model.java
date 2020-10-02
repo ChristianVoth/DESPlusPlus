@@ -169,5 +169,14 @@ public abstract class Model {
     public boolean getIsOpen() {
         return isOpen;
     }
+
+    /**
+     * Setter to change whether a Object is open or not.
+     * @param b
+     */
+
+    public void setIsOpen(boolean b) {
+        isOpen = b;
+    }
 }
 

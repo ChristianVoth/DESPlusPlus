@@ -1,6 +1,7 @@
 package mensaComponents;
 
 import mensaComponents.events.*;
+import statistics.Count;
 import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
@@ -18,6 +19,7 @@ public class Mensa extends core.Model {
     private ExponentialDistribution studentArrivalTime;
     private UniformDistribution choosingFoodTime;
     private UniformDistribution studentPayTime;
+    public Count studentsServed;
 
 
     public double getStudentArrivalTime(){
@@ -46,6 +48,8 @@ public class Mensa extends core.Model {
         choosingFoodTime = new UniformDistribution(this, "Choosing Food Duration-Generator" , 1, 0.25, 1.0);
         studentPayTime = new UniformDistribution(this, "Student Pay Duration-Generator", 1, 0.5, 1.25);
 
+        studentsServed = new Count(this, "Students Served Count");
+
         idleFDQueue = new Queue<>(this, "Idle Food Distribution Queue");
         studentFDQueue = new Queue<>(this, "Student Food Distribution Queue");
         idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
@@ -53,6 +57,7 @@ public class Mensa extends core.Model {
 
         registerReportable(studentFDQueue);
         registerReportable(studentCOQueue);
+        registerReportable(studentsServed);
 
         FoodDistribution FD;
         for (int i = 0; i < NUM_FD; i++) {
@@ -77,7 +82,8 @@ public class Mensa extends core.Model {
 
         Mensa mensa = new Mensa("Mensa Model");
         if (startTime > mensa.getStopTime()) {
-            System.out.println("The start time cannot be larger than the stop time. Please make sure to change one of the values before starting the simulation!");
+            System.out.println("The start time cannot be larger than the stop time." +
+                    " Please make sure to change one of the values before starting the simulation!");
         } else {
             mensa.run();
         }

@@ -20,8 +20,13 @@ public class Count extends Statistic {
         return value;
     }
 
+    public void reset(){
+        super.reset();
+        value = 0;
+    }
+
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax() + "since last Reset at: " + getLastReset();
+        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax() + " since last Reset at: " + getLastReset();
     }
 }

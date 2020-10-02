@@ -18,6 +18,7 @@ public abstract class Reportable extends BasicModelComponent {
     public void reset(){
         lastReset = getModel().currentTime();
         observations = 0;
+
     }
 
     public int getObservations(){

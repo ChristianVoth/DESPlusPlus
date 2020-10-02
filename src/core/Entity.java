@@ -26,15 +26,23 @@ public class Entity extends DynamicObject {
     public Entity(String name) {
         super(name);
         this.entityName = name;
+        this.priority = 100;
 
     }
 
+    public Entity(String name, int priority) {
+        super(name);
+        this.entityName = name;
+        this.priority = priority;
 
+    }
 
     @Override
-    public int compareTo(Event e) {
-        return super.compareTo(e);
+    public int compareTo(Object o) {
+        return Integer.compare(this.priority,((Entity) o).priority);
     }
+
+
 }
 
 
