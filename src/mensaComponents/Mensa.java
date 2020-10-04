@@ -1,6 +1,7 @@
 package mensaComponents;
 
 
+import core.TimeHandler;
 import mensaComponents.events.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,6 +11,7 @@ import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
 
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -26,6 +28,11 @@ public class Mensa extends core.Model {
      * model parameter : the start time.
      */
     private static double startTime = 0.0;
+
+    public static GregorianCalendar startDate = new GregorianCalendar(2020, 10, 4, 8, 0, 0);
+
+    private TimeHandler timeHandler = new TimeHandler();
+
 
     /**
      * model parameter : the number of food distributions.
@@ -151,17 +158,17 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 1;
+        int studentGenerator = 2;
 
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
-                "Student Arrival Generator", 1, 3.0);
+                "Student Arrival Generator", 1, 180.0);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
-                "Choosing Food Duration-Generator", 1, 0.25, 1.0);
+                "Choosing Food Duration-Generator", 1, 15, 60);
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
-                "Student Pay Duration-Generator", 1, 0.5, 1.25);
+                "Student Pay Duration-Generator", 1, 30, 75k);
         // initialise the studentsServed count
         studentsServed = new Count(this, "Students Served Count");
         // initialise the idleFDQueue
@@ -207,13 +214,20 @@ public class Mensa extends core.Model {
                 List<Student> theStudents = session.createQuery("from Student").list();
                 for (Student tempStudent : theStudents) {
                     Student student = new Student(this, tempStudent.getStudentName());
+
+
                     schedule(new StudentArrivalEvent(this,"StudentArrivalEvent", tempStudent.getStudentArrival(), student));
                 }
                 session.getTransaction().commit();
                 break;
             case 2:
+
+                GregorianCalendar arrival = new GregorianCalendar(2020, 10, 4, 8, 40, 0);
+
+                double studentArrival = timeHandler.calculateDifference(startDate, arrival);
+                System.out.println(studentArrival);
                 //generates students
-                schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
+                schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", studentArrival, null));
         }
 
 
