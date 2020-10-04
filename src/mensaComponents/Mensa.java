@@ -1,10 +1,16 @@
 package mensaComponents;
 
+import database.StudentInfo;
 import mensaComponents.events.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import statistics.Count;
 import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
+
+import java.util.List;
 
 /**
  * This is the model class. It is the main class of the event-oriented model of
@@ -30,6 +36,8 @@ public class Mensa extends core.Model {
      * model parameter : the number of checkouts.
      */
     protected static int NUM_CO = 2;
+
+    public Queue<String> studentNameQueue;
 
     /**
      * A waiting queue object is used to represent the waiting line in front of
@@ -143,6 +151,8 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
+        int studentGenerator = 1;
+
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
                 "Student Arrival Generator", 1, 3.0);
@@ -162,6 +172,8 @@ public class Mensa extends core.Model {
         idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
         // initialise the studentCOQueue
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
+
+        studentNameQueue = new Queue<>(this, "Student Name Queue");
 
 
         registerReportable(studentFDQueue);
@@ -186,10 +198,26 @@ public class Mensa extends core.Model {
             idleCOQueue.enqueue(CO);
         }
 
-        // create and schedule a Student Generator Event for the start
-        // time of the simulation
-        schedule(new StudentGeneratorEvent(this,
-                "StudentGeneratorEvent", 0.0, null));
+        switch(studentGenerator) {
+            case 1:
+                // gets the students from a database
+                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(StudentInfo.class).buildSessionFactory();
+                Session session = factory.getCurrentSession();
+                session.beginTransaction();
+                List<StudentInfo> theStudents = session.createQuery("from StudentInfo").list();
+                for (StudentInfo tempStudent : theStudents) {
+                    Student student = new Student(this, tempStudent.getStudentName());
+                    schedule(new StudentArrivalEvent(this,"StudentArrivalEvent", tempStudent.getStudentArrival(), student));
+                }
+                session.getTransaction().commit();
+                break;
+            case 2:
+                //generates students
+                schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
+        }
+
+
+
        // set the stop time of the simulation
         setStopTime(50.0);
     }

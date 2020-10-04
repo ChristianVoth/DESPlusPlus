@@ -82,6 +82,7 @@ public class StudentArrivalEvent extends Event {
             //remove the student from the student FD queue
             currentModel.studentFDQueue.remove(nextInLine);
 
+
             //create a StudentGotFoodEvent
             StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(
                     currentModel, "StudentGotFoodEvent",

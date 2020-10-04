@@ -1,19 +1,24 @@
+
 package mensaComponents.events;
 
 import core.*;
+
 import mensaComponents.*;
+
 
 /**
  * This class represents an entity (and event) source, which continually
  * generates students (and their arrival events) and then schedule itself
  * for the point in time when the next truck arrival is due.
  */
+
 public class StudentGeneratorEvent extends Event {
 
     /**
      * Creates an Object from the mensa class which will
      * represent the current model.
      */
+
     private Mensa currentModel;
 
     /**
@@ -27,6 +32,7 @@ public class StudentGeneratorEvent extends Event {
      * @param entity
      *              Entity : The entity which is associated with the event
      */
+
     public StudentGeneratorEvent(Model parentModel, String name,
                                  double time, Entity entity) {
         super(parentModel, name, time, entity);
@@ -40,15 +46,12 @@ public class StudentGeneratorEvent extends Event {
      * It creates a new student, a new StudentArrivalEvent and
      * schedules itself again for the next student generation
      */
+
     @Override
     public void eventRoutine() {
 
-        // create a new student
-        Student student = new Student(currentModel, "Student"
-                                      + currentModel.getNameExtension());
+        Student student = new Student(currentModel, "Student" + currentModel.getNameExtension());
 
-        // create a new student arrival event and schedule it for the current
-        // point in time
         currentModel.schedule(new StudentArrivalEvent(currentModel,
                 "StudentArrivalEvent", currentModel.currentTime(), student));
 
@@ -57,9 +60,12 @@ public class StudentGeneratorEvent extends Event {
         if (currentModel.getIsOpen()) {
             double testTime = currentModel.getStudentArrivalTime();
             currentModel.schedule(new StudentGeneratorEvent(currentModel,
-                            "StudentGeneratorEvent", currentModel.currentTime()
-                                  + testTime, null));
+                    "StudentGeneratorEvent", currentModel.currentTime()
+                    + testTime, null));
             System.out.println("Test: " + testTime);
         }
+
     }
+
 }
+

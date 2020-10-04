@@ -18,7 +18,6 @@ public class Student extends Entity {
     public Student(Model parentModel, String name) {
         super(parentModel, name);
     }
-
     /**
      * Constructor of the student entity.
      * @param parentModel

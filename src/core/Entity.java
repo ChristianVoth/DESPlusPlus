@@ -9,6 +9,7 @@
  */
 package core;
 
+
 /**
  * Entity is the base class for model entities.
  */
@@ -16,8 +17,12 @@ public class Entity extends DynamicObject {
     /**
      * The name of the entity.
      */
+
     private String entityName;
+
     private Model parentModel;
+
+
 
     /**
      * Creates a new Entity with a given name.
@@ -39,6 +44,7 @@ public class Entity extends DynamicObject {
         this.priority = priority;
 
     }
+
 
     @Override
     public int compareTo(Object o) {

@@ -17,6 +17,8 @@ package core;
  * Both values are passed as parameters to the event´s constructor.
  */
 public abstract class Event extends DynamicObject {
+
+    private int i;
     /**
      *
      */
@@ -43,6 +45,13 @@ public abstract class Event extends DynamicObject {
         this.entity = entity;
         this.scheduledTime = time;
         this.eventName = name;
+    }
+    public Event(Model parentModel, String name, double time, Entity entity, int i) {
+        super(parentModel, name);
+        this.entity = entity;
+        this.scheduledTime = time;
+        this.eventName = name;
+        this.i = i;
     }
 
     /**

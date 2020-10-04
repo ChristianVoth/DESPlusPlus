@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Queue<Entity> extends Reportable{
 
     ArrayList<Entity> list = new ArrayList<>();
-    private int maxQueue = 0;
+
 
     public Queue(Model parentModel, String name) {
         super(parentModel, name);
