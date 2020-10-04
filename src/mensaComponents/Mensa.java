@@ -1,6 +1,6 @@
 package mensaComponents;
 
-import database.StudentInfo;
+
 import mensaComponents.events.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -201,11 +201,11 @@ public class Mensa extends core.Model {
         switch(studentGenerator) {
             case 1:
                 // gets the students from a database
-                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(StudentInfo.class).buildSessionFactory();
+                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class).buildSessionFactory();
                 Session session = factory.getCurrentSession();
                 session.beginTransaction();
-                List<StudentInfo> theStudents = session.createQuery("from StudentInfo").list();
-                for (StudentInfo tempStudent : theStudents) {
+                List<Student> theStudents = session.createQuery("from Student").list();
+                for (Student tempStudent : theStudents) {
                     Student student = new Student(this, tempStudent.getStudentName());
                     schedule(new StudentArrivalEvent(this,"StudentArrivalEvent", tempStudent.getStudentArrival(), student));
                 }

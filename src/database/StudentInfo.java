@@ -1,4 +1,4 @@
-package database;
+/*package database;
 
 import javax.persistence.*;
 
@@ -59,3 +59,4 @@ public class StudentInfo {
                 '}';
     }
 }
+*/

@@ -55,6 +55,9 @@ public class BasicModelComponent implements ModelComponent {
             basicModelComponentName = name;
         }
     }
+    public BasicModelComponent(){
+
+    }
 
     /**
      * Method to get the model in which the model component is used in.

@@ -44,6 +44,9 @@ public class Entity extends DynamicObject {
         this.priority = priority;
 
     }
+    public Entity() {
+
+    }
 
 
     @Override

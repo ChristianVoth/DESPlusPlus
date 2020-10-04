@@ -44,6 +44,9 @@ public abstract class DynamicObject extends BasicModelComponent
     public DynamicObject(String name) {
         super(name);
     }
+    public DynamicObject() {
+
+    }
 
     /**
      * @return
