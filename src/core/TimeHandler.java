@@ -1,7 +1,10 @@
 package core;
 
 import java.sql.Time;
+import java.sql.Timestamp;
+import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
+import java.time.*;
 
 public class TimeHandler {
 
@@ -9,6 +12,10 @@ public class TimeHandler {
     private GregorianCalendar dateToSchedule;
 
     private double differenceInSeconds;
+
+    Instant timeInstant =  Instant.now();
+    ZonedDateTime zdt = ZonedDateTime.ofInstant(timeInstant, ZoneId.systemDefault());
+    GregorianCalendar cal = GregorianCalendar.from(zdt);
 
 
 
