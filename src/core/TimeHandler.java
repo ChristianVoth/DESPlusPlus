@@ -9,15 +9,6 @@ import java.time.*;
 
 public class TimeHandler {
 
-    private GregorianCalendar startDate;
-    private GregorianCalendar dateToSchedule;
-
-    private double differenceInSeconds;
-
-
-
-
-
 
     public int calculateDifference(Instant startDate, Instant date){
 

@@ -88,7 +88,7 @@ public class Queue<Entity> extends Reportable{
     }
 
     public String getReport(){
-        return "Max Queue Length: " + getMaxQueueLength() + " Current Queue Length: " + getCurrentQueueLength()
+        return getName() + "Max Queue Length: " + getMaxQueueLength() + " Current Queue Length: " + getCurrentQueueLength()
                 + " Mean Queue Length: " + getMeanQueueLength() + " Mean Wait Time: " + getMeanWaitTime() + "\n";
     }
 

@@ -38,7 +38,7 @@ public class StartMultithreading {
 
 
         // create for every processor in your computer a thread
-       for (int i = 0; i<= processors; i++) {
+       for (int i = 1; i<= 1; i++) {
             Callable<Report> callableCustomThread = new CustomThread("Thread " + i);
             Future<Report> futureCounterResult = pool.submit(callableCustomThread);
             listOfFutures.add(futureCounterResult);
@@ -50,7 +50,7 @@ public class StartMultithreading {
 
        double meanQueueLength = 0;
         for (Future<Report> future : listOfFutures) {
-            meanQueueLength += future.get().studentCOQueue_meanLength;
+            meanQueueLength += (Double) future.get().studentCOQueue_meanLength;
         }
         meanQueueLength = meanQueueLength / listOfFutures.size();
 

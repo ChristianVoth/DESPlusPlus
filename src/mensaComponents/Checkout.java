@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import java.time.Instant;
+import java.time.Instant;
 
 /**
  * The Checkout entity encapsulates all data relevant for a checkout.

@@ -31,6 +31,7 @@ public class Accumulate extends Statistic{
     public double getMean(){
             double timeWeightedSum = 0;
             double sumWeights = 0;
+
             for(int i = 0; i < accumulate.size() - 1; i++){
                timeWeightedSum += accumulate.get(i).value * (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
 
@@ -38,7 +39,8 @@ public class Accumulate extends Statistic{
             for (int i = 0; i < accumulate.size() - 1; i++){
                 sumWeights += accumulate.get(i + 1).timeOfChange - accumulate.get(i).timeOfChange;
             }
-
+            if (sumWeights == 0)
+                return 0;
             return timeWeightedSum / sumWeights;
         }
 

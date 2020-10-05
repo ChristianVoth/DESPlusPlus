@@ -13,6 +13,8 @@ import statistics.Queue;
 import statistics.UniformDistribution;
 
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -172,14 +174,15 @@ public class Mensa extends core.Model {
     public void init() {
 
         int studentGenerator = 1;
+        //This Time is in UTC
+        this.setStartDate(Instant.parse("2020-10-05T06:00:00Z"));
 
-        this.setStartDate(Instant.parse("2020-10-05T08:00:00Z"));
         // set the stop time of the simulation
-        setStopTime(1.0);
+        setStopTime(36000.0);
 
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
-                "Student Arrival Generator", 1, .01);
+                "Student Arrival Generator", 1, 0.002);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
                 "Choosing Food Duration-Generator", 1, 15, 60);
@@ -239,7 +242,8 @@ public class Mensa extends core.Model {
                 for (Student tempStudent : theStudents) {
                     Student student = new Student(this, tempStudent.getStudentName());
                     double studentArrivalTime = timeHandler.calculateDifference(getStartDate(), tempStudent.getStudentArrival());
-
+                    System.out.println(getStartDate());
+                    System.out.println(studentArrivalTime);
                     schedule(new StudentArrivalEvent(this, "StudentArrivalEvent", studentArrivalTime, student));
                 }
                 session.getTransaction().commit();
@@ -261,12 +265,13 @@ public class Mensa extends core.Model {
                     CO = new Checkout(this, "CO" + i);
                     // put it in the idleCOQueue
                     idleCOQueue.enqueue(CO);
-
+                }
 
                     //generates students
                     schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
-                }
 
+                break;
+            default:
 
         }
     }

@@ -1,9 +1,10 @@
 /*package database;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="student")
+@Table(name="student", schema="studentssep")
 public class StudentInfo {
 
     @Id
@@ -11,14 +12,14 @@ public class StudentInfo {
     @Column(name="id")
     private int id;
 
-    @Column(name="name")
+    @Column(name="studentname")
     private String studentName;
 
     @Column(name="arrival")
-    private double studentArrival;
+    private LocalDateTime studentArrival;
 
 
-    public StudentInfo(String studentName, double studentArrival) {
+    public StudentInfo(String studentName, LocalDateTime studentArrival) {
         this.studentName = studentName;
         this.studentArrival = studentArrival;
     }
@@ -42,11 +43,11 @@ public class StudentInfo {
         this.studentName = studentName;
     }
 
-    public double getStudentArrival() {
+    public LocalDateTime getStudentArrival() {
         return studentArrival;
     }
 
-    public void setStudentArrival(double studentArrival) {
+    public void setStudentArrival(LocalDateTime studentArrival) {
         this.studentArrival = studentArrival;
     }
 
@@ -60,3 +61,4 @@ public class StudentInfo {
     }
 }
 */
+

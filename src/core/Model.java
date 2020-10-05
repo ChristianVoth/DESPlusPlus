@@ -13,6 +13,7 @@ package core;
 import statistics.Reportable;
 
 import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
@@ -107,6 +108,9 @@ public abstract class Model {
 
             currentEvent = eventListImpl.getFirst();
 
+            System.out.println(currentTime());
+            System.out.println(currentEvent.getTime());
+
 
             if(currentEvent.getTime() < currentTime){
 
@@ -124,7 +128,10 @@ public abstract class Model {
 
             }
 
-            if (currentTime >= ChronoUnit.SECONDS.between(stopTime, startDate)) {
+            if (currentTime >= ChronoUnit.SECONDS.between(startDate, stopTime)) {
+
+                System.out.println(currentTime);
+                System.out.println(ChronoUnit.SECONDS.between(startDate, stopTime));
                 isOpen = false;
             }
         }
@@ -139,6 +146,7 @@ public abstract class Model {
      */
     public void setStopTime(double time) {
         stopTime = getStartDate().plusSeconds((long) time);
+        System.out.println(stopTime);
     }
 
     /**
@@ -169,6 +177,7 @@ public abstract class Model {
     public void setStartDate(Instant i){
         startDate = i;
     }
+
 
     public Instant getStartDate(){
         return startDate;
