@@ -25,7 +25,7 @@ public class ExponentialDistribution extends Distribution {
 
     // if wenn kein Seed angegeben
     public String getReport(){
-        return "Distribution Parameters: " + mean + "Seed for Generator: " + getSeed()
+        return "Distribution Parameters: " + getMean() + "Seed for Generator: " + getSeed()
                 + "Number of Observations: " + getObservations() + "Time at last reset: " + getLastReset();
     }
 

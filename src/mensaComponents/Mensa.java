@@ -168,7 +168,7 @@ public class Mensa extends core.Model {
                 "Choosing Food Duration-Generator", 1, 15, 60);
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
-                "Student Pay Duration-Generator", 1, 30, 75k);
+                "Student Pay Duration-Generator", 1, 30, 75);
         // initialise the studentsServed count
         studentsServed = new Count(this, "Students Served Count");
         // initialise the idleFDQueue
