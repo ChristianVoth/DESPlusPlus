@@ -98,8 +98,7 @@ public class StudentGotFoodEvent extends Event {
         // after the simulation time is over,
         // check if there are still people in front of the food distrubtions
         if (!currentModel.studentFDQueue.isEmpty()
-           && currentModel.currentTime() >= currentModel
-            .getStopTime()) {
+           && currentModel.currentTime() >= currentModel.getDifference()) {
             // yes, there are
 
             // create and schedule a new StudentGotFoodEvent for

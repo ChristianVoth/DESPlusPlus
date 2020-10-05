@@ -4,12 +4,13 @@ import core.Entity;
 import core.Model;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 /**
  * The Student entity encapsulates all information associated with a student.
  */
 @javax.persistence.Entity
-@Table(name="student")
+@Table(name="student", schema="studentssep")
 public class Student extends Entity {
 
     @javax.persistence.Id
@@ -17,17 +18,17 @@ public class Student extends Entity {
     @Column(name="id")
     private int Id;
 
-    @Column(name="name")
+    @Column(name="studentname")
     private String studentName;
 
     @Column(name="arrival")
-    private double studentArrival;
+    private Instant studentArrival;
 
     public Student() {
 
     }
 
-    public Student(Model parentModel, String name, double studentArrival) {
+    public Student(Model parentModel, String name, Instant studentArrival) {
         super(parentModel, name);
         this.studentName = name;
         this.studentArrival = studentArrival;
@@ -71,11 +72,11 @@ public class Student extends Entity {
         this.studentName = studentName;
     }
 
-    public double getStudentArrival() {
+    public Instant getStudentArrival() {
         return studentArrival;
     }
 
-    public void setStudentArrival(double studentArrival) {
+    public void setStudentArrival(Instant studentArrival) {
         this.studentArrival = studentArrival;
     }
 }

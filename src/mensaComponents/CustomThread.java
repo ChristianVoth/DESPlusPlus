@@ -1,9 +1,14 @@
 package mensaComponents;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+
 /**
  * The CustomThread class is used to create threads.
  */
-public class CustomThread extends java.lang.Thread {
+public class CustomThread implements Callable {
+
 
         /**
          * name stores the name of the Thread.
@@ -24,14 +29,18 @@ public class CustomThread extends java.lang.Thread {
          *
          * Everything that is written in here is executed in the new created thread
          */
-        public void run() {
-                System.out.println(name + " gestartet" );
-                // Starting the simulate() method from the mensa model
-                Mensa.simulate();
+
+
+
+        @Override
+        public Object call() throws Exception {
+                Mensa mensa = new Mensa("Mensa Model" + this.name);
+
+                System.out.println(name + " gestartet");
+                Mensa.simulate(mensa);
                 System.out.println(name + " beendet");
 
+                return mensa.generateReport();
+
         }
-
-
-
 }

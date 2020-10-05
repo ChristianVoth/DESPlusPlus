@@ -61,6 +61,9 @@ public class Queue<Entity> extends Reportable{
 
         return list.isEmpty();
     }
+    public int indexOf(Entity entity) {
+        return list.indexOf(entity);
+    }
 
     public int getMaxQueueLength() {
 

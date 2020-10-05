@@ -46,13 +46,6 @@ public abstract class Event extends DynamicObject {
         this.scheduledTime = time;
         this.eventName = name;
     }
-    public Event(Model parentModel, String name, double time, Entity entity, int i) {
-        super(parentModel, name);
-        this.entity = entity;
-        this.scheduledTime = time;
-        this.eventName = name;
-        this.i = i;
-    }
 
     /**
      * The method getTime() returns the time when the event is scheduled for.

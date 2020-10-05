@@ -10,13 +10,20 @@
 
 package core;
 
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 
 /**
  * The Class <EventListImpl> is a implementation for the <EventList> interface.
  */
 public class EventListImpl implements EventList {
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).
+            withLocale(Locale.GERMANY).withZone(ZoneId.systemDefault());
 
     /**
      * The event list used to store events.
@@ -97,13 +104,15 @@ public class EventListImpl implements EventList {
     public void showList() {
         int count = 1;
         for (Event e : eventList) {
+
+            String timeOutput = formatter.format(e.getModel().getStartDate().plusSeconds((long)e.scheduledTime));
             if (e.getEntity() != null) {
                 System.out.println(count + ". " + e.getEntity().getName()
-                        + ": " + e.getName() + " " + e.scheduledTime);
+                        + ": " + e.getName() + " " + timeOutput);
                 count++;
             } else {
                 System.out.println(count + ". " + "n/a: "
-                        + e.getName() + " " + e.scheduledTime);
+                        + e.getName() + " " + timeOutput);
                 count++;
             }
         }

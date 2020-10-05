@@ -3,6 +3,7 @@ package core;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.GregorianCalendar;
 import java.time.*;
 
@@ -13,29 +14,25 @@ public class TimeHandler {
 
     private double differenceInSeconds;
 
-    Instant timeInstant =  Instant.now();
-    ZonedDateTime zdt = ZonedDateTime.ofInstant(timeInstant, ZoneId.systemDefault());
-    GregorianCalendar cal = GregorianCalendar.from(zdt);
 
 
 
 
-    public int calculateDifference(GregorianCalendar startDate, GregorianCalendar date){
 
-        long difference = date.getTimeInMillis() - startDate.getTimeInMillis();
+    public int calculateDifference(Instant startDate, Instant date){
+
+
+        long difference = ChronoUnit.SECONDS.between(startDate, date);
+
+
 
         System.out.println(difference);
 
-        int differenceInSeconds = (int) (difference / 1000);
 
-        System.out.println(differenceInSeconds);
-        return differenceInSeconds;
+        return (int) difference;
 
 
     }
 
-    public double getDifferenceInSeconds(){
-        return differenceInSeconds;
-    }
 
 }

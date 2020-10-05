@@ -11,6 +11,9 @@
 package core;
 
 import statistics.Reportable;
+
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 /**
@@ -53,12 +56,14 @@ public abstract class Model {
     /**
      * The stop time of the simulation run.
      */
-    private double stopTime;
+    private Instant stopTime;
 
     /**
      *
      */
     private boolean running = true;
+
+    private Instant startDate;
 
 
     /**
@@ -119,7 +124,7 @@ public abstract class Model {
 
             }
 
-            if (currentTime >= stopTime) {
+            if (currentTime >= ChronoUnit.SECONDS.between(stopTime, startDate)) {
                 isOpen = false;
             }
         }
@@ -133,7 +138,7 @@ public abstract class Model {
      *              double : the time which will be the stop time
      */
     public void setStopTime(double time) {
-        stopTime = time;
+        stopTime = getStartDate().plusSeconds((long) time);
     }
 
     /**
@@ -157,8 +162,27 @@ public abstract class Model {
      * @return
      *      the time when the simulation stops
      */
-    public double getStopTime() {
+    public Instant getStopTime() {
         return stopTime;
+    }
+
+    public void setStartDate(Instant i){
+        startDate = i;
+    }
+
+    public Instant getStartDate(){
+        return startDate;
+    }
+
+    public long getDifference(){
+        return ChronoUnit.SECONDS.between(startDate, stopTime);
+    }
+
+    public long getDifference(Instant instant1, Instant instant2){
+        long difference = ChronoUnit.SECONDS.between(instant1, instant2);
+        System.out.println(difference);
+
+        return difference;
     }
 
     /**
@@ -166,8 +190,11 @@ public abstract class Model {
      */
     public void report() {
         for (Reportable r : reportables) {
+
             System.out.println(r.getReport());
         }
+
+
     }
 
     /**

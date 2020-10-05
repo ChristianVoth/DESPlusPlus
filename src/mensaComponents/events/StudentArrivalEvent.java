@@ -91,6 +91,8 @@ public class StudentArrivalEvent extends Event {
                     nextInLine, currentOther);
             //schedule it
             currentModel.schedule(studentGotFood);
+
+
         }
     }
 }

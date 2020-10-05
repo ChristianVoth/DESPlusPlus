@@ -1,6 +1,7 @@
 package mensaComponents;
 
 
+import core.Model;
 import core.TimeHandler;
 import mensaComponents.events.*;
 import org.hibernate.Session;
@@ -11,7 +12,8 @@ import statistics.ExponentialDistribution;
 import statistics.Queue;
 import statistics.UniformDistribution;
 
-import java.util.GregorianCalendar;
+import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,12 +26,14 @@ import java.util.List;
  */
 public class Mensa extends core.Model {
 
+    public List queueLengths = new ArrayList();
+
+
     /**
      * model parameter : the start time.
      */
     private static double startTime = 0.0;
 
-    public static GregorianCalendar startDate = new GregorianCalendar(2020, 10, 4, 8, 0, 0);
 
     private TimeHandler timeHandler = new TimeHandler();
 
@@ -78,6 +82,14 @@ public class Mensa extends core.Model {
      * here and wait for the next student to come.
      */
     public Queue<Checkout> idleCOQueue;
+
+    public Queue<FoodDistribution> closedFDQueue;
+
+    public Queue<Checkout> closedCOQueue;
+
+    public Queue<Object> closedStaffQueue;
+
+    public Queue<Object> openStaffQueue;
 
     /**
      * Variable to name the students.
@@ -132,6 +144,7 @@ public class Mensa extends core.Model {
     }
 
 
+
     /**
      * Mensa constructor.
      *
@@ -158,11 +171,15 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 2;
+        int studentGenerator = 1;
+
+        this.setStartDate(Instant.parse("2020-10-05T08:00:00Z"));
+        // set the stop time of the simulation
+        setStopTime(1.0);
 
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
-                "Student Arrival Generator", 1, 180.0);
+                "Student Arrival Generator", 1, .01);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
                 "Choosing Food Duration-Generator", 1, 15, 60);
@@ -180,6 +197,10 @@ public class Mensa extends core.Model {
         // initialise the studentCOQueue
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
 
+        closedStaffQueue = new Queue<>(this, "Not Working Staff");
+        closedFDQueue = new Queue<>(this, "Closed Food Distribution");
+        closedCOQueue = new Queue<>(this, "Closed Checkout");
+
         studentNameQueue = new Queue<>(this, "Student Name Queue");
 
 
@@ -187,77 +208,101 @@ public class Mensa extends core.Model {
         registerReportable(studentCOQueue);
         registerReportable(studentsServed);
 
-        // place the food distributions into the idleFDQueue
-        FoodDistribution FD;
-        for (int i = 0; i < NUM_FD; i++) {
-            // create a new food distribution
-            FD = new FoodDistribution(this,"FD" + i);
-            // put it in the idleFDQUeue
-            idleFDQueue.enqueue(FD);
-        }
 
-        // place the checkouts into the idleCOQueue
-        Checkout CO;
-        for (int i = 0; i < NUM_CO; i++) {
-            // create a new checkout
-            CO = new Checkout(this,"CO" + i);
-            // put it in the idleCOQueue
-            idleCOQueue.enqueue(CO);
-        }
+
+
 
         switch(studentGenerator) {
             case 1:
                 // gets the students from a database
-                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class).buildSessionFactory();
+                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
+
+
                 Session session = factory.getCurrentSession();
                 session.beginTransaction();
+                List<FoodDistribution> theFD = session.createQuery("from FoodDistribution fd where fd.department = 'FoodDistribution'").list();
+                for (FoodDistribution tempFD : theFD) {
+                    FoodDistribution FD = new FoodDistribution(this, tempFD.getName(), tempFD.getWorkBegin(), tempFD.getWorkEnd());
+                    closedStaffQueue.enqueue(FD);
+                    schedule(new OpenStaffEvent(this, "Open Food Distribution", this.getDifference(this.getStartDate(), tempFD.getWorkBegin()), FD));
+                    schedule(new CloseStaffEvent(this, "Close Food Distribution", this.getDifference(this.getStartDate(), tempFD.getWorkEnd()), FD));
+                }
+                List<Checkout> theCO = session.createQuery("from Checkout co where co.department = 'Checkout' ").list();
+                for (Checkout tempCO : theCO) {
+                    Checkout CO = new Checkout(this, tempCO.getName(), tempCO.getWorkBegin(), tempCO.getWorkEnd());
+                    closedStaffQueue.enqueue(CO);
+                    schedule(new OpenStaffEvent(this, "Open Checkout", this.getDifference(this.getStartDate(), tempCO.getWorkBegin()), CO));
+                    schedule(new CloseStaffEvent(this, "Close Checkout", this.getDifference(this.getStartDate(), tempCO.getWorkEnd()), CO));
+                }
+
                 List<Student> theStudents = session.createQuery("from Student").list();
                 for (Student tempStudent : theStudents) {
                     Student student = new Student(this, tempStudent.getStudentName());
+                    double studentArrivalTime = timeHandler.calculateDifference(getStartDate(), tempStudent.getStudentArrival());
 
-
-                    schedule(new StudentArrivalEvent(this,"StudentArrivalEvent", tempStudent.getStudentArrival(), student));
+                    schedule(new StudentArrivalEvent(this, "StudentArrivalEvent", studentArrivalTime, student));
                 }
                 session.getTransaction().commit();
+
                 break;
             case 2:
+                FoodDistribution FD;
+                for (int i = 0; i < NUM_FD; i++) {
+                    // create a new food distribution
+                    FD = new FoodDistribution(this, "FD" + i);
+                    // put it in the idleFDQUeue
+                    idleFDQueue.enqueue(FD);
+                }
 
-                GregorianCalendar arrival = new GregorianCalendar(2020, 10, 4, 8, 40, 0);
+                // place the checkouts into the idleCOQueue
+                Checkout CO;
+                for (int i = 0; i < NUM_CO; i++) {
+                    // create a new checkout
+                    CO = new Checkout(this, "CO" + i);
+                    // put it in the idleCOQueue
+                    idleCOQueue.enqueue(CO);
 
-                double studentArrival = timeHandler.calculateDifference(startDate, arrival);
-                System.out.println(studentArrival);
-                //generates students
-                schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", studentArrival, null));
+
+                    //generates students
+                    schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
+                }
+
+
         }
-
-
-
-       // set the stop time of the simulation
-        setStopTime(50.0);
     }
 
     /**
      * Runs the model.
      */
-    public static void simulate() {
+    public static void simulate(Model m) {
         // create model
-        Mensa mensa = new Mensa("Mensa Model");
+        //Mensa mensa = new Mensa("Mensa Model");
         // check if start time is bigger than the stop time
-        if (startTime > mensa.getStopTime()) {
+        //if (startTime > mensa.getDifference()) {
             // yes, it is
             // print error
-            System.out.println("The start time cannot be larger "
-                                + "than the stop time."
-                                + " Please make sure to change one of the"
-                                + " values before starting the simulation!");
-        } else {
+           // System.out.println("The start time cannot be larger "
+                              //  + "than the stop time."
+                               // + " Please make sure to change one of the"
+                                //+ " values before starting the simulation!");
+       // } else {
             // it is not
 
             // start the simulation
-            mensa.run();
-        }
+            m.run();
+        //}
         // generate the report
-        mensa.report();
+
+
+        m.report();
+
+
+        //System.out.println(m.queueLengths);
+    }
+
+    public  Report generateReport(){
+        return new Report(studentFDQueue.getMeanQueueLength(),studentFDQueue.getMeanWaitTime(),
+                studentCOQueue.getMeanQueueLength(), studentCOQueue.getMeanWaitTime());
     }
 
     /**
