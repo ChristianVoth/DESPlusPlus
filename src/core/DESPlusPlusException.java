@@ -5,7 +5,7 @@ public class DESPlusPlusException extends RuntimeException {
 private ErrorMessage errorMessage;
 
     public DESPlusPlusException(ErrorMessage message) {
-        super("DESMOJException\n"
+        super("DESPlusPlusException\n"
                 + "Description: " + message.getMessageDiscription() + "\n"
                 + "Location:    " + message.getLocation() + "\n"
                 + "Reason:      " + message.getReason() + "\n"

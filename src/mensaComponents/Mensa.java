@@ -3,7 +3,10 @@ package mensaComponents;
 
 import core.Model;
 import core.TimeHandler;
-import mensaComponents.events.*;
+import mensaComponents.events.CloseStaffEvent;
+import mensaComponents.events.OpenStaffEvent;
+import mensaComponents.events.StudentArrivalEvent;
+import mensaComponents.events.StudentGeneratorEvent;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,8 +16,6 @@ import statistics.Queue;
 import statistics.UniformDistribution;
 
 import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +36,6 @@ public class Mensa extends core.Model {
      * model parameter : the start time.
      */
     private static double startTime = 0.0;
-
 
     private TimeHandler timeHandler = new TimeHandler();
 
@@ -173,7 +173,7 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 1;
+        int studentGenerator = 2;
         //This Time is in UTC
         this.setStartDate(Instant.parse("2020-10-05T06:00:00Z"));
 
@@ -305,9 +305,20 @@ public class Mensa extends core.Model {
         //System.out.println(m.queueLengths);
     }
 
-    public  Report generateReport(){
-        return new Report(studentFDQueue.getMeanQueueLength(),studentFDQueue.getMeanWaitTime(),
+    public Report generateReport(){
+        MeanReport mean = generateMeanReport();
+        MedianReport median =  generateMedianReport();
+        return new Report(mean, median);
+    }
+
+    public MeanReport generateMeanReport(){
+        return new MeanReport(studentFDQueue.getMeanQueueLength(), studentFDQueue.getMeanWaitTime(),
                 studentCOQueue.getMeanQueueLength(), studentCOQueue.getMeanWaitTime());
+    }
+
+    public MedianReport generateMedianReport(){
+        return new MedianReport(studentFDQueue.getMedianQueueLength(), studentFDQueue.getMedianWaitingTime(),
+                studentCOQueue.getMedianQueueLength(), studentCOQueue.getMedianWaitingTime());
     }
 
     /**

@@ -1,9 +1,7 @@
 package mensaComponents;
 
-import core.Model;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.concurrent.*;
 
 /**
@@ -50,7 +48,6 @@ public class StartMultithreading {
 
        double meanQueueLength = 0;
         for (Future<Report> future : listOfFutures) {
-            meanQueueLength += (Double) future.get().studentCOQueue_meanLength;
         }
         meanQueueLength = meanQueueLength / listOfFutures.size();
 
