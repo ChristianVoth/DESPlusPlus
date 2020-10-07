@@ -6,7 +6,7 @@ public class Message {
 
     private String modelName;
 
-    private String messageDiscription;
+    private String messageDescription;
 
     private double messageTime;
 
@@ -19,15 +19,19 @@ public class Message {
             modelName = origin.getName();
         }
         if (description == null)
-            messageDiscription = "----";
+            messageDescription = "----";
         else
-            messageDiscription = description;
+            messageDescription = description;
 
         messageTime = time;
     }
 
-    public String getMessageDiscription(){
-        return messageDiscription;
+    public Message() {
+
+    }
+
+    public String getMessageDescription(){
+        return messageDescription;
     }
 
     public String getModelName(){
@@ -40,6 +44,6 @@ public class Message {
 
     public String toString(){
 
-        return messageDiscription;
+        return messageDescription;
     }
 }

@@ -11,6 +11,7 @@
 package core;
 
 import excepctionHandling.ErrorMessage;
+import excepctionHandling.NegativeRunTimeException;
 import mensaComponents.Student;
 import statistics.Reportable;
 

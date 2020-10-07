@@ -20,6 +20,7 @@ public class ErrorMessage extends Message {
         this.reason = reason;
     }
 
+
     public String getLocation() {
         return location;
     }
