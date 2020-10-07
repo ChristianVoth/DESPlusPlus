@@ -14,6 +14,9 @@ public class Accumulate extends Statistic{
 
     private Sorting sorting = new Sorting();
     private List<ListEntry> accumulate = new ArrayList<>();
+
+    private List<Double> timeOfChanges = new ArrayList<>();
+
     private double median;
     private double firstQuantil;
     private double thirdQuantil;
@@ -55,38 +58,48 @@ public class Accumulate extends Statistic{
     }
 
     public double getMedian() {
-        sorting.sortListEntry(accumulate);
+
+        for(int i = 0; i < accumulate.size() - 1; i++){
+
+            double timeDifference = accumulate.get(i).value * (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
+            timeOfChanges.add(timeDifference);
+
+        }
+
+        sorting.sortList(timeOfChanges);
+
+        System.out.println(timeOfChanges);
 
 
-        if(accumulate.size() % 2 != 0) {
-            median = accumulate.get(accumulate.size() / 2).value;
+        if(timeOfChanges.size() % 2 != 0) {
+            median = timeOfChanges.get(timeOfChanges.size() / 2);
         } else {
-            median = (accumulate.get((accumulate.size() / 2)).value + accumulate.get(accumulate.size() / 2 - 1).value) * 0.5d;
+            median = (timeOfChanges.get((timeOfChanges.size() / 2)) + timeOfChanges.get(timeOfChanges.size() / 2 - 1)) * 0.5d;
         }
 
         return  median;
     }
 
     public double getFirstQuantil(){
-        double npFirstQuantil = accumulate.size()*0.25d;
-        sorting.sortListEntry(accumulate);
+        double npFirstQuantil = timeOfChanges.size()*0.25d;
+        sorting.sortList(timeOfChanges);
 
-        if(accumulate.size() % 2 != 0) {
-            firstQuantil = accumulate.get((int) npFirstQuantil).value;
+        if(timeOfChanges.size() % 2 != 0) {
+            firstQuantil = timeOfChanges.get((int) npFirstQuantil);
         } else {
-            firstQuantil = (accumulate.get((int) npFirstQuantil).value + accumulate.get((int) npFirstQuantil - 1).value) * 0.5d;
+            firstQuantil = (timeOfChanges.get((int) npFirstQuantil) + timeOfChanges.get((int) npFirstQuantil - 1)) * 0.5d;
         }
         return firstQuantil;
     }
 
     public double getThridQuantil(){
-        double npThirdQuantil = accumulate.size()*0.75d;
-        sorting.sortListEntry(accumulate);
+        double npThirdQuantil = timeOfChanges.size()*0.75d;
+        sorting.sortList(timeOfChanges);
 
-        if(accumulate.size() % 2 != 0) {
-            thirdQuantil = accumulate.get((int) npThirdQuantil).value;
+        if(timeOfChanges.size() % 2 != 0) {
+            thirdQuantil = timeOfChanges.get((int) npThirdQuantil);
         } else {
-            thirdQuantil = (accumulate.get((int) npThirdQuantil).value + accumulate.get((int) npThirdQuantil - 1).value) * 0.5d;
+            thirdQuantil = (timeOfChanges.get((int) npThirdQuantil) + timeOfChanges.get((int) npThirdQuantil - 1)) * 0.5d;
         }
         return thirdQuantil;
     }

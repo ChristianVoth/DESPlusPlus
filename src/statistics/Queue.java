@@ -76,8 +76,6 @@ public class Queue<Entity> extends Reportable{
 
     public double getMeanWaitTime(){
 
-
-
         return waitingTime.getMean();
     }
 
@@ -87,7 +85,6 @@ public class Queue<Entity> extends Reportable{
     }
 
     public double getMeanQueueLength(){
-
         return queueLength.getMean();
     }
 
@@ -99,9 +96,18 @@ public class Queue<Entity> extends Reportable{
         return waitingTime.getMedian();
     }
 
+    public double get25QueueLength() { return queueLength.getFirstQuantil();}
+
+    public double get25WaitingTime() { return waitingTime.getFirstQuantil();}
+
+    public double get75QueueLength() { return queueLength.getThridQuantil();}
+
+    public double get75WaitingTime() { return waitingTime.getThridQuantil();}
+
     public String getReport(){
         return getName() + "Max Queue Length: " + getMaxQueueLength() + " Current Queue Length: " + getCurrentQueueLength()
-                + " Mean Queue Length: " + getMeanQueueLength() + " Mean Wait Time: " + getMeanWaitTime() + "\n";
+                + " Mean Queue Length: " + getMeanQueueLength() + " Mean Wait Time: " + getMeanWaitTime() +
+                " Median Queue Length: " + getMedianQueueLength() + " Median Wait Time: " + getMedianWaitingTime() + "\n";
     }
 
 

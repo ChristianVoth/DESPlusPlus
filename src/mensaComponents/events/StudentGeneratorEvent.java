@@ -61,7 +61,7 @@ public class StudentGeneratorEvent extends Event {
         // student arrival time
         System.out.println(currentModel.getIsOpen());
         if (currentModel.getIsOpen()) {
-            double testTime = currentModel.getStudentArrivalTime();
+            double testTime = 0.5; // currentModel.getStudentArrivalTime();
                 currentModel.schedule(new StudentGeneratorEvent(currentModel,
                         "StudentGeneratorEvent", currentModel.currentTime()
                         + testTime, null));

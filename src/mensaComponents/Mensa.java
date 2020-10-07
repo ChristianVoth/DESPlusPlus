@@ -178,7 +178,7 @@ public class Mensa extends core.Model {
         this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
         // set the stop time of the simulation
-        setStopTime(3600.0);
+        setStopTime(360.0);
 
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
@@ -309,18 +309,34 @@ public class Mensa extends core.Model {
     public Report generateReport(){
         MeanReport mean = generateMeanReport();
         MedianReport median =  generateMedianReport();
-        return new Report(mean, median);
+        Percentile25Report percentile25Report = generate25Report();
+        Percentile75Report percentile75Report = generate75Report();
+        return new Report(mean, median, percentile25Report, percentile75Report);
     }
 
-    public MeanReport generateMeanReport(){
+    public MeanReport generateMeanReport() {
         return new MeanReport(studentFDQueue.getMeanQueueLength(), studentFDQueue.getMeanWaitTime(),
                 studentCOQueue.getMeanQueueLength(), studentCOQueue.getMeanWaitTime());
+
     }
 
     public MedianReport generateMedianReport(){
         return new MedianReport(studentFDQueue.getMedianQueueLength(), studentFDQueue.getMedianWaitingTime(),
                 studentCOQueue.getMedianQueueLength(), studentCOQueue.getMedianWaitingTime());
     }
+
+
+    public Percentile25Report generate25Report(){
+        return new Percentile25Report(studentFDQueue.get25QueueLength(), studentFDQueue.get25WaitingTime(),
+                studentCOQueue.get25QueueLength(), studentCOQueue.get25WaitingTime());
+    }
+
+    public Percentile75Report generate75Report(){
+        return new Percentile75Report(studentFDQueue.get75QueueLength(), studentFDQueue.get75WaitingTime(),
+                studentCOQueue.get75QueueLength(), studentCOQueue.get75WaitingTime());
+    }
+
+
 
     /**
      * Get Method to get the name extension for the students.

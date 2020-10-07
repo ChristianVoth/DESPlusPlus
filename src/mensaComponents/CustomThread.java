@@ -16,7 +16,7 @@ public class CustomThread implements Callable {
          */
         String name;
 
-        private int numOfSimulations = 2;
+        private int numOfSimulations = 4;
 
         List<Report> listOfReports = new ArrayList<>();
 
