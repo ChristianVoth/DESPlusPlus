@@ -1,4 +1,6 @@
-package core;
+package expectionHandling;
+
+import core.Model;
 
 public class Message {
 

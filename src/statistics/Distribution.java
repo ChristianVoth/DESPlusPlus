@@ -27,6 +27,7 @@ abstract class Distribution extends Reportable {
         this.seed = 0L;
 
     }
+
     protected double nextRandomDouble(){
 
         return random.nextDouble();

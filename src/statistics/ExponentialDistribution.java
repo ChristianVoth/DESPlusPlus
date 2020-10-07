@@ -15,12 +15,10 @@ public class ExponentialDistribution extends Distribution {
 
     public double sample() {
         return sample = Math.log(1 - nextRandomDouble()) / (-mean);
-
     }
 
     public double getMean(){
         return this.mean;
-
     }
 
     // if wenn kein Seed angegeben

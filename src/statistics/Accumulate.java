@@ -1,9 +1,9 @@
 package statistics;
 
+import core.LogHandler;
 import core.Model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Accumulate extends Statistic{
 
-
+    private static final LogHandler myLog = new LogHandler();
     private Sorting sorting = new Sorting();
     private List<ListEntry> accumulate = new ArrayList<>();
 
@@ -26,10 +26,13 @@ public class Accumulate extends Statistic{
     }
 
     public void update(double val){
+
         ListEntry entry = new ListEntry(val, getModel().currentTime());
         accumulate.add(entry);
         super.update(val);
     }
+
+
 
     public double getMean(){
             double timeWeightedSum = 0;
@@ -51,8 +54,14 @@ public class Accumulate extends Statistic{
 
         double intermediateResult = 0;
 
-        for (int i = 0; i < accumulate.size(); i++){
-        intermediateResult += (Math.pow(accumulate.get(i).value - getMean(), 2));
+        try{
+            for (int i = 0; i < accumulate.size(); i++){
+                intermediateResult += (Math.pow(accumulate.get(i).value - getMean(), 2));
+            }
+
+        } catch (Exception e){
+            myLog.logger.info("boi, ListSize: " + accumulate.size() + " intermediateResult: " + intermediateResult
+                              + "Exception: " + e);
         }
         return Math.sqrt(intermediateResult / accumulate.size());
     }
@@ -68,7 +77,7 @@ public class Accumulate extends Statistic{
 
         sorting.sortList(timeOfChanges);
 
-        System.out.println(timeOfChanges);
+        // System.out.println(timeOfChanges);
 
 
         if(timeOfChanges.size() % 2 != 0) {
@@ -81,6 +90,7 @@ public class Accumulate extends Statistic{
     }
 
     public double getFirstQuantil(){
+
         double npFirstQuantil = timeOfChanges.size()*0.25d;
         sorting.sortList(timeOfChanges);
 
@@ -93,6 +103,7 @@ public class Accumulate extends Statistic{
     }
 
     public double getThridQuantil(){
+
         double npThirdQuantil = timeOfChanges.size()*0.75d;
         sorting.sortList(timeOfChanges);
 
@@ -108,7 +119,7 @@ public class Accumulate extends Statistic{
 
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
+        return "Accu: Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
                 + ", Weighted Mean: " + getMean() + ", Weighted Standard Deviation: " + getStdDev()
                 + " since last Reset at: " + getLastReset();
     }

@@ -2,6 +2,8 @@ package statistics;
 
 import core.Model;
 
+import java.util.List;
+
 public abstract class Statistic extends Reportable {
 
     private double min = 0;
@@ -26,4 +28,5 @@ public abstract class Statistic extends Reportable {
     public double getMax() {
         return max;
     }
+
 }

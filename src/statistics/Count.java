@@ -2,6 +2,8 @@ package statistics;
 
 import core.Model;
 
+import java.util.List;
+
 public class Count extends Statistic {
 
     private double value = 0;
@@ -16,6 +18,8 @@ public class Count extends Statistic {
         super.update(value);
     }
 
+
+
     public double getValue(){
         return value;
     }
@@ -27,6 +31,6 @@ public class Count extends Statistic {
 
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax() + " since last Reset at: " + getLastReset();
+        return "Count: Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax() + " since last Reset at: " + getLastReset();
     }
 }

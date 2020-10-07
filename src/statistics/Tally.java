@@ -1,6 +1,7 @@
 package statistics;
 
 //import core.LogHandler;
+import core.LogHandler;
 import core.Model;
 
 import java.util.ArrayList;
@@ -9,11 +10,12 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class Tally extends Statistic {
-    //private static final LogHandler myLog = new LogHandler();
+    private static final LogHandler myLog = new LogHandler();
     private double median;
     private double firstQuantil;
     private List<Double> tally = new ArrayList<>();
     private double thirdQuantil;
+    private List<Double> medianList = new ArrayList<>();
 
 
     public Tally(Model parentModel, String name) {
@@ -28,13 +30,15 @@ public class Tally extends Statistic {
         super.update(val);
     }
 
+
+
     public double getMean(){
 
         double sum = 0;
         for(double val: tally){
             sum +=  val;
         }
-        //myLog.logger.info("Value of Sum: " + sum );
+        myLog.logger.info("Value of Sum: " + sum );
 
         return sum / tally.size();
 
@@ -46,10 +50,10 @@ public class Tally extends Statistic {
         for (double val : tally){
             intermediateResult += (Math.pow(val - getMean(), 2));
         }
-        //myLog.logger.fine("Value of intermediateResult: " + intermediateResult);
+        myLog.logger.fine("Value of intermediateResult: " + intermediateResult);
 
         stdDev = Math.sqrt(intermediateResult / tally.size());
-        //myLog.logger.fine("Value of stdDev: " + stdDev);
+        myLog.logger.fine("Value of stdDev: " + stdDev);
 
         return Math.round(stdDev * 10000d) / 10000d;
     }
@@ -95,7 +99,7 @@ public class Tally extends Statistic {
 
     @Override
     public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax()
+        return "Tally: Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax()
                 + " Mean: " + getMean() + " Standard Deviation: " + getStdDev()
                 + " since last Reset at: " + getLastReset() + " Median: " + getMedian();
     }
