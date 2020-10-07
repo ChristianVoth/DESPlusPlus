@@ -185,7 +185,7 @@ public class Mensa extends core.Model {
                 "Student Arrival Generator", 1, 0.002);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
-                "Choosing Food Duration-Generator", 1, 15, 60);
+                "Choosing Food Duration-Generator", 1, 100, 250);
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
                 "Student Pay Duration-Generator", 1, 30, 75);
