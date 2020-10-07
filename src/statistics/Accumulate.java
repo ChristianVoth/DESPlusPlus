@@ -104,6 +104,8 @@ public class Accumulate extends Statistic{
         return thirdQuantil;
     }
 
+
+
     @Override
     public String getReport() {
         return "Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
