@@ -1,4 +1,6 @@
-package core;
+package excepctionHandling;
+
+import core.Model;
 
 public class ErrorMessage extends Message {
 

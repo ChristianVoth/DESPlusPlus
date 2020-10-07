@@ -1,5 +1,7 @@
 package core;
 
+import excepctionHandling.ErrorMessage;
+
 public class DESPlusPlusException extends RuntimeException {
 
 private ErrorMessage errorMessage;
