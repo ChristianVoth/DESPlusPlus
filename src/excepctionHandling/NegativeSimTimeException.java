@@ -1,4 +1,4 @@
-package expectionHandling;
+package excepctionHandling;
 
 public class NegativeSimTimeException extends RuntimeException {
     private static final long serialVersionUID = 1L;

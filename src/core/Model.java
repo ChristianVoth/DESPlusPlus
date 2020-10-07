@@ -10,7 +10,7 @@
 
 package core;
 
-import expectionHandling.ErrorMessage;
+import excepctionHandling.ErrorMessage;
 import mensaComponents.Student;
 import statistics.Reportable;
 

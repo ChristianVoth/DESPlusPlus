@@ -1,4 +1,4 @@
-package expectionHandling;
+package excepctionHandling;
 
 import core.Model;
 

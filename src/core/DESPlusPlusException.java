@@ -1,6 +1,6 @@
 package core;
 
-import expectionHandling.ErrorMessage;
+import excepctionHandling.ErrorMessage;
 
 public class DESPlusPlusException extends RuntimeException {
 
