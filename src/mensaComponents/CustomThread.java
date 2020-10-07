@@ -18,7 +18,7 @@ public class CustomThread implements Callable {
 
         private int numOfSimulations = 2;
 
-        List<ThreadReport<Report>> listOfReports = new ArrayList<>();
+        List<Report> listOfReports = new ArrayList<>();
 
         /**
          * Constructor of CustomThread.
@@ -46,7 +46,7 @@ public class CustomThread implements Callable {
 
                         Mensa mensa = new Mensa("Mensa Model" + this.name + i);
                         Mensa.simulate(mensa);
-                        threadReport.add(mensa.generateReport());
+                        listOfReports.add(mensa.generateReport());
 
 
 
@@ -54,7 +54,7 @@ public class CustomThread implements Callable {
                 System.out.println(name + " beendet");
 
 
-                return threadReport;
+                return listOfReports;
 
 
         }

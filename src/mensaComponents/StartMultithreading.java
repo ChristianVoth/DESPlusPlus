@@ -6,15 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
+
 /**
  *
  */
 public class StartMultithreading {
 
 
+
     public static void main(String [] args) throws InterruptedException, ExecutionException {
 
-        List queueLenghts = new ArrayList();
+
 
         int numSimulations = 5;
 
@@ -22,7 +24,7 @@ public class StartMultithreading {
 
         int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService pool = Executors.newFixedThreadPool(processors);
-        List<Future<ThreadReport>> listOfFutures = new ArrayList<>();
+        List<Future<ArrayList<Report>>> listOfFutures = new ArrayList<>();
 
         System.out.println("Hauptthread gestartet");
 
@@ -38,12 +40,12 @@ public class StartMultithreading {
 
 
         // create for every processor in your computer a thread
-       for (int i = 1; i<= 2; i++) {
-            Callable<ThreadReport> callableCustomThread = new CustomThread("Thread " + i);
-            Future<ThreadReport> futureCounterResult = pool.submit(callableCustomThread);
+       for (int i = 0; i<= 4; i++) {
+            Callable<ArrayList<Report>> callableCustomThread = new CustomThread("Thread " + i);
+            Future<ArrayList<Report>> futureCounterResult = pool.submit(callableCustomThread);
             listOfFutures.add(futureCounterResult);
         }
-       for (Future<ThreadReport> future : listOfFutures) {
+       for (Future<ArrayList<Report>> future : listOfFutures) {
            System.out.println(future.get());
        }
         pool.shutdown();
@@ -52,10 +54,10 @@ public class StartMultithreading {
        double meanFDWaitingTime = 0;
        int sizeOfWholeReport = 0;
 
-        for (Future<ArrayList<ThreadReport<>>> future : listOfFutures) {
+        for (Future<ArrayList<Report>> future : listOfFutures) {
             for(int i = 0; i < future.get().size(); i++){
-                meanFDQueueLength += future.get().get(i).report.meanReport.studentFDQueue_meanLength;
-                meanFDWaitingTime += future.get().get(i).report.meanReport.studentFDQueue_meanWaitingTime;
+                meanFDQueueLength += future.get().get(i).meanReport.studentFDQueue_meanLength;
+                meanFDWaitingTime += future.get().get(i).meanReport.studentFDQueue_meanWaitingTime;
                 sizeOfWholeReport += future.get().size();
             }
         }
@@ -66,6 +68,7 @@ public class StartMultithreading {
 
         System.out.println(meanFDQueueLength);
         System.out.println(meanFDWaitingTime);
+        System.out.println(sizeOfWholeReport);
     }
 
 }

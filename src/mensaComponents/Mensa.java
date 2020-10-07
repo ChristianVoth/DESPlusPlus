@@ -173,7 +173,7 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 1;
+        int studentGenerator = 2;
         //This Time is in UTC
         this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
@@ -305,10 +305,6 @@ public class Mensa extends core.Model {
         //System.out.println(m.queueLengths);
     }
 
-    public ThreadReport<R> generateThreadReport(){
-        Report report = generateReport();
-        return new ThreadReport<R>(report);
-    }
 
     public Report generateReport(){
         MeanReport mean = generateMeanReport();
