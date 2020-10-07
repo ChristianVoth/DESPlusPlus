@@ -1,19 +1,24 @@
 package mensaComponents;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 /**
  * The CustomThread class is used to create threads.
  */
 public class CustomThread implements Callable {
 
-
         /**
          * name stores the name of the Thread.
          */
         String name;
+
+        private int numOfSimulations = 2;
+
+        List<ThreadReport<Report>> listOfReports = new ArrayList<>();
 
         /**
          * Constructor of CustomThread.
@@ -31,16 +36,28 @@ public class CustomThread implements Callable {
          */
 
 
-
         @Override
         public Object call() throws Exception {
-                Mensa mensa = new Mensa("Mensa Model" + this.name);
+
+
 
                 System.out.println(name + " gestartet");
-                Mensa.simulate(mensa);
+                for(int i = 0; i < numOfSimulations; i++) {
+
+                        Mensa mensa = new Mensa("Mensa Model" + this.name + i);
+                        Mensa.simulate(mensa);
+                        threadReport.add(mensa.generateReport());
+
+
+
+                }
                 System.out.println(name + " beendet");
 
-                return mensa.generateReport();
+
+                return threadReport;
+
 
         }
+
+
 }

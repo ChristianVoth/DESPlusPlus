@@ -1,8 +1,10 @@
-/*package database;
+/*
+package database;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.time.LocalDateTime;
-
+/*
 @Entity
 @Table(name="student", schema="studentssep")
 public class StudentInfo {
@@ -16,13 +18,15 @@ public class StudentInfo {
     private String studentName;
 
     @Column(name="arrival")
-    private LocalDateTime studentArrival;
+    private Instant studentArrival;
 
 
-    public StudentInfo(String studentName, LocalDateTime studentArrival) {
+    public StudentInfo(String studentName, Instant studentArrival) {
         this.studentName = studentName;
         this.studentArrival = studentArrival;
     }
+    */
+/*
     public StudentInfo() {
 
     }
@@ -43,11 +47,11 @@ public class StudentInfo {
         this.studentName = studentName;
     }
 
-    public LocalDateTime getStudentArrival() {
+    public Instant getStudentArrival() {
         return studentArrival;
     }
 
-    public void setStudentArrival(LocalDateTime studentArrival) {
+    public void setStudentArrival(Instant studentArrival) {
         this.studentArrival = studentArrival;
     }
 

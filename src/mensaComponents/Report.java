@@ -1,6 +1,6 @@
 package mensaComponents;
 
-public class Report {
+public class Report{
 
     MeanReport meanReport;
     MedianReport medianReport;
@@ -8,5 +8,9 @@ public class Report {
 
         this.meanReport = mean;
         this.medianReport = median;
+    }
+
+    public Report() {
+
     }
 }

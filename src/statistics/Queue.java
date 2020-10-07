@@ -51,6 +51,10 @@ public class Queue<Entity> extends Reportable{
        return list.get(0);
     }
 
+    public Entity get(int i){
+        return  list.get(i);
+    }
+
 
     public int size(){
 

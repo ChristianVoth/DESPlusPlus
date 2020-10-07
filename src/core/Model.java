@@ -10,6 +10,7 @@
 
 package core;
 
+import mensaComponents.Student;
 import statistics.Reportable;
 
 import java.time.Instant;
@@ -232,10 +233,26 @@ public abstract class Model {
         isOpen = b;
     }
 
+
     public String getName(){
         return name;
     }
 
+    public Boolean checkEventList(){
+        for(Event e : eventListImpl.eventList){
+            if(e.getEntity().getClass() != Student.class)
+                return false;
+        }
+        return true;
+    }
+
+    public int getEventListSize(){
+        return eventListImpl.eventList.size();
+    }
+
+    public Event getEventAt(int i){
+        return eventListImpl.eventList.get(i);
+    }
 
 }
 

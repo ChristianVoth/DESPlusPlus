@@ -43,12 +43,12 @@ public class Mensa extends core.Model {
     /**
      * model parameter : the number of food distributions.
      */
-    protected static int NUM_FD = 2;
+    public static int NUM_FD = 2;
 
     /**
      * model parameter : the number of checkouts.
      */
-    protected static int NUM_CO = 2;
+    public static int NUM_CO = 2;
 
     public Queue<String> studentNameQueue;
 
@@ -173,12 +173,12 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 2;
+        int studentGenerator = 1;
         //This Time is in UTC
-        this.setStartDate(Instant.parse("2020-10-05T06:00:00Z"));
+        this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
         // set the stop time of the simulation
-        setStopTime(36000.0);
+        setStopTime(3600.0);
 
         // initialise the studentArrivalTime
         studentArrivalTime = new ExponentialDistribution(this,
@@ -303,6 +303,11 @@ public class Mensa extends core.Model {
 
 
         //System.out.println(m.queueLengths);
+    }
+
+    public ThreadReport<R> generateThreadReport(){
+        Report report = generateReport();
+        return new ThreadReport<R>(report);
     }
 
     public Report generateReport(){

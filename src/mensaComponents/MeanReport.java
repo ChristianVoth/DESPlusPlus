@@ -8,7 +8,7 @@ public class MeanReport {
     double studentCOQueue_meanLength;
     double studentCOQueue_meanWaitingTime;
 
-
+/*
     double studentFDQueue_25PercentileWaitingTime;
     double studentFDQueue_25PercentileQueueLength;
 
@@ -20,7 +20,7 @@ public class MeanReport {
 
     double studentFDQueue_75PercentileWaitingTime;
     double studentFDQueue_75PercentileQueueLength;
-
+*/
     MeanReport(double studentFDQueue_meanLength, double studentFDQueue_meanWaitingTime,
                double studentCOQueue_meanLength, double studentCOQueue_meanWaitingTime){
         this.studentFDQueue_meanLength = studentFDQueue_meanLength;
