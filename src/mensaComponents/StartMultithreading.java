@@ -2,9 +2,21 @@ package mensaComponents;
 
 
 
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+
 
 
 /**
@@ -14,10 +26,11 @@ public class StartMultithreading {
 
 
 
-    public static void main(String [] args) throws InterruptedException, ExecutionException {
+    public static void main(String [] args) throws InterruptedException, ExecutionException, Exception {
 
+       String filename= "data122334";
 
-
+       String simulationID = "1";
         int numSimulations = 5;
 
         Mensa currentModel;
@@ -28,19 +41,8 @@ public class StartMultithreading {
 
         System.out.println("Hauptthread gestartet");
 
-        /*for(int i = 1; i < numSimulations + 1; i++) {
-            Mensa mensa = new Mensa("Mensa Model" + i);
-            Mensa.simulate(mensa);
-
-
-        }
-        */
-
-
-
-
         // create for every processor in your computer a thread
-       for (int i = 0; i < 1; i++) {
+       for (int i = 0; i < 2; i++) {
             Callable<ArrayList<Report>> callableCustomThread = new CustomThread("Thread " + (i + 1));
             Future<ArrayList<Report>> futureCounterResult = pool.submit(callableCustomThread);
             listOfFutures.add(futureCounterResult);
@@ -140,8 +142,6 @@ public class StartMultithreading {
         System.out.println("First Quantile FDQueue Length " + FD_25Length);
         System.out.println("Third Quantile FDQueue Length " + FD_75Length + "\n");
 
-
-
         System.out.println("Mean FDQueue Waiting Time " + FD_meanWaitingTime);
         System.out.println("Median FDQueue Waiting Time " + FD_medianWaitingTime);
         System.out.println("First Quantile FDQueue Waiting Time " + FD_25WaitingTime);
@@ -158,6 +158,98 @@ public class StartMultithreading {
         System.out.println("Third Quantile Waiting Time " + CO_75WaitingTime + "\n");
 
         System.out.println(counter);
+
+
+
+        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+
+        Document document = documentBuilder.newDocument();
+
+        Element element = document.createElement("SimulationRun");
+        document.appendChild(element);
+
+        Attr attr = document.createAttribute("Id");
+
+        attr.setValue(simulationID);
+        element.setAttributeNode(attr);
+
+        Element meanFDQueue = document.createElement("MeanFoodDistributionQueue");
+        meanFDQueue.appendChild(document.createTextNode(String.valueOf(FD_meanLength)));
+        element.appendChild(meanFDQueue);
+
+        Element medianFDLength = document.createElement("FoodDistributionMedianLength");
+        medianFDLength.appendChild(document.createTextNode(String.valueOf(FD_medianLength)));
+        element.appendChild(medianFDLength);
+
+        Element firstQunatileFDQueueLength = document.createElement("FirstQuantileFoodDistribtionQueueLength");
+        firstQunatileFDQueueLength.appendChild(document.createTextNode(String.valueOf(FD_25Length)));
+        element.appendChild(firstQunatileFDQueueLength);
+
+        Element thirdQuantileFDQueueLength = document.createElement("ThirdQuantileFDQueueLength");
+        thirdQuantileFDQueueLength.appendChild(document.createTextNode(String.valueOf(FD_75Length)));
+        element.appendChild(thirdQuantileFDQueueLength);
+
+        Element meanFDQueueWaitingTime = document.createElement("MeanFDQueueWaitingTime");
+        meanFDQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(FD_meanWaitingTime)));
+        element.appendChild(meanFDQueueWaitingTime);
+
+        Element medianFDQueueWaitingTime = document.createElement("MedianFDQueueWaitingTime");
+        medianFDQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(FD_medianWaitingTime)));
+        element.appendChild(medianFDQueueWaitingTime);
+
+        Element firstQuantileFDQueueWaitingTime = document.createElement("FirstQuantileFDQueueWaitingTime");
+        firstQuantileFDQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(FD_25WaitingTime)));
+        element.appendChild(firstQuantileFDQueueWaitingTime);
+
+        Element thirdQuantileFDQueueWaitingTime = document.createElement("ThirdQuantileFDQueueWaitingTime");
+        thirdQuantileFDQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(FD_75WaitingTime)));
+        element.appendChild(thirdQuantileFDQueueWaitingTime);
+
+        Element meanCDQueueLength = document.createElement("MeanCOQueueLength");
+        meanCDQueueLength.appendChild(document.createTextNode(String.valueOf(CO_meanLength)));
+        element.appendChild(meanCDQueueLength);
+
+        Element medianCOQueueLength = document.createElement("MedianCOQueueLength");
+        medianCOQueueLength.appendChild(document.createTextNode(String.valueOf(CO_medianLength)));
+        element.appendChild(medianCOQueueLength);
+
+        Element firstQuantileCOQueue = document.createElement("FirstQuantileCOQueue");
+        firstQuantileCOQueue.appendChild(document.createTextNode(String.valueOf(CO_25Length)));
+        element.appendChild(firstQuantileCOQueue);
+
+        Element thirdQunatileCOQueue = document.createElement("ThirdQuantileCOQueue");
+        thirdQunatileCOQueue.appendChild(document.createTextNode(String.valueOf(CO_75Length)));
+        element.appendChild(thirdQunatileCOQueue);
+
+        Element meanCOQueueWaitingTime = document.createElement("MeanCOQueueWaitingTime");
+        meanCOQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(CO_meanWaitingTime)));
+        element.appendChild(meanCOQueueWaitingTime);
+
+        Element medianCOQueueWaitingTime = document.createElement("MedianCOQueueWaitingTime");
+        medianCOQueueWaitingTime.appendChild(document.createTextNode(String.valueOf(CO_medianWaitingTime)));
+        element.appendChild(medianCOQueueWaitingTime);
+
+        Element firstQuantileWaitingTime = document.createElement("FirstQuantileWaitingTime");
+        firstQuantileWaitingTime.appendChild(document.createTextNode(String.valueOf(CO_25WaitingTime)));
+        element.appendChild(firstQuantileWaitingTime);
+
+        Element thirdQuantileWaitingTime = document.createElement("ThirdQuantileWaitingTime");
+        thirdQuantileWaitingTime.appendChild(document.createTextNode(String.valueOf(CO_75WaitingTime)));
+        element.appendChild(thirdQuantileWaitingTime);
+
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(document);
+
+
+        StreamResult streamResult = new StreamResult(new File("C:\\XML\\" + filename +".fxml"));
+
+        transformer.transform(source, streamResult);
+
+
+
     }
 
 }

@@ -103,6 +103,7 @@ public class EventListImpl implements EventList {
     @Override
     public void showList() {
         int count = 1;
+
         for (Event e : eventList) {
 
             String timeOutput = formatter.format(e.getModel().getStartDate().plusSeconds((long)e.scheduledTime));

@@ -1,15 +1,15 @@
 package statistics;
 
-import core.LogHandler;
+
 import core.Model;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 public class Tally extends Statistic {
-    private static final LogHandler myLog = new LogHandler();
+
     private double median;
     private double firstQuantil;
     private List<Double> tally = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Tally extends Statistic {
         for(double val: tally){
             sum +=  val;
         }
-        myLog.logger.info("Value of Sum: " + sum );
+
 
         return sum / tally.size();
 
@@ -46,10 +46,9 @@ public class Tally extends Statistic {
         for (double val : tally){
             intermediateResult += (Math.pow(val - getMean(), 2));
         }
-        myLog.logger.fine("Value of intermediateResult: " + intermediateResult);
+
 
         stdDev = Math.sqrt(intermediateResult / tally.size());
-        myLog.logger.fine("Value of stdDev: " + stdDev);
 
         return Math.round(stdDev * 10000d) / 10000d;
     }
@@ -62,7 +61,7 @@ public class Tally extends Statistic {
         } else {
             median = (tally.get((tally.size() / 2)) + tally.get(tally.size() / 2 - 1)) * 0.5d;
         }
-        myLog.logger.info("Value of Median: " + median);
+
         return  median;
     }
 
