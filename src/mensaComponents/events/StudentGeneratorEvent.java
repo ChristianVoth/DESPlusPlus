@@ -20,6 +20,7 @@ public class StudentGeneratorEvent extends Event {
      */
 
     private Mensa currentModel;
+    private int num;
 
 
     /**
