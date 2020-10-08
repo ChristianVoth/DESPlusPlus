@@ -244,7 +244,7 @@ public abstract class Model {
 
     public Boolean checkEventList(){
         for(Event e : eventListImpl.eventList){
-            if(e.getEntity().getClass() != Student.class)
+            if(e.getEntity().getClass() == Student.class)
                 return false;
         }
         return true;

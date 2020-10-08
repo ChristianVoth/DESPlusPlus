@@ -8,7 +8,10 @@ import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -24,14 +27,29 @@ import java.util.concurrent.*;
  */
 public class StartMultithreading {
 
+    private int numOfThreads;
+    private int numOFSimulations;
+    private int numOfFD;
+    private int numOfCO;
+    private String filename;
+
+    public StartMultithreading(int numOfThreads, int numOfSimulations, int numOfFD, int numOfCO, String filename) {
+        this.numOfThreads = numOfThreads;
+        this.numOFSimulations = numOfSimulations;
+        this.numOfFD = numOfFD;
+        this.numOfCO = numOfCO;
+        this.filename = filename;
+    }
 
 
-    public static void main(String [] args) throws InterruptedException, ExecutionException, Exception {
+   // public static void main(String [] args) throws InterruptedException, ExecutionException, Exception {
 
-       String filename= "data122334";
+    public void startMultithreading() throws TransformerException, ParserConfigurationException, ExecutionException, InterruptedException {
+
+
 
        String simulationID = "1";
-        int numSimulations = 5;
+
 
         Mensa currentModel;
 
@@ -42,8 +60,8 @@ public class StartMultithreading {
         System.out.println("Hauptthread gestartet");
 
         // create for every processor in your computer a thread
-       for (int i = 0; i < 2; i++) {
-            Callable<ArrayList<Report>> callableCustomThread = new CustomThread("Thread " + (i + 1));
+       for (int i = 0; i < 1; i++) {
+            Callable<ArrayList<Report>> callableCustomThread = new CustomThread("Thread " + (i + 1), numOFSimulations, numOfFD, numOfCO);
             Future<ArrayList<Report>> futureCounterResult = pool.submit(callableCustomThread);
             listOfFutures.add(futureCounterResult);
         }

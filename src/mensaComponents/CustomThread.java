@@ -16,7 +16,9 @@ public class CustomThread implements Callable {
          */
         String name;
 
-        private int numOfSimulations = 4;
+        private int numOfSimulations;
+        private int numOfFD;
+        private int numOfCO;
 
         List<Report> listOfReports = new ArrayList<>();
 
@@ -25,8 +27,11 @@ public class CustomThread implements Callable {
          * @param name
          *              java.lang.String : The name of the thread
          */
-        CustomThread(String name) {
+        CustomThread(String name, int numOfSimulations, int numOfFD, int numOfCO) {
             this.name = name;
+            this.numOfSimulations = numOfSimulations;
+            this.numOfFD = numOfFD;
+            this.numOfCO = numOfCO;
         }
 
         /**
@@ -40,11 +45,11 @@ public class CustomThread implements Callable {
         public Object call() throws Exception {
 
 
-
+                System.out.println(numOfFD + " " + numOfCO);
                 System.out.println(name + " gestartet");
                 for(int i = 0; i < numOfSimulations; i++) {
 
-                        Mensa mensa = new Mensa("Mensa Model" + this.name + i);
+                        Mensa mensa = new Mensa("Mensa Model" + this.name + i, numOfFD, numOfCO);
                         Mensa.simulate(mensa);
                         listOfReports.add(mensa.generateReport());
 

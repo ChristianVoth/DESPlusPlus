@@ -72,7 +72,7 @@ public class Accumulate extends Statistic{
 
         for(int i = 0; i < accumulate.size() - 1; i++){
 
-            double timeDifference = accumulate.get(i).value * (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
+            double timeDifference =  (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
             timeOfChanges.add(timeDifference);
 
         }

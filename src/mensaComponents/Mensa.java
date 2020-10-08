@@ -31,6 +31,26 @@ public class Mensa extends core.Model {
 
     public List queueLengths = new ArrayList();
 
+    /**
+     * model parameter : the number of checkouts.
+     */
+    public int NUM_CO;
+
+
+    /**
+     * model parameter : the number of food distributions.
+     */
+    public int NUM_FD;
+
+
+
+
+    public Mensa(String name, int numOfFD, int numOfCO) {
+        super(name);
+        this.NUM_FD = numOfFD;
+        this.NUM_CO = numOfCO;
+    }
+
 
     /**
      * model parameter : the start time.
@@ -40,15 +60,7 @@ public class Mensa extends core.Model {
     private TimeHandler timeHandler = new TimeHandler();
 
 
-    /**
-     * model parameter : the number of food distributions.
-     */
-    public static int NUM_FD = 2;
 
-    /**
-     * model parameter : the number of checkouts.
-     */
-    public static int NUM_CO = 2;
 
     public Queue<String> studentNameQueue;
 
@@ -154,9 +166,7 @@ public class Mensa extends core.Model {
      * @param name
      *          java.lang.String : The name of the model
      */
-    public Mensa(String name) {
-        super(name);
-    }
+
 
     /**
      * Activates dynamic model components (events).
@@ -173,7 +183,7 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 2;
+        int studentGenerator = 1;
         //This Time is in UTC
         this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
@@ -218,6 +228,7 @@ public class Mensa extends core.Model {
         switch(studentGenerator) {
             case 1:
                 // gets the students from a database
+                System.out.println(NUM_FD + " " +NUM_CO);
                 SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
 
 

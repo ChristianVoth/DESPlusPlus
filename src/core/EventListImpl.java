@@ -23,6 +23,8 @@ import java.util.Locale;
 public class EventListImpl implements EventList {
     LogHandler myLogger = new LogHandler();
 
+    private int counter = 0;
+
     DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).
             withLocale(Locale.GERMANY).withZone(ZoneId.systemDefault());
 
@@ -111,10 +113,10 @@ public class EventListImpl implements EventList {
      */
     @Override
     public void showList() {
+        counter++;
         int count = 1;
 
         for (Event e : eventList) {
-
             String timeOutput = formatter.format(e.getModel().getStartDate().plusSeconds((long)e.scheduledTime));
             if (e.getEntity() != null) {
                 System.out.println(count + ". " + e.getEntity().getName()
