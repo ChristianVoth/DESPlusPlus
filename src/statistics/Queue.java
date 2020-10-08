@@ -1,11 +1,13 @@
 package statistics;
 
+import core.LogHandler;
 import core.Model;
 
 import java.util.ArrayList;
 
 
 public class Queue<Entity> extends Reportable{
+    LogHandler myLogger = new LogHandler();
 
     ArrayList<Entity> list = new ArrayList<>();
 
@@ -18,7 +20,10 @@ public class Queue<Entity> extends Reportable{
     private Accumulate waitingTime = new Accumulate(getModel(), this.getName() + "-Accumulate");
 
     public void enqueue(Entity e){
-
+        if(e == null){
+            myLogger.logger.severe("You tried to enqueue an Entitiy with the value of null");
+            throw new NullPointerException();
+        }
 
         list.add(e);
         queueLength.update(list.size());
@@ -41,9 +46,14 @@ public class Queue<Entity> extends Reportable{
 
         int indexOfE = list.indexOf(e);
 
-        list.remove(indexOfE);
-        queueLength.update(list.size());
-        waitingTime.update(list.size());
+        try {
+            list.remove(indexOfE);
+            queueLength.update(list.size());
+            waitingTime.update(list.size());
+        } catch (NullPointerException exception){
+            myLogger.logger.severe("The Value of Entitiy e was null: " + e + " " + exception);
+        }
+
     }
 
     public Entity getFirst() {
@@ -52,7 +62,7 @@ public class Queue<Entity> extends Reportable{
     }
 
     public Entity get(int i){
-        return  list.get(i);
+        return list.get(i);
     }
 
 

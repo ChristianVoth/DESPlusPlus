@@ -21,6 +21,7 @@ import java.util.Locale;
  * The Class <EventListImpl> is a implementation for the <EventList> interface.
  */
 public class EventListImpl implements EventList {
+    LogHandler myLogger = new LogHandler();
 
     DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).
             withLocale(Locale.GERMANY).withZone(ZoneId.systemDefault());
@@ -37,8 +38,12 @@ public class EventListImpl implements EventList {
      */
     @Override
     public void insert(Event e) {
-        eventList.add(e);
-        Collections.sort(eventList);
+        try{
+            eventList.add(e);
+            Collections.sort(eventList);
+        } catch (NullPointerException exception){
+            myLogger.logger.severe("Eventvalue E: " + e + "threw a NullPointerException: " + exception);
+        }
     }
 
     /**
@@ -69,6 +74,10 @@ public class EventListImpl implements EventList {
      */
     @Override
     public int remove(Event e) {
+        if(e == null){
+            myLogger.logger.severe("You tried to remove an Event with the Value of null ");
+            throw new NullPointerException();
+        }
         int indexOfe;
         indexOfe = eventList.indexOf(e);
         eventList.remove(indexOfe);

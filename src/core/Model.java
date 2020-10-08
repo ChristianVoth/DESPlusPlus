@@ -23,6 +23,7 @@ import java.util.ArrayList;
  *  Model is an abstract base class for simulation models.
  */
 public abstract class Model {
+    LogHandler myLogger = new LogHandler();
 
     private String name;
 
@@ -102,6 +103,8 @@ public abstract class Model {
     public void run() {
         Event currentEvent;
         init();
+
+        myLogger.logger.info("Simulation start.");
 
         while (running && !eventListImpl.isEmpty()) {
             System.out.println(currentTime);
