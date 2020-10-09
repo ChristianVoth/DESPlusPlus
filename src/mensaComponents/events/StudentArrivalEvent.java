@@ -1,3 +1,13 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents.events;
 
 import core.*;
@@ -69,9 +79,6 @@ public class StudentArrivalEvent extends Event {
         System.out.println(currentModel.foodResource);
         // check if a food distribution is available
         if (!currentModel.idleFDQueue.isEmpty()) {
-
-            //yes, it is
-            //if (currentModel.foodResource > 0) {
 
                 nextInLine = currentModel.studentFDQueue.getFirst();
                 currentModel.studentFDQueue.remove(nextInLine);

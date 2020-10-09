@@ -1,3 +1,13 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents.events;
 
 import core.Entity;
@@ -7,22 +17,43 @@ import mensaComponents.Checkout;
 import mensaComponents.FoodDistribution;
 import mensaComponents.Mensa;
 
-
+/**
+ *
+ */
 public class OpenStaffEvent extends Event {
 
+    /**
+     *
+     */
     private Mensa currentModel;
 
+    /**
+     *
+     */
     private Checkout currentCO;
 
+    /**
+     *
+     */
     private FoodDistribution currentFD;
 
+    /**
+     *
+     */
     private boolean isCheckout;
 
-
-    public OpenStaffEvent(Model parentModel, String name, double time, Entity entity) {
+    /**
+     *
+     * @param parentModel
+     * @param name
+     * @param time
+     * @param entity
+     */
+    public OpenStaffEvent(Model parentModel, String name,
+                          double time, Entity entity) {
         super(parentModel, name, time, entity);
 
-        if (entity.getClass() == Checkout.class){
+        if (entity.getClass() == Checkout.class) {
             this.currentCO = (Checkout) entity;
             isCheckout = true;
         } else {
@@ -32,11 +63,13 @@ public class OpenStaffEvent extends Event {
         this.currentModel = (Mensa) parentModel;
     }
 
-
+    /**
+     *
+     */
     @Override
     protected void eventRoutine() {
 
-        if(isCheckout) {
+        if (isCheckout) {
             if (currentModel.closedStaffQueue.indexOf(currentCO) >= 0) {
                 currentModel.closedStaffQueue.remove(currentCO);
             }

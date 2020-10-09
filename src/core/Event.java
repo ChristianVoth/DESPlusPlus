@@ -17,7 +17,9 @@ package core;
  * Both values are passed as parameters to the event´s constructor.
  */
 public abstract class Event extends DynamicObject {
-
+    /**
+     *
+     */
     private int i;
     /**
      *
@@ -37,17 +39,23 @@ public abstract class Event extends DynamicObject {
      *                java.lang.String : The name of this event
      * @param time
      *                double : The time when the event will occur
-     * @param entity
+     * @param eentity
      *                Entity : The entity which the event is associated with ?`?
      */
-    public Event(Model parentModel, String name, double time, Entity entity) {
+    public Event(Model parentModel, String name, double time, Entity eentity) {
         super(parentModel, name);
-        this.entity = entity;
+        this.entity = eentity;
         this.scheduledTime = time;
         this.eventName = name;
     }
 
-    public Event(Model parentModel, String name, double time){
+    /**
+     *
+     * @param parentModel
+     * @param name
+     * @param time
+     */
+    public Event(Model parentModel, String name, double time) {
         super(parentModel, name);
         this.scheduledTime = time;
         this.eventName = name;
@@ -79,6 +87,11 @@ public abstract class Event extends DynamicObject {
      */
     protected abstract void eventRoutine();
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public int compareTo(Object o) {
         return Double.compare(this.scheduledTime, ((Event) o).scheduledTime);

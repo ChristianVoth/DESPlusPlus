@@ -1,21 +1,43 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package statisticsTest;
 
 
 import core.Model;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import statistics.Reportable;
 import statistics.Tally;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ *
+ */
 class TallyTest {
+
+    /**
+     *
+     */
     private List<Double> tallyTest = new ArrayList<>();
+
+    /**
+     *
+     */
     private Model model;
-    Tally tally = new Tally(model,"TallyTest");
+
+    /**
+     *
+     */
+    Tally tally = new Tally(model, "TallyTest");
 
 
 
@@ -24,7 +46,7 @@ class TallyTest {
     void getMeanWholeNumbers() {
         double mean;
 
-        for (int i = 1; i <= 5 ; i++) {
+        for (int i = 1; i <= 5; i++) {
             tally.update(i);
         }
 
@@ -39,61 +61,59 @@ class TallyTest {
             tally.update(i);
         }
 
-        assertEquals(-3d,tally.getMean());
+        assertEquals(-3d, tally.getMean());
     }
 
     @Test
     void getMeanDecialNumber() {
 
-        for (double i = 6; i > 0 ; i -= 0.5) {
+        for (double i = 6; i > 0; i -= 0.5) {
             tally.update(i);
         }
 
-        assertEquals(3.25d,tally.getMean());
+        assertEquals(3.25d, tally.getMean());
     }
 
     @Test
     void getStdDevPositiveNumber() {
 
-        for (int i = 1; i <= 5 ; i++) {
+        for (int i = 1; i <= 5; i++) {
             tally.update(i);
         }
 
-        assertEquals(1.4142d,tally.getStdDev());
+        assertEquals(1.4142d, tally.getStdDev());
 
     }
 
     @Test
     void getStdDevNegativeNumber() {
 
-        for (int i = -1; i >= -5 ; i--) {
+        for (int i = -1; i >= -5; i--) {
             tally.update(i);
         }
 
-        assertEquals(1.4142d,tally.getStdDev());
+        assertEquals(1.4142d, tally.getStdDev());
     }
 
     @Test
     void getStdDeDecimalNumber() {
 
-        for (double i = 6; i > 0 ; i-= 0.5d) {
+        for (double i = 6; i > 0; i -= 0.5d) {
             tally.update(i);
         }
 
-        assertEquals(1.7260d,tally.getStdDev());
+        assertEquals(1.7260d, tally.getStdDev());
     }
 
 
     @Disabled
     void getReportWithNoValue() {
 
-        String result = "Number of Observations: " + tally.getObservations() + " Min: " + tally.getMin() +
-                " Max: " + tally.getMax() + " Mean: " + tally.getMean() +
-                " Standard Deviation: " + tally.getStdDev() + " since last Reset at: " + tally.getLastReset();
-
-        //String expected = tally.getReport();
-
-        //assertEquals(expected, result);
+        String result = "Number of Observations: " + tally.getObservations()
+                + " Min: " + tally.getMin()
+                + " Max: " + tally.getMax() + " Mean: " + tally.getMean()
+                + " Standard Deviation: " + tally.getStdDev()
+                + " since last Reset at: " + tally.getLastReset();
     }
 
     @Disabled
@@ -103,13 +123,11 @@ class TallyTest {
         tally.update(-4d);
         tally.update(3d);
 
-        String result = "Number of Observations: " + tally.getObservations() + " Min: " + tally.getMin() +
-                " Max: " + tally.getMax() + " Mean: " + tally.getMean() +
-                " Standard Deviation: " + tally.getStdDev() + " since last Reset at: " + tally.getLastReset();
-
-        //String expected = tally.getReport();
-
-        //assertEquals(expected, result);
+        String result = "Number of Observations: " + tally.getObservations()
+                + " Min: " + tally.getMin()
+                + " Max: " + tally.getMax() + " Mean: " + tally.getMean()
+                + " Standard Deviation: " + tally.getStdDev()
+                + " since last Reset at: " + tally.getLastReset();
     }
 
     @Test
@@ -117,7 +135,6 @@ class TallyTest {
         for (int i = 1; i <= 6; i++) {
             tally.update(i);
         }
-        //assertEquals(3.5d,tally.getMedian());
     }
 
     @Test
@@ -125,24 +142,18 @@ class TallyTest {
         for (int i = 1; i < 6; i++) {
             tally.update(i);
         }
-
-       // assertEquals(3,tally.getMedian());
     }
 
     @Test
-    void firstQuatilNonIntegral(){
+    void firstQuatilNonIntegral() {
 
         for (int i = 1; i < 6; i++) {
             tally.update(i);
         }
-
-        //assertEquals(2,tally.getFirstQuantile());
-
-
     }
 
     @Test
-    void firstQuantilWholeNumber(){
+    void firstQuantilWholeNumber() {
 
 
         tally.update(4);
@@ -157,11 +168,5 @@ class TallyTest {
         tally.update(7);
         tally.update(7);
         tally.update(7);
-
-
-
-
-        //assertEquals(4d,tally.getFirstQuantile());
-
     }
 }

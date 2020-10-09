@@ -1,3 +1,13 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents.events;
 
 import core.*;
@@ -75,14 +85,12 @@ public class StudentPaidEvent extends Event {
             // schedule a new StudentPaidEvent for him
             currentModel.schedule(new StudentPaidEvent(currentModel,
                     "8====D",
-                    currentModel.currentTime() + currentModel.getStudentPayTime(),
+                    currentModel.currentTime()
+                            + currentModel.getStudentPayTime(),
                     currentStudent, currentCheckout));
 
-        } //else {
-            // no, there isn´t
-
-            // add the current checkout to the idle CO queue
+        }
 
         }
-    //}
+
 }

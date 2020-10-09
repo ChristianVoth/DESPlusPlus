@@ -1,100 +1,178 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents;
 
 import core.Entity;
 import core.Model;
-
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import java.time.Instant;
-import java.time.Instant;
+
 
 /**
  * The Checkout entity encapsulates all data relevant for a checkout.
  */
 @javax.persistence.Entity
-@Table(name="staff", schema="studentssep")
+@Table(name = "staff", schema = "studentssep")
 public class Checkout extends Entity {
 
+    /**
+     *
+     */
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
+    /**
+     *
+     */
     private int Id;
 
-    @Column(name="name")
+    /**
+     *
+     */
+    @Column(name = "name")
     private String name;
 
-    @Column(name="workBegin")
+    /**
+     *
+     */
+    @Column(name = "workBegin")
     private Instant workBegin;
 
-    @Column(name="workEnd")
+    /**
+     *
+     */
+    @Column(name = "workEnd")
     private Instant workEnd;
 
-    @Column(name="department")
+    /**
+     *
+     */
+    @Column(name = "department")
     private String department;
 
     /**
      * Constructor of the checkout entity.
-     * @param parentModel
+     * @param pparentModel
      *              Model : The model the entity belongs to
-     * @param name
+     * @param nname
      *              java.lang.String : The name of the checkout
      */
-    public Checkout(Model parentModel, String name) {
-        super(parentModel, name);
+    public Checkout(Model pparentModel, String nname) {
+        super(pparentModel, nname);
     }
 
-    public Checkout(Model parentModel, String name, Instant workBegin, Instant workEnd) {
-        super(parentModel, name);
-        this.name = name;
-        this.workBegin = workBegin;
-        this.workEnd = workEnd;
+    /**
+     *
+     * @param pparentModel
+     * @param nname
+     * @param wworkBegin
+     * @param wworkEnd
+     */
+    public Checkout(Model pparentModel, String nname, Instant wworkBegin,
+                    Instant wworkEnd) {
+        super(pparentModel, nname);
+        this.name = nname;
+        this.workBegin = wworkBegin;
+        this.workEnd = wworkEnd;
     }
 
+    /**
+     *
+     */
     public Checkout() {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public int getId() {
         return Id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(int id) {
         Id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     *
+     * @param nname
+     */
+    public void setName(String nname) {
+        this.name = nname;
     }
 
+    /**
+     *
+     * @return
+     */
     public Instant getWorkBegin() {
         return workBegin;
     }
 
-    public void setWorkBegin(Instant workBegin) {
-        this.workBegin = workBegin;
+    /**
+     *
+     * @param wworkBegin
+     */
+    public void setWorkBegin(Instant wworkBegin) {
+        this.workBegin = wworkBegin;
     }
 
+    /**
+     *
+     * @return
+     */
     public Instant getWorkEnd() {
         return workEnd;
     }
 
-    public void setWorkEnd(Instant workEnd) {
-        this.workEnd = workEnd;
+    /**
+     *
+     * @param wworkEnd
+     */
+    public void setWorkEnd(Instant wworkEnd) {
+        this.workEnd = wworkEnd;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    /**
+     *
+     * @param ddepartment
+     */
+    public void setDepartment(String ddepartment) {
+        this.department = ddepartment;
     }
 }
 

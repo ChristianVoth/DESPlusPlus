@@ -1,17 +1,36 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package statisticsTest;
 
 import core.Model;
 import org.junit.jupiter.api.Test;
 import statistics.Accumulate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ *
+ */
 class AccumulateTest  {
+    /**
+     *
+     */
     private Model model = new Model("AccModelTest") {
         @Override
-        public void init() {}
+        public void init() {
+
+        }
     };
-    private Accumulate acc = new Accumulate(model,"AccumulateTest");
+    /**
+     *
+     */
+    private Accumulate acc = new Accumulate(model, "AccumulateTest");
 
     @Test
     void update() {
@@ -34,7 +53,7 @@ class AccumulateTest  {
     }
 
     @Test
-    void getFristQUantil(){
+    void getFristQUantil() {
 
         acc.update(4);
         acc.update(3);

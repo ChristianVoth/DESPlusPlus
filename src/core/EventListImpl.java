@@ -21,12 +21,22 @@ import java.util.Locale;
  * The Class <EventListImpl> is a implementation for the <EventList> interface.
  */
 public class EventListImpl implements EventList {
+    /**
+     *
+     */
     LogHandler myLogger = new LogHandler();
 
+    /**
+     *
+     */
     private int counter = 0;
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).
-            withLocale(Locale.GERMANY).withZone(ZoneId.systemDefault());
+    /**
+     *
+     */
+    DateTimeFormatter formatter = DateTimeFormatter
+            .ofLocalizedDateTime(FormatStyle.MEDIUM)
+            .withLocale(Locale.GERMANY).withZone(ZoneId.systemDefault());
 
     /**
      * The event list used to store events.
@@ -40,11 +50,12 @@ public class EventListImpl implements EventList {
      */
     @Override
     public void insert(Event e) {
-        try{
+        try {
             eventList.add(e);
             Collections.sort(eventList);
-        } catch (NullPointerException exception){
-            myLogger.logger.severe("Eventvalue E: " + e + "threw a NullPointerException: " + exception);
+        } catch (NullPointerException exception) {
+            myLogger.logger.severe("Eventvalue E: "
+                    + e + "threw a NullPointerException: " + exception);
         }
     }
 
@@ -76,8 +87,9 @@ public class EventListImpl implements EventList {
      */
     @Override
     public int remove(Event e) {
-        if(e == null){
-            myLogger.logger.severe("You tried to remove an Event with the Value of null ");
+        if (e == null) {
+            myLogger.logger.severe("You tried to remove"
+                    + " an Event with the Value of null ");
             throw new NullPointerException();
         }
         int indexOfe;
@@ -117,7 +129,8 @@ public class EventListImpl implements EventList {
         int count = 1;
 
         for (Event e : eventList) {
-            String timeOutput = formatter.format(e.getModel().getStartDate().plusSeconds((long)e.scheduledTime));
+            String timeOutput = formatter.format(e.getModel().getStartDate().
+                    plusSeconds((long) e.scheduledTime));
             if (e.getEntity() != null) {
                 System.out.println(count + ". " + e.getEntity().getName()
                         + ": " + e.getName() + " " + timeOutput);

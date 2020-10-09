@@ -1,3 +1,13 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents;
 
 
@@ -11,8 +21,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import statistics.*;
-
-import java.lang.reflect.Array;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +35,9 @@ import java.util.List;
  */
 public class Mensa extends core.Model {
 
+    /**
+     *
+     */
     public List queueLengths = new ArrayList();
 
     /**
@@ -40,16 +51,30 @@ public class Mensa extends core.Model {
      */
     public int NUM_FD;
 
+    /**
+     *
+     */
     public int foodResource;
 
+    /**
+     *
+     */
     private int numOfStaff;
 
-
-    public Mensa () {
+    /**
+     *
+     */
+    public Mensa() {
         super();
 
     }
 
+    /**
+     *
+     * @param name
+     * @param numOfFD
+     * @param numOfCO
+     */
     public Mensa(String name, int numOfFD, int numOfCO) {
         super(name);
         this.NUM_FD = numOfFD;
@@ -62,11 +87,15 @@ public class Mensa extends core.Model {
      */
     private static double startTime = 0.0;
 
+    /**
+     *
+     */
     private TimeHandler timeHandler = new TimeHandler();
 
 
-
-
+    /**
+     *
+     */
     public Queue<String> studentNameQueue;
 
     /**
@@ -102,12 +131,24 @@ public class Mensa extends core.Model {
      */
     public Queue<Checkout> idleCOQueue;
 
+    /**
+     *
+     */
     public Queue<FoodDistribution> closedFDQueue;
 
+    /**
+     *
+     */
     public Queue<Checkout> closedCOQueue;
 
+    /**
+     *
+     */
     public Queue<Object> closedStaffQueue;
 
+    /**
+     *
+     */
     public Queue<Object> openStaffQueue;
 
     /**
@@ -130,6 +171,9 @@ public class Mensa extends core.Model {
      */
     private UniformDistribution studentPayTime;
 
+    /**
+     *
+     */
     private UniformDistribution cookingTime;
 
     /**
@@ -164,6 +208,9 @@ public class Mensa extends core.Model {
         return studentPayTime.sample();
     }
 
+    /**
+     *
+     */
     public double getCookingTIme() {
         return  cookingTime.sample();
     }
@@ -205,15 +252,18 @@ public class Mensa extends core.Model {
 
         numOfStaff = 2;
 
-        switch(numOfStaff) {
+        switch (numOfStaff) {
             case 1:
-                cookingTime = new UniformDistribution(this, "Ein Koch", 1, 720, 960);
+                cookingTime = new UniformDistribution(this,
+                        "Ein Koch", 1, 720, 960);
                 break;
             case 2:
-                cookingTime = new UniformDistribution(this, "Zwei Köche", 1, 450, 720);
+                cookingTime = new UniformDistribution(this,
+                        "Zwei Köche", 1, 450, 720);
                 break;
             case 3:
-                cookingTime = new UniformDistribution(this, "Drei Köche", 1, 300, 450);
+                cookingTime = new UniformDistribution(this,
+                        "Drei Köche", 1, 300, 450);
                 break;
             default:
         }
@@ -226,7 +276,7 @@ public class Mensa extends core.Model {
         studentArrivalTime = new ExponentialDistribution(this, "SAG", 1, 180);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
-                "Choosing Food Duration-Generator", 1, 100 , 300);
+                "Choosing Food Duration-Generator", 1, 100, 300);
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
                 "Student Pay Duration-Generator", 1, 100, 300);
@@ -251,38 +301,65 @@ public class Mensa extends core.Model {
         registerReportable(studentFDQueue);
         registerReportable(studentCOQueue);
 
-        switch(studentGenerator) {
+        switch (studentGenerator) {
             case 1:
                 // gets the students from a database
-                System.out.println(NUM_FD + " " +NUM_CO);
-                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
+                System.out.println(NUM_FD + " " + NUM_CO);
+                SessionFactory factory = new Configuration().
+                        configure("hibernate.cfg.xml").
+                        addAnnotatedClass(FoodDistribution.class).
+                        addAnnotatedClass(Student.class).
+                        addAnnotatedClass(Checkout.class).
+                        buildSessionFactory();
 
 
 
                 Session session = factory.getCurrentSession();
                 session.beginTransaction();
-                List<FoodDistribution> theFD = session.createQuery("from FoodDistribution fd where fd.department = 'FoodDistribution'").list();
+                List<FoodDistribution> theFD
+                        = session.createQuery("from FoodDistribution fd"
+                        + "where fd.department = 'FoodDistribution'").list();
                 for (FoodDistribution tempFD : theFD) {
-                    FoodDistribution FD = new FoodDistribution(this, tempFD.getName(), tempFD.getWorkBegin(), tempFD.getWorkEnd());
+                    FoodDistribution FD
+                            = new FoodDistribution(this, tempFD.getName(),
+                            tempFD.getWorkBegin(), tempFD.getWorkEnd());
                     closedStaffQueue.enqueue(FD);
-                    schedule(new OpenStaffEvent(this, "Open Food Distribution", this.getDifference(this.getStartDate(), tempFD.getWorkBegin()), FD));
-                    schedule(new CloseStaffEvent(this, "Close Food Distribution", this.getDifference(this.getStartDate(), tempFD.getWorkEnd()), FD));
+                    schedule(new OpenStaffEvent(this,
+                            "Open Food Distribution", this.
+                            getDifference(this.getStartDate(),
+                                    tempFD.getWorkBegin()), FD));
+                    schedule(new CloseStaffEvent(this,
+                            "Close Food Distribution", this.getDifference(this.
+                                    getStartDate(), tempFD.getWorkEnd()), FD));
                 }
-                List<Checkout> theCO = session.createQuery("from Checkout co where co.department = 'Checkout' ").list();
+                List<Checkout> theCO = session.createQuery(
+                        "from Checkout" + "co where" + "co.department"
+                                + "= 'Checkout' ").list();
                 for (Checkout tempCO : theCO) {
-                    Checkout CO = new Checkout(this, tempCO.getName(), tempCO.getWorkBegin(), tempCO.getWorkEnd());
+                    Checkout CO = new Checkout(this, tempCO.getName(),
+                            tempCO.getWorkBegin(), tempCO.getWorkEnd());
                     closedStaffQueue.enqueue(CO);
-                    schedule(new OpenStaffEvent(this, "Open Checkout", this.getDifference(this.getStartDate(), tempCO.getWorkBegin()), CO));
-                    schedule(new CloseStaffEvent(this, "Close Checkout", this.getDifference(this.getStartDate(), tempCO.getWorkEnd()), CO));
+                    schedule(new OpenStaffEvent(this, "Open Checkout",
+                            this.getDifference(this.getStartDate(),
+                                    tempCO.getWorkBegin()), CO));
+                    schedule(new CloseStaffEvent(this, "Close Checkout",
+                            this.getDifference(this.getStartDate(),
+                                    tempCO.getWorkEnd()), CO));
                 }
 
-                List<Student> theStudents = session.createQuery("from Student").list();
+                List<Student> theStudents = session.createQuery("from Student").
+                        list();
                 for (Student tempStudent : theStudents) {
-                    Student student = new Student(this, tempStudent.getStudentName());
-                    double studentArrivalTime = timeHandler.calculateDifference(getStartDate(), tempStudent.getStudentArrival());
+                    Student student = new Student(this,
+                            tempStudent.getStudentName());
+                    double studentArrivalTime = timeHandler.
+                            calculateDifference(getStartDate(),
+                            tempStudent.getStudentArrival());
                     System.out.println(getStartDate());
                     System.out.println(studentArrivalTime);
-                    schedule(new StudentArrivalEvent(this, "StudentArrivalEvent", studentArrivalTime, student));
+                    schedule(new StudentArrivalEvent(this,
+                            "StudentArrivalEvent",
+                            studentArrivalTime, student));
                 }
                 session.getTransaction().commit();
 
@@ -306,7 +383,8 @@ public class Mensa extends core.Model {
                 }
 
                     //generates students
-                    schedule(new StudentGeneratorEvent(this, "StudentGeneratorEvent", 0.0, null));
+                    schedule(new StudentGeneratorEvent(this,
+                            "StudentGeneratorEvent", 0.0, null));
 
                 break;
             default:

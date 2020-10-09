@@ -1,17 +1,31 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package statisticsTest;
 
 import core.Entity;
 import core.Model;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import statistics.Accumulate;
-
 import statistics.ListEntry;
 import statistics.Queue;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ *
+ */
 class QueueTest {
+
+    /**
+     *
+     */
    Model model = new Model("TestModel") {
        @Override
        public void init() {
@@ -19,6 +33,9 @@ class QueueTest {
        }
    };
 
+    /**
+     *
+     */
    Queue testQueue = new Queue(model, "QueueTest");
 
 
@@ -30,18 +47,18 @@ class QueueTest {
 
      testQueue.dequeue();
 
-     assertEquals(14,testQueue.size());
+     assertEquals(14, testQueue.size());
     }
 
  @Test
  void dequeueGetFirst() {
-  for (int i = 1; i < 15; i+=2) {
+  for (int i = 1; i < 15; i += 2) {
    testQueue.enqueue(i);
   }
 
   testQueue.dequeue();
 
-  assertEquals(3,testQueue.getFirst());
+  assertEquals(3, testQueue.getFirst());
  }
 
     @Test
@@ -54,7 +71,7 @@ class QueueTest {
 
      testQueue.remove(e);
 
-     assertEquals(1,testQueue.size());
+     assertEquals(1, testQueue.size());
 
     }
 
@@ -70,7 +87,7 @@ class QueueTest {
 
   testQueue.remove(e);
 
-  assertEquals(r,testQueue.getFirst());
+  assertEquals(r, testQueue.getFirst());
 
  }
 
@@ -134,19 +151,19 @@ class QueueTest {
 
     @Disabled
     void getMeanWaitTime() {
-     ListEntry le = new ListEntry(5,3);
-     ListEntry le1 = new ListEntry(4,3);
+     ListEntry le = new ListEntry(5, 3);
+     ListEntry le1 = new ListEntry(4, 3);
 
      testQueue.enqueue(le);
      testQueue.enqueue(le1);
 
-     assertEquals(5.5d,testQueue.getMeanWaitTime());
+     assertEquals(5.5d, testQueue.getMeanWaitTime());
 
     }
 
     @Test
     void getCurrentQueueLength() {
-     for (int i = 1; i < 10; i+=2) {
+     for (int i = 1; i < 10; i += 2) {
        testQueue.enqueue(i);
      }
 

@@ -1,3 +1,13 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents.events;
 
 import core.Entity;
@@ -7,16 +17,35 @@ import mensaComponents.FoodDistribution;
 import mensaComponents.Mensa;
 import mensaComponents.Student;
 
+/**
+ *
+ */
 public class CookFoodEvent extends Event {
 
+    /**
+     *
+     */
     private Mensa currentModel;
 
+    /**
+     *
+     */
     private String name;
+
+    /**
+     *
+     */
     private Student nextInLine;
+
+    /**
+     *
+     */
     private FoodDistribution currentFD;
+
+    /**
+     *
+     */
     private Student currentStudent;
-
-
 
     /**
      * Creates a new event of the given model , with the given name
@@ -26,7 +55,8 @@ public class CookFoodEvent extends Event {
      * @param name        java.lang.String : The name of this event
      * @param time        double : The time when the event will occur
      */
-    public CookFoodEvent(Model parentModel, String name, double time, Entity currentStudent, Entity currentFD) {
+    public CookFoodEvent(Model parentModel, String name, double time,
+                         Entity currentStudent, Entity currentFD) {
         super(parentModel, name, time);
         this.currentModel = (Mensa) parentModel;
         this.name = name;
@@ -34,6 +64,9 @@ public class CookFoodEvent extends Event {
         this.currentFD = (FoodDistribution) currentFD;
     }
 
+    /**
+     *
+     */
     @Override
     protected void eventRoutine() {
 
@@ -42,7 +75,9 @@ public class CookFoodEvent extends Event {
         currentModel.foodResource = 50;
 
 
-        StudentGetFoodEvent gotFood  = new StudentGetFoodEvent(currentModel, "Got FoodBla", currentModel.currentTime(),currentStudent,  currentFD);
+        StudentGetFoodEvent gotFood  = new StudentGetFoodEvent(currentModel,
+                "Got FoodBla", currentModel.
+                currentTime(), currentStudent,  currentFD);
         currentModel.schedule(gotFood);
 
 

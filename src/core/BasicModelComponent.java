@@ -7,7 +7,6 @@
  *      date: $Date:
  * Copyright (c): DES++, 2020
  */
-
 package core;
 
 /**
@@ -55,7 +54,11 @@ public class BasicModelComponent implements ModelComponent {
             basicModelComponentName = name;
         }
     }
-    public BasicModelComponent(){
+
+    /**
+     * Empty Constructor.
+     */
+    public BasicModelComponent() {
 
     }
 

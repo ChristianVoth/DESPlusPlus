@@ -1,34 +1,60 @@
+/**
+ * Project: DES++
+ * $Header: $
+ * Author: Christian Voth, Lennart Eikens, Lars Batterham, Steffen Kleinhaus
+ * Last Change:
+ *      by: $Author:
+ *      date: $Date:
+ * Copyright (c): DES++, 2020
+ */
+
 package mensaComponents;
 
 import core.Entity;
 import core.Model;
-
 import javax.persistence.*;
 import java.time.Instant;
-import java.time.Instant;
+
 
 /**
  * The Student entity encapsulates all information associated with a student.
  */
 @javax.persistence.Entity
-@Table(name="student", schema="studentssep")
+@Table(name = "student", schema = "studentssep")
 public class Student extends Entity {
 
+    /**
+     *
+     */
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private int Id;
 
-    @Column(name="studentname")
+    /**
+     *
+     */
+    @Column(name = "studentname")
     private String studentName;
-
-    @Column(name="arrival")
+    /**
+     *
+     */
+    @Column(name = "arrival")
     private Instant studentArrival;
 
+    /**
+     *
+     */
     public Student() {
 
     }
 
+    /**
+     *
+     * @param parentModel
+     * @param name
+     * @param studentArrival
+     */
     public Student(Model parentModel, String name, Instant studentArrival) {
         super(parentModel, name);
         this.studentName = name;
@@ -57,26 +83,50 @@ public class Student extends Entity {
         super(parentModel, name, priority);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getId() {
         return Id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(int id) {
         Id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getStudentName() {
         return studentName;
     }
 
+    /**
+     *
+     * @param studentName
+     */
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
 
+    /**
+     *
+     * @return
+     */
     public Instant getStudentArrival() {
         return studentArrival;
     }
 
+    /**
+     *
+     * @param studentArrival
+     */
     public void setStudentArrival(Instant studentArrival) {
         this.studentArrival = studentArrival;
     }

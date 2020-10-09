@@ -14,20 +14,24 @@ import excepctionHandling.ErrorMessage;
 import excepctionHandling.NegativeRunTimeException;
 import mensaComponents.Student;
 import statistics.QueueReport;
-import statistics.Report;
 import statistics.Reportable;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  *  Model is an abstract base class for simulation models.
  */
 public abstract class Model {
+    /**
+     *
+     */
     LogHandler myLogger = new LogHandler();
 
+    /**
+     *
+     */
     private String name;
 
     /**
@@ -40,15 +44,18 @@ public abstract class Model {
      */
     public ArrayList<Reportable> reportables = new ArrayList<>();
 
+    /**
+     *
+     */
     public ArrayList<QueueReport> listOfReports = new ArrayList<>();
 
     /**
      * Constructs a model, with the give name.
-     * @param name
+     * @param nname
      *              java.lang.String : The name of this model
      */
-    public Model(String name) {
-        this.name = name;
+    public Model(String nname) {
+        this.name = nname;
 
     }
 
@@ -72,8 +79,14 @@ public abstract class Model {
      */
     private boolean running = true;
 
+    /**
+     *
+     */
     private Instant startDate;
 
+    /**
+     *
+     */
     public Model() {
 
     }
@@ -130,12 +143,16 @@ public abstract class Model {
             //System.out.println(currentEvent.getTime());
 
 
-            if(currentEvent.getTime() < currentTime){
+            if (currentEvent.getTime() < currentTime) {
 
-                ErrorMessage error = new ErrorMessage(this, "The next Event seems to lie in the past!",
-                        currentEvent.getName() + " for Entity: " + currentEvent.getEntity().getName(),
-                        "The Time this Event was scheduled for, has been wrongly calculated",
-                        "Make sure Distributions are used properly!", currentTime);
+                ErrorMessage error = new ErrorMessage(this, "The next Event "
+                        + "seems to lie in the past!",
+                        currentEvent.getName() + " for Entity: "
+                                + currentEvent.getEntity().getName(),
+                        "The Time this Event was scheduled for, "
+                                + "has been wrongly calculated",
+                        "Make sure Distributions are used properly!",
+                        currentTime);
                 throw new NegativeRunTimeException(error);
             } else {
 
@@ -151,10 +168,8 @@ public abstract class Model {
 
             }
 
-            if (currentTime >= ChronoUnit.SECONDS.between(startDate, stopTime)) {
-
-                //System.out.println(currentTime);
-                //System.out.println(ChronoUnit.SECONDS.between(startDate, stopTime));
+            if (currentTime >= ChronoUnit.
+                    SECONDS.between(startDate, stopTime)) {
                 isOpen = false;
             }
         }
@@ -197,20 +212,37 @@ public abstract class Model {
         return stopTime;
     }
 
-    public void setStartDate(Instant i){
+    /**
+     *
+     * @param i
+     */
+    public void setStartDate(Instant i) {
         startDate = i;
     }
 
-
-    public Instant getStartDate(){
+    /**
+     *
+     * @return
+     */
+    public Instant getStartDate() {
         return startDate;
     }
 
-    public long getDifference(){
+    /**
+     *
+     * @return
+     */
+    public long getDifference() {
         return ChronoUnit.SECONDS.between(startDate, stopTime);
     }
 
-    public long getDifference(Instant instant1, Instant instant2){
+    /**
+     *
+     * @param instant1
+     * @param instant2
+     * @return
+     */
+    public long getDifference(Instant instant1, Instant instant2) {
         long difference = ChronoUnit.SECONDS.between(instant1, instant2);
         System.out.println(difference);
 
@@ -241,7 +273,7 @@ public abstract class Model {
     }
 
     /**
-     * Get Method for the variable isOpen
+     * Get Method for the variable isOpen.
      * @return
      *      a boolean
      */
@@ -258,25 +290,42 @@ public abstract class Model {
         isOpen = b;
     }
 
-
-    public String getName(){
+    /**
+     *
+     * @return
+     */
+    public String getName() {
         return name;
     }
 
-    public Boolean checkEventList(){
-        for(Event e : eventListImpl.eventList){
-            if(e.getName() == "Cook Food" || e.getEntity().getClass() == Student.class) {
+    /**
+     *
+     * @return
+     */
+    public Boolean checkEventList() {
+        for (Event e : eventListImpl.eventList) {
+            if (e.getName() == "Cook Food"
+                    || e.getEntity().getClass() == Student.class) {
                 return false;
             }
         }
         return true;
     }
 
-    public int getEventListSize(){
+    /**
+     *
+     * @return
+     */
+    public int getEventListSize() {
         return eventListImpl.eventList.size();
     }
 
-    public Event getEventAt(int i){
+    /**
+     *
+     * @param i
+     * @return
+     */
+    public Event getEventAt(int i) {
         return eventListImpl.eventList.get(i);
     }
 

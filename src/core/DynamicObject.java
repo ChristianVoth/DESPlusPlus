@@ -7,7 +7,6 @@
  *      date: $Date:
  * Copyright (c): DES++, 2020
  */
-
 package core;
 
 /**
@@ -29,7 +28,7 @@ public abstract class DynamicObject extends BasicModelComponent
     /**
      * Constructs a Dynamic Object for a specific model, with a specific name.
      *
-     * @param parentModel Model : Model :  The model this object is associated to
+     * @param parentModel Model : Model : The model this object is associated to
      * @param name        java.lang.String : The name of the object
      */
     public DynamicObject(Model parentModel, String name) {
@@ -44,6 +43,10 @@ public abstract class DynamicObject extends BasicModelComponent
     public DynamicObject(String name) {
         super(name);
     }
+
+    /**
+     *
+     */
     public DynamicObject() {
 
     }
