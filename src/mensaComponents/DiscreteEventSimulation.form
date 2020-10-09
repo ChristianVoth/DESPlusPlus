@@ -1,209 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="mensaComponents.StartGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1077" height="503"/>
+      <xy x="20" y="20" width="1115" height="503"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="69d6e" class="javax.swing.JLabel">
+      <grid id="f20fc" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties>
-          <text value="DIscrete Event SImulation"/>
-        </properties>
-      </component>
-      <component id="bf893" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Simulation One"/>
-        </properties>
-      </component>
-      <component id="66537" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Simulation Two"/>
-        </properties>
-      </component>
-      <component id="f34ad" class="javax.swing.JTextField" binding="simulationsTextField2">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="befef" class="javax.swing.JTextField" binding="foodDistributionTextField2">
-        <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="100c6" class="javax.swing.JTextField" binding="checkoutsTextField2">
-        <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="35510" class="javax.swing.JTextField" binding="threadsTextField2">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="7f679" class="javax.swing.JTextField" binding="filenameTextField2">
-        <constraints>
-          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="f2a9b" class="javax.swing.JTextField" binding="threadsTextField1" default-binding="true">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="cd3f0" class="javax.swing.JTextField" binding="simulationsTextField1">
-        <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="fa2fb" class="javax.swing.JTextField" binding="foodDistributionTextField1" default-binding="true">
-        <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="82dac" class="javax.swing.JTextField" binding="checkoutsTextField1" default-binding="true">
-        <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="be485" class="javax.swing.JTextField" binding="filenameTextField1" default-binding="true">
-        <constraints>
-          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="6dec9" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="BoxPlot"/>
-        </properties>
-      </component>
-      <component id="26d72" class="javax.swing.JButton" binding="showBoxPlotButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Show BoxPlot"/>
-        </properties>
-      </component>
-      <component id="ff35f" class="javax.swing.JButton" binding="startSimulationButton1">
-        <constraints>
-          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Start Simulation"/>
-        </properties>
-      </component>
-      <component id="48533" class="javax.swing.JButton" binding="startSimulationButton2">
-        <constraints>
-          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Start Simulation"/>
-        </properties>
-      </component>
-      <component id="fef75" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Nmber of Threads"/>
-        </properties>
-      </component>
-      <component id="4c2a6" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Number of Simulations"/>
-        </properties>
-      </component>
-      <component id="f6847" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Number of Food Distributions"/>
-        </properties>
-      </component>
-      <component id="c1b9b" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Number of Checkouts"/>
-        </properties>
-      </component>
-      <component id="be91f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Filename"/>
-        </properties>
-      </component>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <tabbedpane id="fd733" binding="tabbedPane1" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="9336b" binding="Tab1" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Generate Student"/>
+                </constraints>
+                <properties>
+                  <name value=""/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f76ca" class="javax.swing.JLabel" binding="labelSimulation1">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Simulation 1"/>
+                    </properties>
+                  </component>
+                  <component id="1605f" class="javax.swing.JLabel" binding="labelSimulation2">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Simulation 2"/>
+                    </properties>
+                  </component>
+                  <component id="767ce" class="javax.swing.JTextField" binding="textSimulation1">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Simulations"/>
+                    </properties>
+                  </component>
+                  <component id="5522f" class="javax.swing.JTextField" binding="textFD1">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Food Distributions"/>
+                    </properties>
+                  </component>
+                  <component id="78a4c" class="javax.swing.JTextField" binding="textCO1">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Checkouts"/>
+                    </properties>
+                  </component>
+                  <component id="eb912" class="javax.swing.JComboBox" binding="comboBoxSimulation1">
+                    <constraints>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="1"/>
+                        <item value="2"/>
+                        <item value="3"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="451b2" class="javax.swing.JButton" binding="btnSimulation1">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Start Simulation"/>
+                    </properties>
+                  </component>
+                  <component id="628b6" class="javax.swing.JTextField" binding="textThreads2">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Threads"/>
+                    </properties>
+                  </component>
+                  <component id="85b6b" class="javax.swing.JTextField" binding="textSimulation2">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Simulations"/>
+                    </properties>
+                  </component>
+                  <component id="c8a01" class="javax.swing.JTextField" binding="textFD2">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Food Distributions"/>
+                    </properties>
+                  </component>
+                  <component id="61584" class="javax.swing.JTextField" binding="textCO2">
+                    <constraints>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Checkouts"/>
+                    </properties>
+                  </component>
+                  <component id="20b81" class="javax.swing.JButton" binding="btnBarChart">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Show Statistics"/>
+                    </properties>
+                  </component>
+                  <component id="7e2c2" class="javax.swing.JComboBox" binding="comboBoxSimulation2">
+                    <constraints>
+                      <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="1"/>
+                        <item value="2"/>
+                        <item value="3"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="cfe02" class="javax.swing.JButton" binding="btnSimulation2">
+                    <constraints>
+                      <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Start Simulation"/>
+                    </properties>
+                  </component>
+                  <component id="29a99" class="javax.swing.JTextField" binding="textThreads1">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <name value=""/>
+                      <text value="Number Of Threads"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="74f63" binding="Tab2" layout-manager="GridLayoutManager" row-count="3" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Get Students From Database"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="f2e94" class="javax.swing.JLabel" binding="labelDBSimulation1">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Simulation 1"/>
+                    </properties>
+                  </component>
+                  <component id="77aed" class="javax.swing.JLabel" binding="labelDBSimulation2">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Simulation 2"/>
+                    </properties>
+                  </component>
+                  <component id="6e1ef" class="javax.swing.JTextField" binding="textDBThreads1">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Threads"/>
+                    </properties>
+                  </component>
+                  <component id="45c94" class="javax.swing.JTextField" binding="textDBSimulation1">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Simulations"/>
+                    </properties>
+                  </component>
+                  <component id="50afd" class="javax.swing.JTextField" binding="textDBThreads2">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Threads"/>
+                    </properties>
+                  </component>
+                  <component id="5f8a1" class="javax.swing.JTextField" binding="textDBSimulation2">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value="Number Of Simulations"/>
+                    </properties>
+                  </component>
+                  <component id="b6c31" class="javax.swing.JComboBox" binding="comboBoxDBSimulation1">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="1"/>
+                        <item value="2"/>
+                        <item value="3"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="59801" class="javax.swing.JComboBox" binding="comboBoxDBSimulation2">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="1"/>
+                        <item value="2"/>
+                        <item value="3"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="f9bae" class="javax.swing.JButton" binding="btnDBSimulation1">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Start Simulation"/>
+                    </properties>
+                  </component>
+                  <component id="4ddad" class="javax.swing.JButton" binding="btnDBSimulation2">
+                    <constraints>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Start Simulation"/>
+                    </properties>
+                  </component>
+                  <component id="677be" class="javax.swing.JButton" binding="btnDBBarChart">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Show Statistics"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
     </children>
   </grid>
 </form>

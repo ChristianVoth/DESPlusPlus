@@ -61,6 +61,8 @@ public class Mensa extends core.Model {
      */
     private int numOfStaff;
 
+    private int studentGenerator;
+
     /**
      *
      */
@@ -69,16 +71,24 @@ public class Mensa extends core.Model {
 
     }
 
+    public Mensa(String name, int numOfStaff, int studentGenerator) {
+        super(name);
+        this.numOfStaff = numOfStaff;
+        this.studentGenerator = studentGenerator;
+    }
+
     /**
      *
      * @param name
      * @param numOfFD
      * @param numOfCO
      */
-    public Mensa(String name, int numOfFD, int numOfCO) {
+    public Mensa(String name, int numOfFD, int numOfCO, int numOfStaff, int studentGenerator) {
         super(name);
         this.NUM_FD = numOfFD;
         this.NUM_CO = numOfCO;
+        this.numOfStaff = numOfStaff;
+        this.studentGenerator = studentGenerator;
     }
 
 
@@ -241,7 +251,7 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 2;
+
         //This Time is in UTC
         this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
@@ -250,7 +260,6 @@ public class Mensa extends core.Model {
 
         foodResource = 50;
 
-        numOfStaff = 2;
 
         switch (numOfStaff) {
             case 1:
@@ -305,20 +314,14 @@ public class Mensa extends core.Model {
             case 1:
                 // gets the students from a database
                 System.out.println(NUM_FD + " " + NUM_CO);
-                SessionFactory factory = new Configuration().
-                        configure("hibernate.cfg.xml").
-                        addAnnotatedClass(FoodDistribution.class).
-                        addAnnotatedClass(Student.class).
-                        addAnnotatedClass(Checkout.class).
-                        buildSessionFactory();
+                SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
 
 
 
                 Session session = factory.getCurrentSession();
                 session.beginTransaction();
                 List<FoodDistribution> theFD
-                        = session.createQuery("from FoodDistribution fd"
-                        + "where fd.department = 'FoodDistribution'").list();
+                        = session.createQuery("from FoodDistribution fd where fd.department = 'FoodDistribution'").list();
                 for (FoodDistribution tempFD : theFD) {
                     FoodDistribution FD
                             = new FoodDistribution(this, tempFD.getName(),
@@ -332,9 +335,7 @@ public class Mensa extends core.Model {
                             "Close Food Distribution", this.getDifference(this.
                                     getStartDate(), tempFD.getWorkEnd()), FD));
                 }
-                List<Checkout> theCO = session.createQuery(
-                        "from Checkout" + "co where" + "co.department"
-                                + "= 'Checkout' ").list();
+                List<Checkout> theCO = session.createQuery("from Checkout co where co.department = 'Checkout' ").list();
                 for (Checkout tempCO : theCO) {
                     Checkout CO = new Checkout(this, tempCO.getName(),
                             tempCO.getWorkBegin(), tempCO.getWorkEnd());
@@ -347,8 +348,7 @@ public class Mensa extends core.Model {
                                     tempCO.getWorkEnd()), CO));
                 }
 
-                List<Student> theStudents = session.createQuery("from Student").
-                        list();
+                List<Student> theStudents = session.createQuery("from Student").list();
                 for (Student tempStudent : theStudents) {
                     Student student = new Student(this,
                             tempStudent.getStudentName());

@@ -41,10 +41,21 @@ public class CustomThread implements Callable {
          */
         private int numOfCO;
 
+        private int numOfStaff;
+
+        private int studentGenerator;
+
         /**
          *
          */
         List<ArrayList<QueueReport>> listOfReports = new ArrayList<>();
+
+        public CustomThread(String name, int numOfSimulations, int numOfStaff, int studentGenerator) {
+                this.name = name;
+                this.numOfSimulations = numOfSimulations;
+                this.numOfStaff = numOfStaff;
+                this.studentGenerator = studentGenerator;
+        }
 
         /**
          *
@@ -54,11 +65,13 @@ public class CustomThread implements Callable {
          * @param nnumOfCO
          */
         CustomThread(String nname, int nnumOfSimulations,
-                     int nnumOfFD, int nnumOfCO) {
+                     int nnumOfFD, int nnumOfCO, int numOfStaff, int studentGenerator) {
             this.name = nname;
             this.numOfSimulations = nnumOfSimulations;
             this.numOfFD = nnumOfFD;
             this.numOfCO = nnumOfCO;
+            this.numOfStaff = numOfStaff;
+            this.studentGenerator = studentGenerator;
         }
 
         /**
@@ -73,22 +86,29 @@ public class CustomThread implements Callable {
 
                 System.out.println(numOfFD + " " + numOfCO);
                 System.out.println(name + " gestartet");
-                for (int i = 0; i < numOfSimulations; i++) {
+                switch (studentGenerator) {
+                        case 1:
+                                for (int i = 0; i < numOfSimulations; i++) {
 
-                        Mensa mensa = new Mensa("Mensa Model"
-                                + this.name + i, numOfFD, numOfCO);
-                        listOfReports.add(mensa.simulate(mensa));
+                                        Mensa mensa = new Mensa("Mensa Model"
+                                                + this.name + i, numOfStaff, studentGenerator);
+                                        listOfReports.add(mensa.simulate(mensa));
+                                }
+                                System.out.println(name + " beendet");
+                        break;
+                        case 2:
+                                for (int i = 0; i < numOfSimulations; i++) {
 
+                                        Mensa mensa = new Mensa("Mensa Model"
+                                                + this.name + i, numOfFD, numOfCO, numOfStaff, studentGenerator);
+                                        listOfReports.add(mensa.simulate(mensa));
 
-
+                                }
+                                System.out.println(name + " beendet");
+                        break;
+                        default:
                 }
-                System.out.println(name + " beendet");
-                System.out.println(listOfReports);
-
-
                 return listOfReports;
-
-
         }
 
 
