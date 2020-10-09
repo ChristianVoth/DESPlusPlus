@@ -70,7 +70,6 @@ public class CloseStaffEvent extends Event {
         } else if (this.entity.getClass() == FoodDistribution.class) {
             isFoodDistribution = true;
         }
-
     }
 
 
@@ -93,7 +92,7 @@ public class CloseStaffEvent extends Event {
 
                 currentModel.schedule(new CloseStaffEvent(currentModel,
                         "Closed Staff Event", newTime, currentCO));
-                }
+            }
         } else if (isFoodDistribution) {
             currentFD = (FoodDistribution) entity;
             if (currentModel.checkEventList() || checkClosedQueue(currentFD)) {
@@ -109,11 +108,8 @@ public class CloseStaffEvent extends Event {
                 currentModel.schedule(new CloseStaffEvent(currentModel,
                         "Closed Staff Event", newTime, currentFD));
             }
-
-
-            }
-
         }
+    }
 
     /**
      *
@@ -122,33 +118,33 @@ public class CloseStaffEvent extends Event {
      */
     private boolean checkClosedQueue(Entity e) {
 
-            System.out.println(e.getClass());
-            if (e.getClass() == FoodDistribution.class) {
-                int countFD = 0;
-                for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
-                    Object current = currentModel.closedStaffQueue.get(i);
-                    if (current.getClass() == FoodDistribution.class) {
-                        countFD += 1;
-                    }
-                }
-                if (countFD < currentModel.NUM_FD - 1) {
-                    return true;
-                }
-            } else {
-                int countCO = 0;
-                for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
-                    System.out.println(currentModel.closedStaffQueue.get(i));
-                    Object current = currentModel.closedStaffQueue.get(i);
-                    if (current.getClass() == Checkout.class) {
-                        countCO += 1;
-                    }
-                }
-                System.out.println(countCO);
-                if (countCO < currentModel.NUM_CO - 1) {
-                    return true;
+        System.out.println(e.getClass());
+        if (e.getClass() == FoodDistribution.class) {
+            int countFD = 0;
+            for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
+                Object current = currentModel.closedStaffQueue.get(i);
+                if (current.getClass() == FoodDistribution.class) {
+                    countFD += 1;
                 }
             }
-            return false;
+            if (countFD < currentModel.NUM_FD - 1) {
+                return true;
+            }
+        } else {
+            int countCO = 0;
+            for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
+                System.out.println(currentModel.closedStaffQueue.get(i));
+                Object current = currentModel.closedStaffQueue.get(i);
+                if (current.getClass() == Checkout.class) {
+                    countCO += 1;
+                }
+            }
+            System.out.println(countCO);
+            if (countCO < currentModel.NUM_CO - 1) {
+                return true;
+            }
         }
+    return false;
     }
+}
 

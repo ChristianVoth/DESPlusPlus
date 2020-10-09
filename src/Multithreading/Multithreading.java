@@ -46,6 +46,7 @@ public class Multithreading {
      */
     private int studentGenerator;
 
+
     private int numOfStaff;
 
     private FinalReport finalReport;
@@ -104,6 +105,12 @@ public class Multithreading {
 
         double maxWaitingTime1 = 0;
         double maxWaitingTime2 = 0;
+
+        List tallyList1;
+        List tallyList2;
+
+        List accumulateList1;
+        List accumulateList2;
 
         int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService pool = Executors.newFixedThreadPool(processors);

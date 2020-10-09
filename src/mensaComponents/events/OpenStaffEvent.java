@@ -79,7 +79,6 @@ public class OpenStaffEvent extends Event {
             currentModel.closedStaffQueue.remove(currentFD);
             }
         currentModel.idleFDQueue.enqueue(currentFD);
-
         }
-        }
+    }
 }

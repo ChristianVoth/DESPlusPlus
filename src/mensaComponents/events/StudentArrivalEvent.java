@@ -86,7 +86,7 @@ public class StudentArrivalEvent extends Event {
                 currentOther = currentModel.idleFDQueue.getFirst();
                 currentModel.idleFDQueue.remove(currentOther);
 
-                StudentGetFoodEvent gotFood = new StudentGetFoodEvent(currentModel, "Student obtained Food",
+                StudentGotFoodEvent gotFood = new StudentGotFoodEvent(currentModel, "Student Got Food Event",
                         currentModel.currentTime() + currentModel.getChoosingFoodTime(), nextInLine, currentOther);
                 currentModel.schedule(gotFood);
 

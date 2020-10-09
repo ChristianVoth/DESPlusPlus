@@ -9,6 +9,9 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.statistics.BoxAndWhiskerCategoryDataset;
+import org.jfree.data.statistics.BoxAndWhiskerXYDataset;
+import org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;
 
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
@@ -241,6 +244,7 @@ public class StartGUI extends JFrame {
         btnDBBarChart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 DefaultCategoryDataset dcd = new DefaultCategoryDataset();
 
                 String series1 = "Simulation 1";

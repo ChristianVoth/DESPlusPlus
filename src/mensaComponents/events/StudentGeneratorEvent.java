@@ -67,7 +67,7 @@ public class StudentGeneratorEvent extends Event {
                     + currentModel.getNameExtension());
 
             currentModel.schedule(new StudentArrivalEvent(currentModel,
-                    "StudentArrivalEvent",
+                    "Student Arrival Event",
                     currentModel.currentTime(), student));
             System.out.println(currentModel.getIsOpen());
         if (currentModel.getIsOpen()) {

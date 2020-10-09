@@ -84,7 +84,7 @@ public class StudentPaidEvent extends Event {
             // get the student next in line, create and
             // schedule a new StudentPaidEvent for him
             currentModel.schedule(new StudentPaidEvent(currentModel,
-                    "8====D",
+                    "Student Paid Event",
                     currentModel.currentTime()
                             + currentModel.getStudentPayTime(),
                     currentStudent, currentCheckout));

@@ -75,7 +75,7 @@ public class CookFoodEvent extends Event {
         currentModel.foodResource = 50;
 
 
-        StudentGetFoodEvent gotFood  = new StudentGetFoodEvent(currentModel,
+        StudentGotFoodEvent gotFood  = new StudentGotFoodEvent(currentModel,
                 "Got FoodBla", currentModel.
                 currentTime(), currentStudent,  currentFD);
         currentModel.schedule(gotFood);
