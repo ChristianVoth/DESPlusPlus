@@ -10,10 +10,7 @@ import java.util.List;
 
 public class Tally extends Statistic {
 
-    private double median;
-    private double firstQuantil;
     private List<Double> tally = new ArrayList<>();
-    private double thirdQuantil;
 
 
     public Tally(Model parentModel, String name) {
@@ -26,6 +23,11 @@ public class Tally extends Statistic {
     public void update(double val){
         tally.add(val);
         super.update(val);
+    }
+
+    public double getMaxQueueLength(){
+        sorting.sortList(tally);
+        return tally.get(tally.size() - 1);
     }
 
     public double getMean(){
@@ -47,11 +49,11 @@ public class Tally extends Statistic {
             intermediateResult += (Math.pow(val - getMean(), 2));
         }
 
-
         stdDev = Math.sqrt(intermediateResult / tally.size());
 
-        return Math.round(stdDev * 10000d) / 10000d;
+        return stdDev;
     }
+    /*
 
     public double getMedian() {
         sorting.sortList(tally);
@@ -66,36 +68,65 @@ public class Tally extends Statistic {
     }
 
 
-    public double getFirstQuantil(){
-        double npFirstQuantil = tally.size()*0.25d;
+    public double getFirstQuantile(){
+        double npFirstQuantile = tally.size()*0.25d;
         Collections.sort(tally);
 
         if(tally.size() % 2 != 0) {
-            firstQuantil = tally.get((int) npFirstQuantil);
+            firstQuantile = tally.get((int) npFirstQuantile);
         } else {
-            firstQuantil = (tally.get((int) npFirstQuantil) + tally.get((int) npFirstQuantil - 1)) * 0.5d;
+            firstQuantile = (tally.get((int) npFirstQuantile) + tally.get((int) npFirstQuantile - 1)) * 0.5d;
         }
-        return firstQuantil;
+        return firstQuantile;
     }
 
-    public double getThridQuantil(){
-        double npThirdQuantil = tally.size()*0.75d;
+    public double getThirdQuantile(){
+        double npThirdQuantile = tally.size()*0.75d;
         Collections.sort(tally);
 
         if(tally.size() % 2 != 0) {
-            firstQuantil = tally.get((int) npThirdQuantil);
+            firstQuantile = tally.get((int) npThirdQuantile);
         } else {
-            firstQuantil = (tally.get((int) npThirdQuantil) + tally.get((int) npThirdQuantil - 1)) * 0.5d;
+            firstQuantile = (tally.get((int) npThirdQuantile) + tally.get((int) npThirdQuantile - 1)) * 0.5d;
         }
-        return firstQuantil;
+        return firstQuantile;
+    }
+    */
+    public Quantiles getQuantiles(){
+        Collections.sort(tally);
+        int npFirstQuantile = (int) (tally.size()*0.25d);
+        int npThirdQuantile = (int) (tally.size()*0.75d);
+
+        double median;
+        double firstQuantile;
+        double thirdQuantile;
+
+
+        if(tally.size() % 2 != 0) {
+            median = tally.get(tally.size() / 2);
+            firstQuantile = tally.get(npFirstQuantile);
+            thirdQuantile = tally.get(npThirdQuantile);
+        } else {
+            median = (tally.get(tally.size() / 2) + tally.get(tally.size() / 2 - 1)) * 0.5d;
+            firstQuantile = (tally.get(npFirstQuantile) + tally.get(npFirstQuantile - 1)) * 0.5d;
+            thirdQuantile = (tally.get(npThirdQuantile) + tally.get(npThirdQuantile - 1)) * 0.5d;
+
+        }
+
+        return new Quantiles(median, firstQuantile, thirdQuantile);
+
+
+    }
+
+    public List getTally(){
+        return tally;
     }
 
 
 
     @Override
-    public String getReport() {
-        return "Number of Observations: " + getObservations() + " Min: " + getMin() + " Max: " + getMax()
-                + " Mean: " + getMean() + " Standard Deviation: " + getStdDev()
-                + " since last Reset at: " + getLastReset() + " Median: " + getMedian();
+    public QueueLengthReport getReport() {
+        return new QueueLengthReport(getMean(), getQuantiles(), getMaxQueueLength());
+
     }
 }

@@ -30,9 +30,8 @@ public class UniformDistribution extends Distribution{
 
 
 
-    public String getReport(){
-        return "Distribution Parameters: Min: " + getMin() + ", Max: " + getMax()  + "Seed for Generator: " + getSeed()
-                + "Number of Observations: " + getObservations() + "Time at last reset: " + getLastReset();
+    public QueueReport getReport(){
+        return null;
     }
 
 }

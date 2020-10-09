@@ -10,11 +10,9 @@ import mensaComponents.events.StudentGeneratorEvent;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import statistics.Count;
-import statistics.ExponentialDistribution;
-import statistics.Queue;
-import statistics.UniformDistribution;
+import statistics.*;
 
+import java.lang.reflect.Array;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +40,15 @@ public class Mensa extends core.Model {
      */
     public int NUM_FD;
 
+    public int foodResource;
+
+    private int numOfStaff;
 
 
+    public Mensa () {
+        super();
+
+    }
 
     public Mensa(String name, int numOfFD, int numOfCO) {
         super(name);
@@ -125,6 +130,8 @@ public class Mensa extends core.Model {
      */
     private UniformDistribution studentPayTime;
 
+    private UniformDistribution cookingTime;
+
     /**
      * A simple count how many students got served.
      */
@@ -157,6 +164,10 @@ public class Mensa extends core.Model {
         return studentPayTime.sample();
     }
 
+    public double getCookingTIme() {
+        return  cookingTime.sample();
+    }
+
 
 
     /**
@@ -183,22 +194,42 @@ public class Mensa extends core.Model {
     @Override
     public void init() {
 
-        int studentGenerator = 1;
+        int studentGenerator = 2;
         //This Time is in UTC
         this.setStartDate(Instant.parse("2020-06-10T06:00:00Z"));
 
         // set the stop time of the simulation
-        setStopTime(360.0);
+        setStopTime(36000.0);
+
+        foodResource = 50;
+
+        numOfStaff = 2;
+
+        switch(numOfStaff) {
+            case 1:
+                cookingTime = new UniformDistribution(this, "Ein Koch", 1, 720, 960);
+                break;
+            case 2:
+                cookingTime = new UniformDistribution(this, "Zwei Köche", 1, 450, 720);
+                break;
+            case 3:
+                cookingTime = new UniformDistribution(this, "Drei Köche", 1, 300, 450);
+                break;
+            default:
+        }
+
+
 
         // initialise the studentArrivalTime
-        studentArrivalTime = new ExponentialDistribution(this,
-                "Student Arrival Generator", 1, 0.002);
+        //studentArrivalTime = new ExponentialDistribution(this,
+               // "Student Arrival Generator", 1, 5);
+        studentArrivalTime = new ExponentialDistribution(this, "SAG", 1, 180);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
-                "Choosing Food Duration-Generator", 1, 100, 250);
+                "Choosing Food Duration-Generator", 1, 100 , 300);
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
-                "Student Pay Duration-Generator", 1, 30, 75);
+                "Student Pay Duration-Generator", 1, 100, 300);
         // initialise the studentsServed count
         studentsServed = new Count(this, "Students Served Count");
         // initialise the idleFDQueue
@@ -219,17 +250,13 @@ public class Mensa extends core.Model {
 
         registerReportable(studentFDQueue);
         registerReportable(studentCOQueue);
-        registerReportable(studentsServed);
-
-
-
-
 
         switch(studentGenerator) {
             case 1:
                 // gets the students from a database
                 System.out.println(NUM_FD + " " +NUM_CO);
                 SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
+
 
 
                 Session session = factory.getCurrentSession();
@@ -290,7 +317,7 @@ public class Mensa extends core.Model {
     /**
      * Runs the model.
      */
-    public static void simulate(Model m) {
+    public ArrayList simulate(Model m) {
         // create model
         //Mensa mensa = new Mensa("Mensa Model");
         // check if start time is bigger than the stop time
@@ -309,42 +336,10 @@ public class Mensa extends core.Model {
         //}
         // generate the report
 
-
-        m.report();
+        return m.report();
 
 
         //System.out.println(m.queueLengths);
-    }
-
-
-    public Report generateReport(){
-        MeanReport mean = generateMeanReport();
-        MedianReport median =  generateMedianReport();
-        Percentile25Report percentile25Report = generate25Report();
-        Percentile75Report percentile75Report = generate75Report();
-        return new Report(mean, median, percentile25Report, percentile75Report);
-    }
-
-    public MeanReport generateMeanReport() {
-        return new MeanReport(studentFDQueue.getMeanQueueLength(), studentFDQueue.getMeanWaitTime(),
-                studentCOQueue.getMeanQueueLength(), studentCOQueue.getMeanWaitTime());
-
-    }
-
-    public MedianReport generateMedianReport(){
-        return new MedianReport(studentFDQueue.getMedianQueueLength(), studentFDQueue.getMedianWaitingTime(),
-                studentCOQueue.getMedianQueueLength(), studentCOQueue.getMedianWaitingTime());
-    }
-
-
-    public Percentile25Report generate25Report(){
-        return new Percentile25Report(studentFDQueue.get25QueueLength(), studentFDQueue.get25WaitingTime(),
-                studentCOQueue.get25QueueLength(), studentCOQueue.get25WaitingTime());
-    }
-
-    public Percentile75Report generate75Report(){
-        return new Percentile75Report(studentFDQueue.get75QueueLength(), studentFDQueue.get75WaitingTime(),
-                studentCOQueue.get75QueueLength(), studentCOQueue.get75WaitingTime());
     }
 
 

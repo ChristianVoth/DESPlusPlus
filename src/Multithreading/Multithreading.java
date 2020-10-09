@@ -1,8 +1,7 @@
-/*package mensaComponents;
+package Multithreading;
 
 
 
-import Multithreading.CustomThread;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -22,13 +21,10 @@ import java.util.List;
 import java.util.concurrent.*;
 
 
-
 /**
  *
  */
-
-/*
-public class StartMultithreading {
+public class Multithreading {
 
     private int numOfThreads;
     private int numOFSimulations;
@@ -36,7 +32,7 @@ public class StartMultithreading {
     private int numOfCO;
     private String filename;
 
-    public StartMultithreading(int numOfThreads, int numOfSimulations, int numOfFD, int numOfCO, String filename) {
+    public Multithreading(int numOfThreads, int numOfSimulations, int numOfFD, int numOfCO, String filename) {
         this.numOfThreads = numOfThreads;
         this.numOFSimulations = numOfSimulations;
         this.numOfFD = numOfFD;
@@ -52,135 +48,119 @@ public class StartMultithreading {
 
 
        String simulationID = "1";
-
+       
 
         int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService pool = Executors.newFixedThreadPool(processors);
-        List<Future<ArrayList<QueueReport>>> listOfFutures = new ArrayList<>();
+        List<Future<ArrayList<ArrayList<QueueReport>>>> listOfFutures = new ArrayList<>();
 
         System.out.println("Hauptthread gestartet");
 
         // create for every processor in your computer a thread
-       for (int i = 0; i < 1; i++) {
-            Callable<ArrayList<QueueReport>> callableCustomThread = new CustomThread("Thread " + (i + 1), numOFSimulations, numOfFD, numOfCO);
-            Future<ArrayList<QueueReport>> futureCounterResult = pool.submit(callableCustomThread);
+       for (int i = 0; i < numOfThreads; i++) {
+            Callable<ArrayList<ArrayList<QueueReport>>> callableCustomThread = new CustomThread("Thread " + (i + 1), numOFSimulations, numOfFD, numOfCO);
+            Future<ArrayList<ArrayList<QueueReport>>> futureCounterResult = pool.submit(callableCustomThread);
             listOfFutures.add(futureCounterResult);
         }
-       for (Future<ArrayList<QueueReport>> future : listOfFutures) {
-           System.out.println(future.get());
-       }
+
         pool.shutdown();
 
-       double FD_meanLength = 0;
-       double FD_meanWaitingTime = 0;
-
-       double CO_meanLength = 0;
-       double CO_meanWaitingTime = 0;
-
-       double FD_medianLength = 0;
-       double FD_medianWaitingTime = 0;
-
-       double CO_medianLength = 0;
-       double CO_medianWaitingTime = 0;
-
-       double FD_25Length = 0;
-       double FD_25WaitingTime = 0;
-
-       double CO_25Length = 0;
-       double CO_25WaitingTime = 0;
-
-       double FD_75Length = 0;
-       double FD_75WaitingTime = 0;
-
-       double CO_75Length = 0;
-       double CO_75WaitingTime = 0;
-
-       int counter = 0;
+        int counter1 = 0;
+        int counter2 = 0;
 
 
-        for (Future<ArrayList<QueueReport>> future : listOfFutures) {
+        //Threads --> Simulations --> QueueReports
+        double meanQueueLength1 = 0;
+        double meanQueueLength2 = 0;
+
+        double medianQueueLength1 = 0;
+        double medianQueueLength2 = 0;
+
+        double maxQueueLength1 = 0;
+        double maxQueueLength2 = 0;
+
+        double meanWaitingTime1 = 0;
+        double meanWaitingTime2 = 0;
+
+        double medianWaitingTime1 = 0;
+        double medianWaitingTime2 = 0;
+
+        double maxWaitingTime1 = 0;
+        double maxWaitingTime2 = 0;
+
+        for (Future<ArrayList<ArrayList<QueueReport>>> future : listOfFutures) {
             for(int i = 0; i < future.get().size(); i++){
 
+                counter2++;
+                for(int n = 0; n < future.get().get(i).size(); n++){
+                    System.out.println(future.get().get(i));
+                    if(n == 0){
+                        meanQueueLength1 += future.get().get(i).get(n).queueLengthReport.meanQueueLength;
+                        medianQueueLength1 += future.get().get(i).get(n).queueLengthReport.quantiles.median;
+                        maxQueueLength1 += future.get().get(i).get(n).queueLengthReport.maximumQueueLength;
 
-                FD_meanLength += future.get().get(i).meanReport.studentFDQueue_meanLength;
-                FD_meanWaitingTime += future.get().get(i).meanReport.studentFDQueue_meanWaitingTime;
+                        meanWaitingTime1 += future.get().get(i).get(n).waitingTimeReport.meanWaitingTime;
+                        medianWaitingTime1 += future.get().get(i).get(n).waitingTimeReport.quantiles.median;
+                        maxWaitingTime1 += future.get().get(i).get(n).waitingTimeReport.maximumWaitingTime;
+                    }
+                    if(n == 1){
+                        meanQueueLength2 += future.get().get(i).get(n).queueLengthReport.meanQueueLength;
+                        medianQueueLength2 += future.get().get(i).get(n).queueLengthReport.quantiles.median;
+                        maxQueueLength2 += future.get().get(i).get(n).queueLengthReport.maximumQueueLength;
 
-                CO_meanLength += future.get().get(i).meanReport.studentCOQueue_meanLength;
-                CO_meanWaitingTime += future.get().get(i).meanReport.studentCOQueue_meanWaitingTime;
+                        meanWaitingTime2 += future.get().get(i).get(n).waitingTimeReport.meanWaitingTime;
+                        medianWaitingTime2 += future.get().get(i).get(n).waitingTimeReport.quantiles.median;
+                        maxWaitingTime2 += future.get().get(i).get(n).waitingTimeReport.maximumWaitingTime;
+                    }
 
-                FD_medianLength += future.get().get(i).medianReport.studentFDQueue_medianQueueLength;
-                FD_medianWaitingTime += future.get().get(i).medianReport.studentFDQueue_medianWaitingTime;
-
-                CO_medianLength += future.get().get(i).medianReport.studentCOQueue_medianQueueLength;
-                CO_medianWaitingTime += future.get().get(i).medianReport.studentCOQueue_medianWaitingTime;
-
-                FD_25Length += future.get().get(i).percentile25Report.studentFDQueue_25QueueLength;
-                FD_25WaitingTime += future.get().get(i).percentile25Report.studentFDQueue_25WaitingTime;
-
-                CO_25Length += future.get().get(i).percentile25Report.studentCOQueue_25QueueLength;
-                CO_25WaitingTime += future.get().get(i).percentile25Report.studentCOQueue_25WaitingTime;
-
-                FD_75Length += future.get().get(i).percentile75Report.studentFDQueue_75QueueLength;
-                FD_75WaitingTime += future.get().get(i).percentile75Report.studentFDQueue_75WaitingTime;
-
-                CO_75Length += future.get().get(i).percentile75Report.studentCOQueue_75QueueLength;
-                CO_75WaitingTime += future.get().get(i).percentile75Report.studentCOQueue_75WaitingTime;
-
-
-
-                counter++;
+                    System.out.println(meanWaitingTime1);
+                    System.out.println(meanWaitingTime2);
+                counter1++;
             }
         }
+        }
 
-        FD_meanLength = FD_meanLength / counter;
-        FD_meanWaitingTime = FD_meanWaitingTime / counter;
+        counter1 = counter2;
 
-        CO_meanLength = CO_meanLength / counter;
-        CO_meanWaitingTime = CO_meanWaitingTime / counter;
+        meanQueueLength1 = meanQueueLength1 / counter1;
+        meanQueueLength2 = meanQueueLength2 / counter1;
 
-        FD_medianLength = FD_medianLength / counter;
-        FD_medianWaitingTime = FD_medianWaitingTime / counter;
+        medianQueueLength1 = medianQueueLength1 / counter1;
+        medianQueueLength2 = medianQueueLength2 / counter1;
 
-        CO_medianLength = CO_medianLength / counter;
-        CO_medianWaitingTime = CO_medianWaitingTime / counter;
+        maxQueueLength1 = maxQueueLength1 / counter1;
+        maxQueueLength2 = maxQueueLength2 / counter1;
 
-        FD_25Length = FD_25Length / counter;
-        FD_25WaitingTime = FD_25WaitingTime / counter;
+        meanWaitingTime1 = meanWaitingTime1 / counter1;
+        meanWaitingTime2 = meanWaitingTime2 / counter1;
 
-        CO_25Length = CO_25Length / counter;
-        CO_25WaitingTime = CO_25WaitingTime / counter;
+        medianWaitingTime1 = medianWaitingTime1 / counter1;
+        medianWaitingTime2 = medianWaitingTime2 / counter1;
 
-        FD_75Length = FD_75Length / counter;
-        FD_75WaitingTime = FD_75WaitingTime / counter;
-
-        CO_75Length = CO_75Length / counter;
-        CO_75WaitingTime = CO_75WaitingTime / counter;
-
-        System.out.println("\n" + "Mean FDQueue Length " + FD_meanLength);
-        System.out.println("Median FDQueue Length " + FD_medianLength);
-        System.out.println("First Quantile FDQueue Length " + FD_25Length);
-        System.out.println("Third Quantile FDQueue Length " + FD_75Length + "\n");
-
-        System.out.println("Mean FDQueue Waiting Time " + FD_meanWaitingTime);
-        System.out.println("Median FDQueue Waiting Time " + FD_medianWaitingTime);
-        System.out.println("First Quantile FDQueue Waiting Time " + FD_25WaitingTime);
-        System.out.println("Third Quantile FDQueue Waiting Time " + FD_75WaitingTime + "\n");
-
-        System.out.println("Mean COQueue Length " + CO_meanLength);
-        System.out.println("Median COQueue Length " + CO_medianLength);
-        System.out.println("First Quantile COQueue " + CO_25Length);
-        System.out.println("Third Quantile COQueue " + CO_75Length + "\n");
-
-        System.out.println("Mean COQueue Waiting Time " + CO_meanWaitingTime);
-        System.out.println("Median COQueue Waiting Time " + CO_medianWaitingTime);
-        System.out.println("First Quantile Waiting Time " + CO_25WaitingTime);
-        System.out.println("Third Quantile Waiting Time " + CO_75WaitingTime + "\n");
-
-        System.out.println(counter);
+        maxWaitingTime1 = maxWaitingTime1 / counter1;
+        maxWaitingTime2 = maxWaitingTime2 / counter1;
 
 
 
-        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+        System.out.println("\n" + "Mean Queue1 Length " + meanQueueLength1);
+        System.out.println("Mean Queue2 Length " + meanQueueLength2);
+        System.out.println("Median Queue1 Length " + medianQueueLength1);
+        System.out.println("Median Queue2 Length " + medianQueueLength2);
+        System.out.println("Max Queue1 Length " + maxQueueLength1);
+        System.out.println("Max Queue2 Length " + maxQueueLength2);
+        System.out.println("Mean Waiting1 Time " + meanWaitingTime1);
+        System.out.println("Mean Waiting2 Time " + meanWaitingTime2);
+        System.out.println("Median Waiting1 Time " + medianWaitingTime1);
+        System.out.println("Median Waiting2 Time " + medianWaitingTime2);
+        System.out.println("Max Waiting1 Time " + maxWaitingTime1);
+        System.out.println("Max Waiting2 Time " + maxWaitingTime2);
+
+        System.out.println(counter1);
+        System.out.println(counter2);
+
+
+
+        /*DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 
         Document document = documentBuilder.newDocument();
@@ -267,9 +247,8 @@ public class StartMultithreading {
 
         transformer.transform(source, streamResult);
 
-
+*/
 
     }
 
 }
-*/

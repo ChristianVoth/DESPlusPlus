@@ -18,7 +18,7 @@ public class StopEvent extends Event {
 
         for (int i = 0 ; i < currentModel.studentFDQueue.size() + currentModel.studentCOQueue.size(); i++) {
             currentModel.schedule(new StudentArrivalEvent(currentModel, "Lappen" + i, currentModel.currentTime(), null));
-            currentModel.schedule(new StudentGotFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime() + 0.1, null, null));
+            currentModel.schedule(new StudentGetFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime() + 0.1, null, null));
         }
         //for (int i = 0 ; i < currentModel.studentCOQUeue.size(); i++)
           //  currentModel.schedule(new StudentGotFoodEvent(currentModel, "Torpedo" + i, currentModel.currentTime(), null, null));

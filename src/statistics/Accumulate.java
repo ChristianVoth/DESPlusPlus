@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public class Accumulate extends Statistic{
+public class Accumulate extends Statistic {
 
     private static final LogHandler myLog = new LogHandler();
     private Sorting sorting = new Sorting();
@@ -17,112 +17,192 @@ public class Accumulate extends Statistic{
 
     private List<Double> timeOfChanges = new ArrayList<>();
 
+    private List<Double> timeOfExists = new ArrayList<>();
+
     private double median;
-    private double firstQuantil;
-    private double thirdQuantil;
+    private double firstQuantile;
+    private double thirdQuantile;
+    private double totalOfQueueEntries = 0;
 
     public Accumulate(Model parentModel, String name) {
         super(parentModel, name);
     }
 
-    public void update(double val){
+    public void update(double val) {
 
         ListEntry entry = new ListEntry(val, getModel().currentTime());
         accumulate.add(entry);
         super.update(val);
     }
 
+    public void incTotalOfQueueEntries() {
+        totalOfQueueEntries++;
+    }
+
+    public Quantiles getQuantiles(){
 
 
-    public double getMean(){
-            double timeWeightedSum = 0;
-            double sumWeights = 0;
 
-            for(int i = 0; i < accumulate.size() - 1; i++){
-               timeWeightedSum += accumulate.get(i).value * (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
+        if(accumulate.size() <= 0)
+            return null;
 
-            }
-            for (int i = 0; i < accumulate.size() - 1; i++){
-                sumWeights += accumulate.get(i + 1).timeOfChange - accumulate.get(i).timeOfChange;
-            }
+        calculateTimeDifferences();
 
-            if (sumWeights == 0)
-                return 0;
-            return timeWeightedSum / sumWeights;
+        sorting.sortList(timeOfChanges);
+
+        int npFirstQuantile = (int) (timeOfChanges.size() * 0.25d);
+        int npThirdQuantile = (int) (timeOfChanges.size() * 0.75d);
+
+        if (timeOfChanges.size() % 2 != 0) {
+            median = timeOfChanges.get((timeOfChanges.size() / 2));
+            firstQuantile = timeOfChanges.get(npFirstQuantile);
+            thirdQuantile = timeOfChanges.get(npThirdQuantile);
+        } else {
+            median = (timeOfChanges.get((timeOfChanges.size() / 2)) + timeOfChanges.get(timeOfChanges.size() / 2 - 1)) * 0.5d;
+            firstQuantile = (timeOfChanges.get(npFirstQuantile) + timeOfChanges.get((npFirstQuantile - 1)) * 0.5d);
+            thirdQuantile = (timeOfChanges.get(npThirdQuantile) + timeOfChanges.get((npThirdQuantile - 1)) * 0.5d);
         }
 
-    public double getStdDev(){
+        return new Quantiles(median, firstQuantile, thirdQuantile);
+
+
+
+    }
+
+
+    public double getMean() {
+        double timeWeightedSum = 0;
+
+        for (int i = 0; i < accumulate.size() - 1; i++) {
+            timeWeightedSum += accumulate.get(i).value * (accumulate.get(i + 1).timeOfChange - accumulate.get(i).timeOfChange);
+
+        }
+        return timeWeightedSum / totalOfQueueEntries;
+    }
+
+    public double getStdDev() {
 
         double intermediateResult = 0;
 
-        try{
-            for (int i = 0; i < accumulate.size(); i++){
+        try {
+            for (int i = 0; i < accumulate.size() - 1; i++) {
                 intermediateResult += (Math.pow(accumulate.get(i).value - getMean(), 2));
             }
 
-        } catch (Exception e){
+        } catch (Exception e) {
             myLog.logger.info("boi, ListSize: " + accumulate.size() + " intermediateResult: " + intermediateResult
-                              + "Exception: " + e);
+                    + "Exception: " + e);
         }
-        return Math.sqrt(intermediateResult / accumulate.size());
+        return Math.sqrt(intermediateResult / (totalOfQueueEntries - 1)); //-1 because we are dealing with samples
     }
 
-    public double getMedian() {
+    /* public double getMedian() {
 
-
-        for(int i = 0; i < accumulate.size() - 1; i++){
-
-            double timeDifference =  (accumulate.get(i+1).timeOfChange - accumulate.get(i).timeOfChange);
-            timeOfChanges.add(timeDifference);
-
-        }
+        calculateTimeDifferences();
 
         sorting.sortList(timeOfChanges);
 
         // System.out.println(timeOfChanges);
 
 
-        if(timeOfChanges.size() % 2 != 0) {
+        if (timeOfChanges.size() % 2 != 0) {
             median = timeOfChanges.get(timeOfChanges.size() / 2);
         } else {
             median = (timeOfChanges.get((timeOfChanges.size() / 2)) + timeOfChanges.get(timeOfChanges.size() / 2 - 1)) * 0.5d;
         }
 
-        return  median;
+        return median;
     }
 
-    public double getFirstQuantil(){
+    public double getFirstQuantile() {
 
-        double npFirstQuantil = timeOfChanges.size()*0.25d;
+        calculateTimeDifferences();
+
+
+        double npFirstQuantile = timeOfChanges.size() * 0.25d;
         sorting.sortList(timeOfChanges);
 
-        if(timeOfChanges.size() % 2 != 0) {
-            firstQuantil = timeOfChanges.get((int) npFirstQuantil);
+        if (timeOfChanges.size() % 2 != 0) {
+            firstQuantile = timeOfChanges.get((int) npFirstQuantile);
         } else {
-            firstQuantil = (timeOfChanges.get((int) npFirstQuantil) + timeOfChanges.get((int) npFirstQuantil - 1)) * 0.5d;
+            firstQuantile = (timeOfChanges.get((int) npFirstQuantile) + timeOfChanges.get((int) npFirstQuantile - 1)) * 0.5d;
         }
-        return firstQuantil;
+        return firstQuantile;
     }
 
-    public double getThridQuantil(){
+    public double getThirdQuantile() {
 
-        double npThirdQuantil = timeOfChanges.size()*0.75d;
+        calculateTimeDifferences();
+
+
+        double npThirdQuantile = timeOfChanges.size() * 0.75d;
         sorting.sortList(timeOfChanges);
 
-        if(timeOfChanges.size() % 2 != 0) {
-            thirdQuantil = timeOfChanges.get((int) npThirdQuantil);
+        if (timeOfChanges.size() % 2 != 0) {
+            thirdQuantile = timeOfChanges.get((int) npThirdQuantile);
         } else {
-            thirdQuantil = (timeOfChanges.get((int) npThirdQuantil) + timeOfChanges.get((int) npThirdQuantil - 1)) * 0.5d;
+            thirdQuantile = (timeOfChanges.get((int) npThirdQuantile) + timeOfChanges.get((int) npThirdQuantile - 1)) * 0.5d;
         }
-        return thirdQuantil;
+        return thirdQuantile;
+    } */
+
+    public double getMinimumWaitTime() {
+
+        //calculateTimeDifferences();
+        sorting.sortList(timeOfChanges);
+        return timeOfChanges.get(0);
+
+
     }
 
+    public double getMaximumWaitTime() {
+
+        //calculateTimeDifferences();
+        sorting.sortList(timeOfChanges);
+        return timeOfChanges.get(timeOfChanges.size() - 1);
+    }
+
+    public void calculateTimeDifferences() {
+
+        findExits();
+
+        int exitNumber = 0;
+
+        if (accumulate.size() > 0) {
+
+            for (int i = 1; i < accumulate.size() - 1; i++) {
+
+                if (accumulate.get(i).value > accumulate.get(i - 1).value) {
+                    double timeOfEntry = accumulate.get(i).timeOfChange;
+                    double timeOfExit = timeOfExists.get(exitNumber);
+                    timeOfChanges.add(timeOfEntry - timeOfExit);
+                    exitNumber++;
+
+                }
+            }
+        }
+
+
+    }
+
+    public List getTimeOfChanges(){
+        calculateTimeDifferences();
+        sorting.sortList(timeOfChanges);
+        return timeOfChanges;
+    }
+
+
+    public void findExits() {
+        for (int i = 1; i < accumulate.size() - 1; i++) {
+            if (accumulate.get(i).value < accumulate.get(i - 1).value) {
+                timeOfExists.add(accumulate.get(i).timeOfChange);
+            }
+        }
+    }
 
 
     @Override
-    public String getReport() {
-        return "Accu: Number of Observations: " + getObservations() + " Min: " + getMin() + ", Max: " + getMax()
-                + ", Weighted Mean: " + getMean() + ", Weighted Standard Deviation: " + getStdDev()
-                + " since last Reset at: " + getLastReset();
+    public WaitingTimeReport getReport() {
+        return new WaitingTimeReport(getMean(), getQuantiles(), getMinimumWaitTime(), getMaximumWaitTime());
     }
 }

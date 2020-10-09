@@ -14,7 +14,7 @@ public class ExponentialDistribution extends Distribution {
     }
 
     public double sample() {
-        return sample = Math.log(1 - nextRandomDouble()) / (-mean);
+        return sample = -Math.log(nextRandomDouble()) * mean;
     }
 
     public double getMean(){
@@ -22,9 +22,8 @@ public class ExponentialDistribution extends Distribution {
     }
 
     // if wenn kein Seed angegeben
-    public String getReport(){
-        return "Distribution Parameters: " + getMean() + "Seed for Generator: " + getSeed()
-                + "Number of Observations: " + getObservations() + "Time at last reset: " + getLastReset();
+    public QueueReport getReport(){
+        return null;
     }
 
 

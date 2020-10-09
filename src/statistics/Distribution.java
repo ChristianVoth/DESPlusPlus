@@ -7,7 +7,7 @@ import java.util.Random;
 
 abstract class Distribution extends Reportable {
     private long seed;
-    private Random random = new Random(seed);
+    private Random random = new Random();
 
     public Distribution(Model parentModel, String name, long seed) {
         super(parentModel, name);

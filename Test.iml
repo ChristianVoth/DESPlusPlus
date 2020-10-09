@@ -57,5 +57,6 @@
     </orderEntry>
     <orderEntry type="library" name="junit-jupiter-engine-5.4.2" level="project" />
     <orderEntry type="library" name="logback-classic-1.2.3" level="project" />
+    <orderEntry type="library" name="jfreechart" level="project" />
   </component>
 </module>

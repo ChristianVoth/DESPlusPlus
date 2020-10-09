@@ -1,4 +1,4 @@
-package mensaComponents.events;
+/*package mensaComponents.events;
 
 import core.*;
 import mensaComponents.*;
@@ -9,33 +9,35 @@ import mensaComponents.*;
  * It occurs when a student got his food and is finished in
  * the food distribution.
  */
+/*
 public class StudentGotFoodEvent extends Event {
 
     /**
      * A reference to the current food distribution in which the student was.
      */
+/*
     private FoodDistribution currentOther;
 
     /**
      * A reference to the model this event is a part of.
      */
+/*
     private Mensa currentModel;
-
     /**
      * A reference to the current student entity which got food.
      */
-    private Student currentStudent;
+ /*   private Student currentStudent;
 
     /**
      * A variable to store the first entry of the idle CO Queue.
      */
-    private Checkout currentCheckout;
+/*    private Checkout currentCheckout;
 
     /**
      * A reference to the student entity which is the first entry of
      * the studentCOQueue.
      */
-    private Student nextInLine;
+ /*   private Student nextInLine;
 
     /**
      * Constructor of the StudentGotFoodEvent.
@@ -52,7 +54,7 @@ public class StudentGotFoodEvent extends Event {
      * @param other
      *              Entity : The food distribution entity which served the food
      */
-    public StudentGotFoodEvent(Model parentModel, String name, double time,
+   /* public StudentGotFoodEvent(Model parentModel, String name, double time,
                                Entity student, Entity other) {
         super(parentModel, name, time, student);
         currentModel = (Mensa) parentModel;
@@ -64,7 +66,7 @@ public class StudentGotFoodEvent extends Event {
     /**
      * This eventRoutine() describes what happens when a student got their food.
      */
-    @Override
+  /*  @Override
     public void eventRoutine() {
 
         // the student that got food enters the Checkout queue
@@ -73,8 +75,22 @@ public class StudentGotFoodEvent extends Event {
         // the idle FD queue again
         currentModel.idleFDQueue.enqueue(currentOther);
 
+
+
+
+
+        if(currentModel.foodResource < 10)
+        {
+            CookFoodEvent deliverFood = new CookFoodEvent(currentModel, "Deliver Cooked Food Event",
+                    currentModel.currentTime() + 500);
+            currentModel.schedule(deliverFood);
+        }
+
         // check if a checkout is available
-        if (!currentModel.idleCOQueue.isEmpty()) {
+        if (!currentModel.idleCOQueue.isEmpty() && currentModel.foodResource > 0) {
+
+            currentModel.foodResource--;
+            System.out.println(currentModel.foodResource);
 
             // yes, it is
 
@@ -86,6 +102,12 @@ public class StudentGotFoodEvent extends Event {
             nextInLine = currentModel.studentCOQueue.getFirst();
             // remove him from the student CO queue
             currentModel.studentCOQueue.remove(nextInLine);
+
+
+
+
+
+
             // create a new StudentPaidEvent for the current student,
             // in the current checkout
             StudentPaidEvent studentPaid = new StudentPaidEvent(currentModel,
@@ -111,7 +133,9 @@ public class StudentGotFoodEvent extends Event {
             // remove the student
             currentModel.studentFDQueue.remove(currentModel.studentFDQueue.
                     getFirst());
+
         }
     }
 }
 
+*/

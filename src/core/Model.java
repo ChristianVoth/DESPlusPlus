@@ -13,11 +13,14 @@ package core;
 import excepctionHandling.ErrorMessage;
 import excepctionHandling.NegativeRunTimeException;
 import mensaComponents.Student;
+import statistics.QueueReport;
+import statistics.Report;
 import statistics.Reportable;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  Model is an abstract base class for simulation models.
@@ -36,6 +39,8 @@ public abstract class Model {
      *
      */
     public ArrayList<Reportable> reportables = new ArrayList<>();
+
+    public ArrayList<QueueReport> listOfReports = new ArrayList<>();
 
     /**
      * Constructs a model, with the give name.
@@ -68,6 +73,10 @@ public abstract class Model {
     private boolean running = true;
 
     private Instant startDate;
+
+    public Model() {
+
+    }
 
 
     /**
@@ -107,14 +116,18 @@ public abstract class Model {
         myLogger.logger.info("Simulation start.");
 
         while (running && !eventListImpl.isEmpty()) {
-            System.out.println(currentTime);
-            eventListImpl.showList();
+            //System.out.println(currentTime);
+
+
+
 
 
             currentEvent = eventListImpl.getFirst();
 
-            System.out.println(currentTime());
-            System.out.println(currentEvent.getTime());
+
+
+            //System.out.println(currentTime());
+            //System.out.println(currentEvent.getTime());
 
 
             if(currentEvent.getTime() < currentTime){
@@ -126,17 +139,22 @@ public abstract class Model {
                 throw new NegativeRunTimeException(error);
             } else {
 
+
                 currentTime = currentEvent.getTime();
 
                 eventListImpl.removeFirst();
+
                 currentEvent.eventRoutine();
+
+
+                eventListImpl.showList();
 
             }
 
             if (currentTime >= ChronoUnit.SECONDS.between(startDate, stopTime)) {
 
-                System.out.println(currentTime);
-                System.out.println(ChronoUnit.SECONDS.between(startDate, stopTime));
+                //System.out.println(currentTime);
+                //System.out.println(ChronoUnit.SECONDS.between(startDate, stopTime));
                 isOpen = false;
             }
         }
@@ -202,11 +220,13 @@ public abstract class Model {
     /**
      *
      */
-    public void report() {
-        for (Reportable r : reportables) {
+    public ArrayList report() {
+        for (Reportable r: reportables) {
+            listOfReports.add(r.getReport());
+            System.out.println(listOfReports);
 
-            System.out.println(r.getReport());
         }
+        return listOfReports;
 
 
     }
@@ -217,6 +237,7 @@ public abstract class Model {
      */
     public void registerReportable(Reportable r) {
         reportables.add(r);
+        System.out.println(reportables);
     }
 
     /**
@@ -244,8 +265,9 @@ public abstract class Model {
 
     public Boolean checkEventList(){
         for(Event e : eventListImpl.eventList){
-            if(e.getEntity().getClass() == Student.class)
+            if(e.getName() == "Cook Food" || e.getEntity().getClass() == Student.class) {
                 return false;
+            }
         }
         return true;
     }

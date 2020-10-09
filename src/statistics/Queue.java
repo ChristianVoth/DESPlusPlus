@@ -28,6 +28,9 @@ public class Queue<Entity> extends Reportable{
         list.add(e);
         queueLength.update(list.size());
         waitingTime.update(list.size());
+        waitingTime.incTotalOfQueueEntries();
+        //System.out.println(this.getName() + waitingTime.getTimeOfChanges());
+
     }
 
     public void dequeue(){
@@ -59,6 +62,12 @@ public class Queue<Entity> extends Reportable{
     public Entity getFirst() {
 
        return list.get(0);
+    }
+
+    public void setFirst(Entity e) {
+        list.add(0, e);
+        queueLength.update(list.size());
+        waitingTime.update(list.size());
     }
 
     public Entity get(int i){
@@ -99,26 +108,13 @@ public class Queue<Entity> extends Reportable{
         return queueLength.getMean();
     }
 
-    public double getMedianQueueLength(){
-        return queueLength.getMedian();
-    }
+    public double getMinimumWaitTime() {return waitingTime.getMinimumWaitTime();}
 
-    public double getMedianWaitingTime(){
-        return waitingTime.getMedian();
-    }
+    public double getMaximumWaitTime() {return waitingTime.getMaximumWaitTime();}
 
-    public double get25QueueLength() { return queueLength.getFirstQuantil();}
 
-    public double get25WaitingTime() { return waitingTime.getFirstQuantil();}
-
-    public double get75QueueLength() { return queueLength.getThridQuantil();}
-
-    public double get75WaitingTime() { return waitingTime.getThridQuantil();}
-
-    public String getReport(){
-        return getName() + "Max Queue Length: " + getMaxQueueLength() + " Current Queue Length: " + getCurrentQueueLength()
-                + " Mean Queue Length: " + getMeanQueueLength() + " Mean Wait Time: " + getMeanWaitTime() +
-                " Median Queue Length: " + getMedianQueueLength() + " Median Wait Time: " + getMedianWaitingTime() + "\n";
+    public QueueReport getReport(){
+        return new QueueReport(queueLength.getReport(), waitingTime.getReport(), this);
     }
 
 

@@ -66,33 +66,25 @@ public class StudentArrivalEvent extends Event {
 
         // student enters the food distribution queue (studentFDQueue)
         currentModel.studentFDQueue.enqueue(currentStudent);
-
+        System.out.println(currentModel.foodResource);
         // check if a food distribution is available
         if (!currentModel.idleFDQueue.isEmpty()) {
 
             //yes, it is
+            //if (currentModel.foodResource > 0) {
 
-            //get a reference to the first FD from the idle FD queue
-            currentOther = currentModel.idleFDQueue.getFirst();
-            //remove it from the queue
-            currentModel.idleFDQueue.remove(currentOther);
+                nextInLine = currentModel.studentFDQueue.getFirst();
+                currentModel.studentFDQueue.remove(nextInLine);
 
-            //get the first student from the student FD queue
-            nextInLine = currentModel.studentFDQueue.getFirst();
-            //remove the student from the student FD queue
-            currentModel.studentFDQueue.remove(nextInLine);
+                currentOther = currentModel.idleFDQueue.getFirst();
+                currentModel.idleFDQueue.remove(currentOther);
 
-
-            //create a StudentGotFoodEvent
-            StudentGotFoodEvent studentGotFood = new StudentGotFoodEvent(
-                    currentModel, "StudentGotFoodEvent",
-                    currentModel.currentTime()
-                    + currentModel.getChoosingFoodTime(),
-                    nextInLine, currentOther);
-            //schedule it
-            currentModel.schedule(studentGotFood);
+                StudentGetFoodEvent gotFood = new StudentGetFoodEvent(currentModel, "Student obtained Food",
+                        currentModel.currentTime() + currentModel.getChoosingFoodTime(), nextInLine, currentOther);
+                currentModel.schedule(gotFood);
 
 
+          //  }
         }
     }
 }

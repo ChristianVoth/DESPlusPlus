@@ -1,5 +1,7 @@
 package mensaComponents;
 
+import Multithreading.Multithreading;
+
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -8,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutionException;
 
 public class StartGUI extends JFrame {
+
     private JTextField simulationsTextField2;
     private JTextField foodDistributionTextField2;
     private JTextField checkoutsTextField2;
@@ -43,7 +46,7 @@ public class StartGUI extends JFrame {
                 int numOfCheckouts = (Integer.parseInt(checkoutsTextField1.getText()));
                 String filename = filenameTextField1.getText();
 
-                StartMultithreading startMultithreading = new StartMultithreading(numOfThreads, numOfSimulations, numOfFoodDistributions, numOfCheckouts, filename);
+                Multithreading startMultithreading = new Multithreading(numOfThreads, numOfSimulations, numOfFoodDistributions, numOfCheckouts, filename);
 
                 try {
                     startMultithreading.startMultithreading();
@@ -70,7 +73,7 @@ public class StartGUI extends JFrame {
                 int numOfCheckouts = (Integer.parseInt(checkoutsTextField2.getText()));
                 String filename = filenameTextField2.getText();
 
-                StartMultithreading startMultithreading = new StartMultithreading(numOfThreads, numOfSimulations, numOfFoodDistributions, numOfCheckouts, filename);
+                Multithreading startMultithreading = new Multithreading(numOfThreads, numOfSimulations, numOfFoodDistributions, numOfCheckouts, filename);
 
                 try {
                     startMultithreading.startMultithreading();
@@ -83,6 +86,11 @@ public class StartGUI extends JFrame {
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
+            }
+        });
+        showBoxPlotButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
             }
         });
     }

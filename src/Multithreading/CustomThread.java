@@ -1,10 +1,12 @@
-package mensaComponents;
+package Multithreading;
 
-import java.lang.reflect.Array;
+import mensaComponents.Mensa;
+import statistics.QueueReport;
+import statistics.Report;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
 
 /**
  * The CustomThread class is used to create threads.
@@ -20,7 +22,7 @@ public class CustomThread implements Callable {
         private int numOfFD;
         private int numOfCO;
 
-        List<Report> listOfReports = new ArrayList<>();
+        List<ArrayList<QueueReport>> listOfReports = new ArrayList<>();
 
         /**
          * Constructor of CustomThread.
@@ -50,16 +52,16 @@ public class CustomThread implements Callable {
                 for(int i = 0; i < numOfSimulations; i++) {
 
                         Mensa mensa = new Mensa("Mensa Model" + this.name + i, numOfFD, numOfCO);
-                        Mensa.simulate(mensa);
-                        listOfReports.add(mensa.generateReport());
+                        listOfReports.add(mensa.simulate(mensa));
 
 
 
                 }
                 System.out.println(name + " beendet");
+                System.out.println(listOfReports);
 
 
-                return listOfReports;
+                return listOfReports ;
 
 
         }

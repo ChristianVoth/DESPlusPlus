@@ -59,26 +59,30 @@ public class StudentPaidEvent extends Event {
     @Override
     public void eventRoutine() {
 
+        currentModel.idleCOQueue.enqueue(currentCheckout);
+
         // check if there is a student waiting
         if (!currentModel.studentCOQueue.isEmpty()) {
 
+            currentStudent = currentModel.studentCOQueue.getFirst();
+            currentModel.studentCOQueue.remove(currentStudent);
+
+            currentCheckout = currentModel.idleCOQueue.getFirst();
+            currentModel.idleCOQueue.remove(currentCheckout);
             // yes, there is
 
             // get the student next in line, create and
             // schedule a new StudentPaidEvent for him
             currentModel.schedule(new StudentPaidEvent(currentModel,
-              "StudentPaidEvent",
-               currentModel.currentTime() + currentModel.getStudentPayTime(),
-                    currentModel.studentCOQueue.getFirst(),
-                    currentCheckout));
-            // remove the student from the student checkout queue
-            currentModel.studentCOQueue.remove(currentModel.studentCOQueue.
-                    getFirst());
-        } else {
+                    "8====D",
+                    currentModel.currentTime() + currentModel.getStudentPayTime(),
+                    currentStudent, currentCheckout));
+
+        } //else {
             // no, there isn´t
 
             // add the current checkout to the idle CO queue
-            currentModel.idleCOQueue.enqueue(currentCheckout);
+
         }
-    }
+    //}
 }

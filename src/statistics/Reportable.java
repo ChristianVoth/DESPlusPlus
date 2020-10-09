@@ -12,7 +12,7 @@ public abstract class Reportable extends BasicModelComponent {
     }
 
 
-    public abstract String getReport();
+    public abstract QueueReport getReport();
 
 
     public void reset(){

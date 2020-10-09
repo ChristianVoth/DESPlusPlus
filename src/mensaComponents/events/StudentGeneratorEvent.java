@@ -52,17 +52,17 @@ public class StudentGeneratorEvent extends Event {
     @Override
     public void eventRoutine() {
 
-        for (int i = 0; i <= Math.random() * 5 + 1; i++) {
+       // for (int i = 0; i <= Math.random() * 5 + 1; i++) {
             Student student = new Student(currentModel, "Student" + currentModel.getNameExtension());
 
             currentModel.schedule(new StudentArrivalEvent(currentModel,
                     "StudentArrivalEvent", currentModel.currentTime(), student));
-        }
+       // }
         // schedule this student generator again for the next
         // student arrival time
         System.out.println(currentModel.getIsOpen());
         if (currentModel.getIsOpen()) {
-            double testTime = 0.5; // currentModel.getStudentArrivalTime();
+            double testTime= currentModel.getStudentArrivalTime();
                 currentModel.schedule(new StudentGeneratorEvent(currentModel,
                         "StudentGeneratorEvent", currentModel.currentTime()
                         + testTime, null));
