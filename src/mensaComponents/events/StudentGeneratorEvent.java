@@ -29,7 +29,6 @@ public class StudentGeneratorEvent extends Event {
     private Mensa currentModel;
 
 
-
     /**
      * Constructs a new StudentGeneratorEvent.
      * @param parentModel

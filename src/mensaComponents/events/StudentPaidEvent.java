@@ -70,7 +70,6 @@ public class StudentPaidEvent extends Event {
     public void eventRoutine() {
 
         currentModel.idleCOQueue.enqueue(currentCheckout);
-
         // check if there is a student waiting
         if (!currentModel.studentCOQueue.isEmpty()) {
 
@@ -79,10 +78,7 @@ public class StudentPaidEvent extends Event {
 
             currentCheckout = currentModel.idleCOQueue.getFirst();
             currentModel.idleCOQueue.remove(currentCheckout);
-            // yes, there is
 
-            // get the student next in line, create and
-            // schedule a new StudentPaidEvent for him
             currentModel.schedule(new StudentPaidEvent(currentModel,
                     "Student Paid Event",
                     currentModel.currentTime()

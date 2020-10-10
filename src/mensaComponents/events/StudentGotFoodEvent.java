@@ -104,6 +104,7 @@ public class StudentGotFoodEvent extends Event {
 
             }
         }
+
         if (currentModel.foodResource == 0) {
             CookFoodEvent cookFood = new CookFoodEvent(currentModel,
                     "Cook Food Event", currentModel.currentTime()

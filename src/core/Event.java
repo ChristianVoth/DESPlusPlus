@@ -17,16 +17,13 @@ package core;
  * Both values are passed as parameters to the event´s constructor.
  */
 public abstract class Event extends DynamicObject {
+
     /**
-     *
-     */
-    private int i;
-    /**
-     *
+     * A store variable for the entity which the event is associated with
      */
     private Entity entity;
     /**
-     *
+     *  A store variable for the name of the event;
      */
     private String eventName;
 
@@ -34,13 +31,13 @@ public abstract class Event extends DynamicObject {
      * Creates a new event of the given model , with the given name
      * and a given time and a given entity.
      * @param parentModel
-     *                Model :  The model this event is associated to
+     *                core.Model :  The model this event is associated to
      * @param name
      *                java.lang.String : The name of this event
      * @param time
      *                double : The time when the event will occur
      * @param eentity
-     *                Entity : The entity which the event is associated with ?`?
+     *                Entity : The entity which the event is associated with
      */
     public Event(Model parentModel, String name, double time, Entity eentity) {
         super(parentModel, name);
@@ -51,9 +48,14 @@ public abstract class Event extends DynamicObject {
 
     /**
      *
+     * Creates a new event of the given model, with the given name and
+     * a given time
      * @param parentModel
+     *      core.Model : The model this event is associated to
      * @param name
+ *          java.lang.String : The name of this event
      * @param time
+     *      double : The time when the event will occur
      */
     public Event(Model parentModel, String name, double time) {
         super(parentModel, name);
@@ -89,8 +91,8 @@ public abstract class Event extends DynamicObject {
 
     /**
      *
-     * @param o
-     * @return
+     * @param o the Object which should be compared
+     * @return an integer value
      */
     @Override
     public int compareTo(Object o) {
