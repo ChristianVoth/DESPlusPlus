@@ -10,7 +10,6 @@
 
 package statistics;
 
-import java.util.List;
 
 /**
  * Custom object to store all values concerning queue lengths.

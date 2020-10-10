@@ -14,7 +14,8 @@ import core.BasicModelComponent;
 import core.Model;
 
 /**
- * Base class for all classes in statistics package. Contains all methods which are necessary to be implemented by each
+ * Base class for all classes in statistics package. Contains all
+ * methods which are necessary to be implemented by each
  * of said classes.
  */
 public abstract class Reportable extends BasicModelComponent {
@@ -66,7 +67,7 @@ public abstract class Reportable extends BasicModelComponent {
     }
 
     /**
-     * Increases amount of observations
+     * Increases amount of observations.
      */
     public void incObservations() {
 

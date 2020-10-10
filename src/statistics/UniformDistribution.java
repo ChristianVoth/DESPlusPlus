@@ -44,7 +44,7 @@ public class UniformDistribution extends Distribution {
     }
 
     /**
-     * Returns value of determined distribution.
+     * @return value of determined distribution.
      */
     public double sample() {
         return min + ((max - min) * nextRandomDouble());
@@ -52,21 +52,21 @@ public class UniformDistribution extends Distribution {
     }
 
     /**
-     * Return current minimum
+     * @return current minimum
      */
     public double getMin() {
         return this.min;
     }
 
     /**
-     * Return current maximum
+     * @return current maximum
      */
     public double getMax() {
         return this.max;
     }
 
     /**
-     *
+     * @return null
      */
     public QueueReport getQueueReport() {
         return null;

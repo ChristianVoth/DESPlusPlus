@@ -27,16 +27,17 @@ public class ExponentialDistribution extends Distribution {
      * @param parentModel : reference to the model this distribution belongs to
      * @param name : name of this distribution
      * @param seed : seed used for number generation
-     * @param rate : used as a parameter in the distribution
+     * @param rrate : used as a parameter in the distribution
      */
     public ExponentialDistribution(Model parentModel, String name,
-                                   long seed, double rate) {
+                                   long seed, double rrate) {
         super(parentModel, name, seed);
-        this.rate = rate;
+        this.rate = rrate;
     }
 
     /**
-     * Exponential distribution is modelled by using the inverse method, allowing to use the number generator provided
+     * Exponential distribution is modelled by using the inverse method,
+     * allowing to use the number generator provided
      * by Java.
      * @return sample of exponential distribution
      */

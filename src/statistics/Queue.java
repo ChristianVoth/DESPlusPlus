@@ -21,12 +21,12 @@ import java.util.ArrayList;
 public class Queue<Entity> extends Reportable {
 
     /**
-     * Reference to the Logger;
+     * Reference to the Logger.
      */
     LogHandler myLogger = new LogHandler();
 
     /**
-     * List containing the queued entities
+     * List containing the queued entities.
      */
     ArrayList<Entity> list = new ArrayList<>();
 
@@ -52,8 +52,9 @@ public class Queue<Entity> extends Reportable {
             this.getName() + "-Accumulate");
 
     /**
-     * Used when adding a entity to the Queue. Throws NullPointerException when entity is invalid. Updates the tally
-     * object as well as the accumulate object with the updated queue size.
+     * Used when adding a entity to the Queue. Throws NullPointerException
+     * when entity is invalid. Updates the tally object as well as the
+     * accumulate object with the updated queue size.
      * @param e : is the passed on entity
      */
     public void enqueue(Entity e) {
@@ -70,7 +71,8 @@ public class Queue<Entity> extends Reportable {
     }
 
     /**
-     * Used when removing the first entity from the queue. Updates the tally and accumulate object with the updated
+     * Used when removing the first entity from the queue.
+     * Updates the tally and accumulate object with the updated
      * queue size.
      */
     public void dequeue() {
@@ -86,7 +88,8 @@ public class Queue<Entity> extends Reportable {
     }
 
     /**
-     * Used to remove a specific entity from the queue. Updates the corresponding tally and accumulate objects.
+     * Used to remove a specific entity from the queue.
+     * Updates the corresponding tally and accumulate objects.
      * @param e : entity which is to be removed
      */
     public void remove(core.Entity e) {
@@ -105,7 +108,7 @@ public class Queue<Entity> extends Reportable {
     }
 
     /**
-     * Used to get a reference to the first entity of the queue
+     * Used to get a reference to the first entity of the queue.
      * @return first entity of queue
      */
     public Entity getFirst() {
@@ -178,7 +181,7 @@ public class Queue<Entity> extends Reportable {
     }
 
     /**
-     * Adds default entry to accumulate object
+     * Adds default entry to accumulate object.
      */
     public void initQueue() {
         waitingTime.initQueue();
@@ -186,7 +189,8 @@ public class Queue<Entity> extends Reportable {
 
     /**
      *
-     * @return QueueReport containing a separate report for the queue length and waiting times
+     * @return QueueReport containing a separate report for
+     * the queue length and waiting times
      */
     public QueueReport getQueueReport() {
         return new QueueReport(queueLength.getQueueReport(),

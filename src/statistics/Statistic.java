@@ -13,7 +13,8 @@ package statistics;
 import core.Model;
 
 /**
- * Abstract base class which count, tally and accumulate extend. Stores maximums and minimums of each object.
+ * Abstract base class which count, tally and accumulate extend.
+ * Stores maximums and minimums of each object.
  */
 public abstract class Statistic extends Reportable {
 
@@ -36,7 +37,8 @@ public abstract class Statistic extends Reportable {
     }
 
     /**
-     * Examine if new minimum or maximum is reached. If it is, update accordingly.
+     * Examine if new minimum or maximum is reached.
+     * If it is, update accordingly.
      * @param val
      */
     public void update(double val) {

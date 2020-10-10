@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Custom Objext used to sort Lists
+ * Custom Object used to sort Lists.
  */
 public class Sorting {
 

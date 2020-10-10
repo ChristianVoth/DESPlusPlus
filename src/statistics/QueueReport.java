@@ -13,7 +13,7 @@ package statistics;
 /**
  * Custom object storing the reports from both accumulate and tally.
  */
-public class QueueReport{
+public class QueueReport {
 
     /**
      * Stores the tally report.
