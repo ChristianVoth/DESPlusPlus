@@ -24,48 +24,161 @@ import java.awt.event.ItemListener;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * This class is used to create a Graphical User Interface for the Project DESPlusPlus.
+ * It will use the JFreeChart library.
+ */
 public class StartGUI extends JFrame {
 
-
+    /**
+     * Main Panel
+     */
     private JPanel mainPanel;
+    /**
+     * The tabbed Pane
+     */
     private JTabbedPane tabbedPane1;
-    private JTabbedPane TabPanel;
+    /**
+     * The Generate Students Tab
+     */
     private JPanel Tab1;
+    /**
+     * The Get Student from Database Tab
+     */
     private JPanel Tab2;
+    /**
+     * The textfield for number of Threads Simulation1
+     */
     private JTextField textThreads1;
+    /**
+     * The textfield for number of Simulations Simulation1
+     */
     private JTextField textSimulation1;
+    /**
+     * The textfield for number of food distributions Simulation1
+     */
     private JTextField textFD1;
+    /**
+     * The textfield for number of checkouts Simulation1
+     */
     private JTextField textCO1;
+    /**
+     * The textfield for the number of threads Simulation2
+     */
     private JTextField textThreads2;
+    /**
+     * The textfield for the number of Simulations Simulation2
+     */
     private JTextField textSimulation2;
+    /**
+     * The textfield for the number of food distribution Simulation2
+     */
     private JTextField textFD2;
+    /**
+     * The textfield for the number of checkouts Simulation2
+     */
     private JTextField textCO2;
+    /**
+     * The textfield for the number of Threads Simulation with DB 1
+     */
     private JTextField textDBThreads1;
+    /**
+     * The textfield for the number of Simulations Simulation with DB 1
+     */
     private JTextField textDBSimulation1;
+    /**
+     * The textfield for the number of Threads Simulation with DB 2
+     */
     private JTextField textDBThreads2;
+    /**
+     * The textfield for the number of Simulations Simulation with DB2
+     */
     private JTextField textDBSimulation2;
+    /**
+     * Label Simulation2 for Simulation 2
+     */
     private JLabel labelSimulation2;
+    /**
+     * Label Simulation1 for Simulation with DB 1
+     */
     private JLabel labelDBSimulation1;
+    /**
+     * Label Simulation2 for Simulation with DB 2
+     */
     private JLabel labelDBSimulation2;
+    /**
+     * Button Start Simulation Simulation with DB 1
+     */
     private JButton btnDBSimulation1;
+    /**
+     * Button Start Simulation Simulation with DB 2
+     */
     private JButton btnDBSimulation2;
+    /**
+     * Button Start Simulation Simulation 1
+     */
     private JButton btnSimulation1;
+    /**
+     * Button Start Simulation Simulation 2
+     */
     private JButton btnSimulation2;
+    /**
+     * Button Show Stastic Generate Student
+     */
     private JButton btnBarChart;
+    /**
+     * Button Show Statistic Get Student from DB
+     */
     private JButton btnDBBarChart;
+    /**
+     * ComboBox Simulation with DB 1
+     */
     private JComboBox comboBoxDBSimulation1;
+    /**
+     * ComboBox Simulation with DB 2
+     */
     private JComboBox comboBoxDBSimulation2;
+    /**
+     * ComboBox Simulation 1
+     */
     private JComboBox comboBoxSimulation1;
+    /**
+     * Label Simulation 2
+     */
     private JLabel labelSimulation1;
+    /**
+     * ComboBox Simulation 2
+     */
     private JComboBox comboBoxSimulation2;
+    /**
+     * Object for the FinalReport from Simulation 1
+     */
     private FinalReport finalReportSimulation1;
+    /**
+     * Object for the FinalReport from Simulation 2
+     */
     private FinalReport finalReportSimulation2;
+
+    /**
+     * Object for the FinalReport from Simulation with DB 1
+     */
     private FinalReport finalReportSimulationDB1;
+    /**
+     * Object for the FinalReport from Simulation with DB 2
+     */
     private FinalReport finalReportSimulationDB2;
+    /**
+     * A variable to store the number of staff from a simulation
+     */
     private int numOfStaff;
 
 
-
+    /**
+     * The Constructor of StartGUI.
+     * Everything related to the Graphical User Interface is implementated here.
+     * @param title
+     *      java.lang.String : Title of the Graphical User Interface (Is set to Discrete Event Simulation)
+     */
     public StartGUI(String title) {
         super(title);
 
@@ -315,6 +428,11 @@ public class StartGUI extends JFrame {
         });
     }
 
+    /**
+     * The main Method.
+     * It is used to start the Graphical User Interface
+     * @param args
+     */
     public static void main(String[] args) {
         JFrame frame = new StartGUI("Discrete Event Simulation");
         frame.setVisible(true);
