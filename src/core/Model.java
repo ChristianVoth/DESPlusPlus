@@ -25,9 +25,9 @@ import java.util.ArrayList;
  */
 public abstract class Model {
     /**
-     *
+     *e
      */
-    LogHandler myLogger = new LogHandler();
+    LogHandler LOG_HANDLER = new LogHandler();
 
     /**
      * A variable to store the Model name.
@@ -126,7 +126,7 @@ public abstract class Model {
         Event currentEvent;
         init();
 
-        myLogger.logger.info("Simulation start.");
+        LOG_HANDLER.logger.info("Simulation start.");
 
         while (running && !eventListImpl.isEmpty()) {
 

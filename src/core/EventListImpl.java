@@ -62,7 +62,7 @@ public class EventListImpl implements EventList {
                     "EventName: " + e.getName() + " Entity: "
                             + e.getEntity().getName(),
                     "Event e: " + e.getName() + " has a Value of null",
-                    "SomethingSomething null prevention", e.getTime());
+                    "Make sure that your entities cannot become null", e.getTime());
 
             throw new NullEventException(error);
         }
@@ -114,7 +114,7 @@ public class EventListImpl implements EventList {
               "Eventname: " + e.getName() + " Entity: "
                       + e.getEntity().getName(),
                     "Event e: " + e.getName() + " has a Value of null",
-            "SomethingSomething null prevention", e.getTime());
+            "Make sure that your entities cannot become null", e.getTime());
 
             throw new NullEventException(error);
         }

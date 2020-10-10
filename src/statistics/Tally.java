@@ -10,7 +10,10 @@
 
 package statistics;
 
+import core.LogHandler;
 import core.Model;
+import sun.rmi.runtime.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,6 +28,11 @@ public class Tally extends Statistic {
      * List to store values.
      */
     private List<Double> tally = new ArrayList<>();
+
+    /**
+     * Reference to the Log-Handler
+     */
+    private static final LogHandler LOG_HANDLER = new LogHandler();
 
     /**
      *
@@ -70,7 +78,7 @@ public class Tally extends Statistic {
             sum +=  val;
         }
 
-
+        LOG_HANDLER.logger.finer("Tally getMean() Sum Value: " + sum);
         return sum / tally.size();
 
     }
@@ -87,6 +95,9 @@ public class Tally extends Statistic {
         }
 
         stdDev = Math.sqrt(intermediateResult / tally.size());
+
+        LOG_HANDLER.logger.finer("Tally getStdDev() standard deviation Value: " + stdDev
+                + " intermediateResult value: " + intermediateResult);
 
         return stdDev;
     }
@@ -119,6 +130,9 @@ public class Tally extends Statistic {
                     + tally.get(npThirdQuantile - 1)) * 0.5d;
 
         }
+
+        LOG_HANDLER.logger.finer("Tally  getQuantiles() median value: " + median + " firstQuantile value: "
+                                + firstQuantile + " thirdQuantile value: " + thirdQuantile);
         return new Quantiles(median, firstQuantile, thirdQuantile);
 
     }

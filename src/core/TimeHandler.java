@@ -21,7 +21,7 @@ public class TimeHandler {
     /**
      *
      */
-    LogHandler myLog = new LogHandler();
+    LogHandler LOG_HANDLER = new LogHandler();
 
     /**
      * Method to calculate the Difference between the start date and a date given to it.
@@ -38,7 +38,7 @@ public class TimeHandler {
 
        if (compare < 0) {
 
-            myLog.logger.severe("You picked a Date: " + date + " that lies behind your startDate: " + startDate);
+            LOG_HANDLER.logger.severe("You picked a Date: " + date + " that lies behind your startDate: " + startDate);
 
             ErrorMessage error = new ErrorMessage(
                     null, "Your given date lies in the past", "calculateDifference-Method Class: Timehandler",
@@ -52,7 +52,7 @@ public class TimeHandler {
 
 
         difference = ChronoUnit.SECONDS.between(startDate, date);
-        myLog.logger.finer("Value between startDate und date: " + difference);
+        LOG_HANDLER.logger.finer("Value between startDate und date: " + difference);
 
         return (int) difference;
     }

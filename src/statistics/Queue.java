@@ -12,6 +12,9 @@ package statistics;
 
 import core.LogHandler;
 import core.Model;
+import excepctionHandling.ErrorMessage;
+import excepctionHandling.NullEventException;
+
 import java.util.ArrayList;
 
 /**
@@ -23,7 +26,7 @@ public class Queue<Entity> extends Reportable {
     /**
      * Reference to the Logger.
      */
-    LogHandler myLogger = new LogHandler();
+    LogHandler LOG_HANDLER = new LogHandler();
 
     /**
      * List containing the queued entities.
@@ -64,7 +67,7 @@ public class Queue<Entity> extends Reportable {
             waitingTime.update(list.size());
             waitingTime.incTotalOfQueueEntries();
         } catch (NullPointerException ext ){
-            myLogger.logger.severe("You tried to enqueue an Entity with a Value of null: "
+            LOG_HANDLER.logger.severe("You tried to enqueue an Entity with a Value of null: "
                     + getName() + " Exception: " + ext);
         }
 
@@ -94,16 +97,26 @@ public class Queue<Entity> extends Reportable {
      */
     public void remove(core.Entity e) {
 
+        if (e == null) {
+            LOG_HANDLER.logger.severe("Cannot remove Entity e:"
+                    + e.getModel().getName() + " into Queue. Value of e was null");
+            ErrorMessage error = new ErrorMessage(null,
+                    "The Entity that you wanted to to remove has a "
+                            + "Value of null!",
+                    "Mode: " + e.getModel().getName() + " Entity: "
+                            + e.getName(),
+                    "Event e: " + e.getName() + " has a Value of null",
+                    "Make sure that your entities cannot become null", e.getModel().currentTime());
+
+            throw new NullEventException(error);
+        }
         int indexOfE = list.indexOf(e);
 
-        try {
+
             list.remove(indexOfE);
             queueLength.update(list.size());
             waitingTime.update(list.size());
-        } catch (NullPointerException exception) {
-            myLogger.logger.severe("You tried to remove a Entity with the Value of Null: " + getName()
-                    + "Exception: " + exception);
-        }
+
 
     }
 
