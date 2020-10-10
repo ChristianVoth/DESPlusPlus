@@ -22,11 +22,9 @@ public class Entity extends DynamicObject {
     private String entityName;
 
     /**
-     *
+     *  The Model the Entity is part of
      */
     private Model parentModel;
-
-
 
     /**
      * Creates a new Entity with a given name.
@@ -46,9 +44,11 @@ public class Entity extends DynamicObject {
     /**
      *
      * @param associatedModel
-     *          core.Model :
+     *          core.Model : The model this entity belongs to
      * @param name
+     *          java.lang.String : The name of the entity
      * @param priority
+     *          int : The priority of the entity
      */
     public Entity(Model associatedModel, String name, int priority) {
         super(name);
@@ -59,7 +59,7 @@ public class Entity extends DynamicObject {
     }
 
     /**
-     *
+     * Default Constructor
      */
     public Entity() {
 
@@ -67,8 +67,8 @@ public class Entity extends DynamicObject {
 
     /**
      *
-     * @param o
-     * @return
+     * @param o the Object which should be compared
+     * @return an integer value
      */
     @Override
     public int compareTo(Object o) {

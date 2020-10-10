@@ -16,7 +16,7 @@ package core;
 public abstract class DynamicObject extends BasicModelComponent
                                     implements Comparable<Object> {
     /**
-     *
+     * A priority which can be a assigned to a specific Entity
      */
     int priority;
 
@@ -45,14 +45,14 @@ public abstract class DynamicObject extends BasicModelComponent
     }
 
     /**
-     *
+     *  Default Constructor
      */
     public DynamicObject() {
 
     }
 
     /**
-     * @return
+     * @return an integer Value (the priority assigned to an Entity)
      */
     public int getPriority() {
         return priority;
@@ -60,13 +60,14 @@ public abstract class DynamicObject extends BasicModelComponent
 
     /**
      * @param p
+     *      int : priority value
      */
     public void setPriority(int p) {
         priority = p;
     }
 
     /**
-     * @return
+     * @return a double (the time for which the event is scheduled)
      */
     public double getScheduledTime() {
         return scheduledTime;
