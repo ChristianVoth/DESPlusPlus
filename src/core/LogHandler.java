@@ -33,7 +33,7 @@ public class LogHandler {
 
         logger.setLevel(Level.ALL);
 
-        ch.setLevel(Level.SEVERE);
+        ch.setLevel(Level.INFO);
         logger.addHandler(ch);
 
         try {
