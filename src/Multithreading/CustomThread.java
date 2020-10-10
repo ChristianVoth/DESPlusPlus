@@ -74,6 +74,7 @@ public class CustomThread implements Callable {
             this.studentGenerator = studentGenerator;
         }
 
+
         /**
          * The run() method of a thread.
          *
@@ -83,11 +84,12 @@ public class CustomThread implements Callable {
         @Override
         public Object call() throws Exception {
 
+                System.out.println(numOfStaff);
                 System.out.println(name + " gestartet\n" );
                 switch (studentGenerator) {
                         case 1:
                                 for (int i = 0; i < numOfSimulations; i++) {
-
+                                        System.out.println(numOfStaff);
                                         Mensa mensa = new Mensa("Mensa Model"
                                                 + this.name + i, numOfStaff, studentGenerator);
                                         listOfReports.add(mensa.simulate(mensa));

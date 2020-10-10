@@ -260,7 +260,7 @@ public class Mensa extends core.Model {
 
         foodResource = 50;
 
-
+        System.out.println(numOfStaff);
         switch (numOfStaff) {
             case 1:
                 cookingTime = new UniformDistribution(this,

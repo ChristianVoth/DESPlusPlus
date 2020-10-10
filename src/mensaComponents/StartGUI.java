@@ -78,6 +78,7 @@ public class StartGUI extends JFrame {
         btnSimulation1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 int numOfThreads = (Integer.parseInt(textThreads1.getText()));
                 int numOfSimulations = (Integer.parseInt(textSimulation1.getText()));
                 int numOfFoodDistributions = (Integer.parseInt(textFD1.getText()));
@@ -131,7 +132,7 @@ public class StartGUI extends JFrame {
                 String selectedValue = comboBoxDBSimulation1.getSelectedItem().toString();
                 numOfStaff = (Integer.parseInt(selectedValue));
 
-
+                System.out.println(numOfStaff);
                 Multithreading startMultithreading = new Multithreading(numOfThreads,  numOfSimulations,numOfStaff, 1);
 
                 try {

@@ -30,7 +30,7 @@ public abstract class Model {
     LogHandler myLogger = new LogHandler();
 
     /**
-     *
+     * A variable to store the Model name.
      */
     private String name;
 
@@ -40,7 +40,7 @@ public abstract class Model {
     private boolean isOpen = true;
 
     /**
-     *
+     * An ArrayList of all our reportable Objects
      */
     public ArrayList<Reportable> reportables = new ArrayList<>();
 
@@ -60,7 +60,7 @@ public abstract class Model {
     }
 
     /**
-     *
+     * Creating a new eventList
      */
     private EventListImpl eventListImpl = new EventListImpl();
 
@@ -75,17 +75,17 @@ public abstract class Model {
     private Instant stopTime;
 
     /**
-     *
+     * As long as this variable is true, the simulation is running
      */
     private boolean running = true;
 
     /**
-     *
+     * The start date of the Simulation
      */
     private Instant startDate;
 
     /**
-     *
+     * Default Constructor
      */
     public Model() {
 
@@ -130,17 +130,7 @@ public abstract class Model {
 
         while (running && !eventListImpl.isEmpty()) {
 
-
-
-
-
-
             currentEvent = eventListImpl.getFirst();
-
-
-
-
-
 
             if (currentEvent.getTime() < currentTime) {
 
@@ -212,34 +202,37 @@ public abstract class Model {
     }
 
     /**
-     *
-     * @param i
+     * Method to set the start date
+     * @param i is an Instant which will be our start date.
      */
     public void setStartDate(Instant i) {
         startDate = i;
     }
 
     /**
-     *
+     * Method to get the start date
      * @return
+     *      Instant : Returns our start date
      */
     public Instant getStartDate() {
         return startDate;
     }
 
     /**
-     *
+     * Method to get the Difference between start date and stop time.
      * @return
+     *      long : Return the Difference as long value
      */
     public long getDifference() {
         return ChronoUnit.SECONDS.between(startDate, stopTime);
     }
 
     /**
-     *
+     * Method to get the Difference between two Instants.
      * @param instant1
      * @param instant2
      * @return
+     *      long : Return the Difference as long value
      */
     public long getDifference(Instant instant1, Instant instant2) {
         long difference = ChronoUnit.SECONDS.between(instant1, instant2);
@@ -248,7 +241,7 @@ public abstract class Model {
     }
 
     /**
-     *
+     * Returning an ArrayList of Reports for each reportable object of the reportable List.
      */
     public ArrayList report() {
         for (Reportable r: reportables) {
@@ -258,7 +251,7 @@ public abstract class Model {
     }
 
     /**
-     *
+     * A Method to register a reportable Object and add it to the reportable list.
      * @param r
      */
     public void registerReportable(Reportable r) {
@@ -284,7 +277,7 @@ public abstract class Model {
     }
 
     /**
-     *
+     * Method to get the Model name.
      * @return
      */
     public String getName() {
@@ -292,12 +285,13 @@ public abstract class Model {
     }
 
     /**
-     *
-     * @return
+     * Method to check if the event list has Cook Food Events
+     * or an event with a Student associated to it.
+     * @return a boolean
      */
     public Boolean checkEventList() {
         for (Event e : eventListImpl.eventList) {
-            if (e.getName() == "Cook Food"
+            if (e.getName() == "Cook Food Event"
                     || e.getEntity().getClass() == Student.class) {
                 return false;
             }
@@ -306,17 +300,18 @@ public abstract class Model {
     }
 
     /**
-     *
-     * @return
+     * Method to get the size of the event list.
+     * @return integer
      */
     public int getEventListSize() {
         return eventListImpl.eventList.size();
     }
 
     /**
-     *
-     * @param i
+     * Method to get from the event list a event on a specific index.
+     * @param i integer
      * @return
+     *      Event : The Event at the specific index
      */
     public Event getEventAt(int i) {
         return eventListImpl.eventList.get(i);

@@ -30,7 +30,7 @@ public class EventListImpl implements EventList {
     LogHandler myLogger = new LogHandler();
 
     /**
-     *
+     * A simple counter
      */
     private int counter = 0;
 

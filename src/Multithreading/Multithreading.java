@@ -120,11 +120,13 @@ public class Multithreading {
         List<Future<ArrayList<ArrayList<QueueReport>>>> listOfFutures
                 = new ArrayList<>();
 
-        System.out.println("Hauptthread gestartet");
+        System.out.println("Hauptthread gestartet\n");
+        System.out.println(numOfStaff);
 
         switch (studentGenerator) {
             case 1:
                 for (int i = 0; i < numOfThreads; i++) {
+                    System.out.println(numOfStaff);
                     Callable<ArrayList<ArrayList<QueueReport>>> callableCustomThread
                             = new CustomThread("Thread "
                             + (i + 1), numOfSimulations, numOfStaff, studentGenerator);

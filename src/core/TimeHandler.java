@@ -23,10 +23,13 @@ public class TimeHandler {
     LogHandler myLog = new LogHandler();
 
     /**
-     *
+     * Method to calculate the Difference between the start date and a date given to it.
      * @param startDate
+     *      Instant :
      * @param date
+     *      Instant :
      * @return
+     *      The difference as int value
      */
     public int calculateDifference(Instant startDate, Instant date) {
         long difference = 0;
