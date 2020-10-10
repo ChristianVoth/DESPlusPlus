@@ -1,5 +1,9 @@
 package excepctionHandling;
 
+/**
+ *DESPlusPlus i
+ */
+
 public class DESPluPlusException extends RuntimeException {
     private static final long serialVersionUID = 2L;
     private ErrorMessage errorMessage;

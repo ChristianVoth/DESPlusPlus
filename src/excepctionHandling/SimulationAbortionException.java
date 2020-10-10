@@ -1,5 +1,10 @@
 package excepctionHandling;
 
+
+/**
+ * SimulationAbortionException
+ *
+ */
 public class SimulationAbortionException extends DESPluPlusException {
     private static final long serialVersionUID = 1L;
 

@@ -2,6 +2,11 @@ package excepctionHandling;
 
 import core.Model;
 
+/**
+ *ErrorMessage
+ *
+ */
+
 public class ErrorMessage extends Message {
 
     private String reason;
