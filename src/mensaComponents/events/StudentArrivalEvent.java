@@ -76,7 +76,7 @@ public class StudentArrivalEvent extends Event {
 
         // student enters the food distribution queue (studentFDQueue)
         currentModel.studentFDQueue.enqueue(currentStudent);
-        System.out.println(currentModel.foodResource);
+
         // check if a food distribution is available
         if (!currentModel.idleFDQueue.isEmpty()) {
 
