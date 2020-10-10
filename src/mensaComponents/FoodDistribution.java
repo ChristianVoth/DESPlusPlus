@@ -25,7 +25,7 @@ import java.time.Instant;
 public class FoodDistribution extends Entity {
 
     /**
-     *
+     * A variable to store the Id of the food distribution.
      */
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,78 +33,89 @@ public class FoodDistribution extends Entity {
     private int Id;
 
     /**
-     *
+     * A variable to store the name of the food distribution.
      */
     @Column(name = "name")
     private String name;
 
     /**
-     *
+     * A variable to store the time instant when
+     * the food distribution starts working.
      */
     @Column(name = "workBegin")
     private Instant workBegin;
 
     /**
-     *
+     * A variable to store the time instant when the
+     * food distribution stops working.
      */
     @Column(name = "workEnd")
     private Instant workEnd;
 
     /**
-     *
+     * A variable to store the department in which
+     * the staff is working.
      */
     @Column(name = "department")
     private String department;
 
     /**
      * Constructor of the food distribution entity.
-     * @param pparentModel
+     * @param parentModel
      *              Model : The model the entity belongs to
-     * @param nname
+     * @param name
      *              java.lang.String : The name of the food distribution
      */
-    public FoodDistribution(Model pparentModel, String nname) {
-        super(pparentModel, nname);
+    public FoodDistribution(Model parentModel, String name) {
+        super(parentModel, name);
     }
 
     /**
      *
-     * @param pparentModel
-     * @param nname
-     * @param wworkBegin
-     * @param wworkEnd
+     * @param parentModel
+     *      Model : The model the entity belongs to
+     * @param name
+     *      java.lang.String : The name of the food distribution
+     * @param workBegin
+     *      Instant : A time instant when the checkout starts working
+     * @param workEnd
+     *      Instant : A time instant when the checkout stops working
      */
-    public FoodDistribution(Model pparentModel, String nname,
-                            Instant wworkBegin, Instant wworkEnd) {
-        super(pparentModel, nname);
-        this.name = nname;
-        this.workBegin = wworkBegin;
-        this.workEnd = wworkEnd;
+    public FoodDistribution(Model parentModel, String name,
+                            Instant workBegin, Instant workEnd) {
+        super(parentModel, name);
+        this.name = name;
+        this.workBegin = workBegin;
+        this.workEnd = workEnd;
     }
 
     /**
-     *
+     * Default Constructor.
      */
     public FoodDistribution() {
 
     }
 
     /**
-     *
+     * Get Method for the Id.
+     * @return an integer value (the id)
      */
     public int getId() {
         return Id;
     }
 
     /**
-     *
+     * Set Method for the Id.
+     * @param id
+     *      int : The id of the food distribution
      */
     public void setId(int id) {
         Id = id;
     }
 
     /**
-     *
+     * Get Method for the name of the food distribution.
+     * @return java.lang.String the name of the food distribution
      */
     @Override
     public String getName() {
@@ -112,43 +123,46 @@ public class FoodDistribution extends Entity {
     }
 
     /**
-     *
-     * @param nname
+     * Set Method to name the food distribution.
+     * @param name
+     *      java.lang.String : The name of the food distribution
      */
-    public void setName(String nname) {
-        this.name = nname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
-     *
-     * @return
+     * Get Method for the time when the food distribution starts working.
+     * @return a time instant when the food distribution starts working
      */
     public Instant getWorkBegin() {
         return workBegin;
     }
 
     /**
-     *
-     * @param wworkBegin
+     * Set Method for the working begin of the food distribution.
+     * @param workBegin
+     *      Instant : A time instant when the food distribution starts working
      */
-    public void setWorkBegin(Instant wworkBegin) {
-        this.workBegin = wworkBegin;
+    public void setWorkBegin(Instant workBegin) {
+        this.workBegin = workBegin;
     }
 
     /**
-     *
-     * @return
+     * Get Method for the working end of the food distribution.
+     * @return a time instant when the food distribution end working
      */
     public Instant getWorkEnd() {
         return workEnd;
     }
 
     /**
-     *
-     * @param wworkEnd
+     * Set Method for the working end of the food distribution.
+     * @param workEnd
+     *      Instant : A time instant when the food distribution stops working
      */
-    public void setWorkEnd(Instant wworkEnd) {
-        this.workEnd = wworkEnd;
+    public void setWorkEnd(Instant workEnd) {
+        this.workEnd = workEnd;
     }
 }
 

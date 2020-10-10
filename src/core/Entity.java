@@ -22,7 +22,7 @@ public class Entity extends DynamicObject {
     private String entityName;
 
     /**
-     *  The Model the Entity is part of
+     *  The Model the Entity is part of.
      */
     private Model parentModel;
 
@@ -59,7 +59,7 @@ public class Entity extends DynamicObject {
     }
 
     /**
-     * Default Constructor
+     * Default Constructor.
      */
     public Entity() {
 

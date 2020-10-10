@@ -84,7 +84,6 @@ public class StudentPaidEvent extends Event {
                     currentModel.currentTime()
                             + currentModel.getStudentPayTime(),
                     currentStudent, currentCheckout));
-
         }
     }
 }

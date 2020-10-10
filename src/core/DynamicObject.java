@@ -16,7 +16,7 @@ package core;
 public abstract class DynamicObject extends BasicModelComponent
                                     implements Comparable<Object> {
     /**
-     * A priority which can be a assigned to a specific Entity
+     * A priority which can be a assigned to a specific Entity.
      */
     int priority;
 

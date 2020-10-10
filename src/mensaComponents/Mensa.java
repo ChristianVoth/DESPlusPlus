@@ -36,7 +36,7 @@ import java.util.List;
 public class Mensa extends core.Model {
 
     /**
-     *
+     * A List of queue lengths.
      */
     public List queueLengths = new ArrayList();
 
@@ -52,45 +52,20 @@ public class Mensa extends core.Model {
     public int NUM_FD;
 
     /**
-     *
+     * model parameter : the number of food resources.
      */
     public int foodResource;
 
     /**
-     *
+     * model parameter : the number of staff (cooks).
      */
     private int numOfStaff;
 
+    /**
+     * model parameter : A parameter that is used to
+     * decide how the students are generated.
+     */
     private int studentGenerator;
-
-    /**
-     *
-     */
-    public Mensa() {
-        super();
-
-    }
-
-    public Mensa(String name, int numOfStaff, int studentGenerator) {
-        super(name);
-        this.numOfStaff = numOfStaff;
-        this.studentGenerator = studentGenerator;
-    }
-
-    /**
-     *
-     * @param name
-     * @param numOfFD
-     * @param numOfCO
-     */
-    public Mensa(String name, int numOfFD, int numOfCO, int numOfStaff, int studentGenerator) {
-        super(name);
-        this.NUM_FD = numOfFD;
-        this.NUM_CO = numOfCO;
-        this.numOfStaff = numOfStaff;
-        this.studentGenerator = studentGenerator;
-    }
-
 
     /**
      * model parameter : the start time.
@@ -98,15 +73,9 @@ public class Mensa extends core.Model {
     private static double startTime = 0.0;
 
     /**
-     *
+     * Custom object used for time formatting.
      */
     private TimeHandler timeHandler = new TimeHandler();
-
-
-    /**
-     *
-     */
-    public Queue<String> studentNameQueue;
 
     /**
      * A waiting queue object is used to represent the waiting line in front of
@@ -139,25 +108,15 @@ public class Mensa extends core.Model {
      * If there is no student waiting for service the CO will return
      * here and wait for the next student to come.
      */
-    public Queue<Checkout> idleCOQueue;
+     public Queue<Checkout> idleCOQueue;
 
     /**
-     *
-     */
-    public Queue<FoodDistribution> closedFDQueue;
-
-    /**
-     *
-     */
-    public Queue<Checkout> closedCOQueue;
-
-    /**
-     *
+     * A queue object is used to represent staff that stop working.
      */
     public Queue<Object> closedStaffQueue;
 
     /**
-     *
+     * A queue object is used to represent staff that wants to start working.
      */
     public Queue<Object> openStaffQueue;
 
@@ -170,11 +129,13 @@ public class Mensa extends core.Model {
      * Random number stream used to draw an arrival time for the next student.
      */
     private ExponentialDistribution studentArrivalTime;
+
     /**
      * Random number stream used to draw a choosing food time for a student.
      * Describes the time the student need to choose his food.
      */
     private UniformDistribution choosingFoodTime;
+
     /**
      * Random number stream used to draw a pay time for a student.
      * Describes the time the student need to pay his meal.
@@ -201,6 +162,59 @@ public class Mensa extends core.Model {
     }
 
     /**
+     * Default Constructor.
+     */
+    public Mensa() {
+        super();
+
+    }
+
+    /**
+     /**
+     * Mensa constructor.
+     *
+     * Creates a new Mensa model via calling the constructor of the superclass.
+     * @param name
+     *          java.lang.String : The name of the Mensa model
+     * @param numOfStaff
+     *          int : The number of staff you want to have in the model
+     * @param studentGenerator
+     *          int : Used to choose the case how
+     *          you want to generate the students
+     */
+    public Mensa(String name, int numOfStaff, int studentGenerator) {
+        super(name);
+        this.numOfStaff = numOfStaff;
+        this.studentGenerator = studentGenerator;
+    }
+
+    /**
+     * Mensa constructor.
+     *
+     * Creates a new Mensa model via calling the constructor of the superclass.
+     * @param name
+     *          java.lang.String : The name of the Mensa model
+     * @param numOfFD
+     *          int : The number of food distributions
+     * @param numOfCO
+     *          int : The number of checkouts
+     * @param numOfStaff
+     *          int : The number of staff you want to have in the model
+     * @param studentGenerator
+     *          int : Used to choose the case
+     *          how you want to generate the students
+     */
+    public Mensa(String name, int numOfFD, int numOfCO,
+                 int numOfStaff, int studentGenerator) {
+        super(name);
+        this.NUM_FD = numOfFD;
+        this.NUM_CO = numOfCO;
+        this.numOfStaff = numOfStaff;
+        this.studentGenerator = studentGenerator;
+    }
+
+
+    /**
      * Returns a sample of the random stream used to determine
      * the time the student needs to choose food.
      * @return double a choosingFoodTime sample
@@ -224,17 +238,6 @@ public class Mensa extends core.Model {
     public double getCookingTIme() {
         return  cookingTime.sample();
     }
-
-
-
-    /**
-     * Mensa constructor.
-     *
-     * Creates a new Mensa model via calling the constructor of the superclass.
-     * @param name
-     *          java.lang.String : The name of the model
-     */
-
 
     /**
      * Activates dynamic model components (events).
@@ -287,31 +290,21 @@ public class Mensa extends core.Model {
         // initialise the studentPayTime
         studentPayTime = new UniformDistribution(this,
                 "Student Pay Duration-Generator", 1, 100, 300);
-
         // initialise the studentsServed count
         studentsServed = new Count(this, "Students Served Count");
-
         // initialise the idleFDQueue
         idleFDQueue = new Queue<>(this, "Idle Food Distribution Queue");
-
-        // initialise the idleCOQueue
-        idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
-
         // initialise the studentFDQueue
         studentFDQueue = new Queue<>(this, "Student Food Distribution Queue");
         studentFDQueue.initQueue();
-
+        // initialise the idleCOQueue
+        idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
         // initialise the studentCOQueue
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
         studentCOQueue.initQueue();
 
         closedStaffQueue = new Queue<>(this, "Not Working Staff");
-        closedFDQueue = new Queue<>(this, "Closed Food Distribution");
-        closedCOQueue = new Queue<>(this, "Closed Checkout");
 
-        studentNameQueue = new Queue<>(this, "Student Name Queue");
-
-        //register our Queues as reportable Objects
         registerReportable(studentFDQueue);
         registerReportable(studentCOQueue);
 
@@ -403,12 +396,7 @@ public class Mensa extends core.Model {
 
         // generate the report
         return m.report();
-
-
-
     }
-
-
 
     /**
      * Get Method to get the name extension for the students.

@@ -40,7 +40,7 @@ public abstract class Model {
     private boolean isOpen = true;
 
     /**
-     * An ArrayList of all our reportable Objects
+     * An ArrayList of all our reportable Objects.
      */
     public ArrayList<Reportable> reportables = new ArrayList<>();
 
@@ -51,16 +51,16 @@ public abstract class Model {
 
     /**
      * Constructs a model, with the give name.
-     * @param nname
+     * @param name
      *              java.lang.String : The name of this model
      */
-    public Model(String nname) {
-        this.name = nname;
+    public Model(String name) {
+        this.name = name;
 
     }
 
     /**
-     * Creating a new eventList
+     * Creating a new eventList.
      */
     private EventListImpl eventListImpl = new EventListImpl();
 
@@ -75,17 +75,17 @@ public abstract class Model {
     private Instant stopTime;
 
     /**
-     * As long as this variable is true, the simulation is running
+     * As long as this variable is true, the simulation is running.
      */
     private boolean running = true;
 
     /**
-     * The start date of the Simulation
+     * The start date of the Simulation.
      */
     private Instant startDate;
 
     /**
-     * Default Constructor
+     * Default Constructor.
      */
     public Model() {
 
@@ -202,15 +202,15 @@ public abstract class Model {
     }
 
     /**
-     * Method to set the start date
-     * @param i is an Instant which will be our start date.
+     * Method to set the start date.
+     * @param i is an Instant which will be our start date
      */
     public void setStartDate(Instant i) {
         startDate = i;
     }
 
     /**
-     * Method to get the start date
+     * Method to get the start date.
      * @return
      *      Instant : Returns our start date
      */
@@ -241,7 +241,9 @@ public abstract class Model {
     }
 
     /**
-     * Returning an ArrayList of Reports for each reportable object of the reportable List.
+     * Returning an ArrayList of Reports for each
+     * reportable object of the reportable List.
+     * @return ArrayList of Reports
      */
     public ArrayList report() {
         for (Reportable r: reportables) {
@@ -251,7 +253,8 @@ public abstract class Model {
     }
 
     /**
-     * A Method to register a reportable Object and add it to the reportable list.
+     * A Method to register a reportable
+     * Object and add it to the reportable list.
      * @param r
      */
     public void registerReportable(Reportable r) {
@@ -278,7 +281,7 @@ public abstract class Model {
 
     /**
      * Method to get the Model name.
-     * @return
+     * @return java.lang.String : The name
      */
     public String getName() {
         return name;
