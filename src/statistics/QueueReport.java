@@ -11,30 +11,30 @@
 package statistics;
 
 /**
- *
+ * Custom object storing the reports from both accumulate and tally.
  */
-public class QueueReport {
+public class QueueReport{
 
     /**
-     *
+     * Stores the tally report.
      */
     public QueueLengthReport queueLengthReport;
 
     /**
-     *
+     * Stores the accumulate report.
      */
     public WaitingTimeReport waitingTimeReport;
 
     /**
-     *
+     * Stores the associated queue.
      */
     public Queue queue;
 
     /**
      *
-     * @param qqueueLengthReport
-     * @param wwaitingTimeReport
-     * @param qqueue
+     * @param qqueueLengthReport : tally report to be stored
+     * @param wwaitingTimeReport : accumulate report to be stored
+     * @param qqueue : associated queue
      */
     QueueReport(QueueLengthReport qqueueLengthReport,
                 WaitingTimeReport wwaitingTimeReport, Queue qqueue) {

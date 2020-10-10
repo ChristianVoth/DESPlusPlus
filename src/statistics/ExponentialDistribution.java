@@ -18,49 +18,50 @@ import core.Model;
 public class ExponentialDistribution extends Distribution {
 
     /**
-     *
+     * Exponential distributions rely on a rate, at which events occur.
      */
-    private double mean;
+    private double rate;
 
     /**
      *
-     */
-    private double sample;
-
-    /**
-     *
-     * @param parentModel
-     * @param name
-     * @param seed
-     * @param mmean
+     * @param parentModel : reference to the model this distribution belongs to
+     * @param name : name of this distribution
+     * @param seed : seed used for number generation
+     * @param rate : used as a parameter in the distribution
      */
     public ExponentialDistribution(Model parentModel, String name,
-                                   long seed, double mmean) {
+                                   long seed, double rate) {
         super(parentModel, name, seed);
-        this.mean = mmean;
+        this.rate = rate;
     }
 
     /**
-     *
-     * @return
+     * Exponential distribution is modelled by using the inverse method, allowing to use the number generator provided
+     * by Java.
+     * @return sample of exponential distribution
      */
     public double sample() {
-        return sample = -Math.log(nextRandomDouble()) * mean;
+        return -Math.log(nextRandomDouble()) * rate;
     }
 
     /**
      *
-     * @return
+     * @return the set rate.
      */
-    public double getMean() {
-        return this.mean;
+    public double getRate() {
+        return this.rate;
     }
 
     /**
      *
-     * @return
+     * @return the QueueReport
      */
-    public QueueReport getReport() {
+    public QueueReport getQueueReport() {
+        return null;
+    }
+
+    @Override
+    public Report getReport() {
         return null;
     }
 

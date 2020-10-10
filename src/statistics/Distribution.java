@@ -14,41 +14,42 @@ import core.Model;
 import java.util.Random;
 
 /**
- *
+ * Abstract base class for distributions, which are constructed using java.util.Random.
  */
 abstract class Distribution extends Reportable {
 
     /**
-     *
+     * Seed can be used for the generator in order to receive the same sequence of generated numbers. This can be
+     * useful when testing.
      */
     private long seed;
 
     /**
-     *
+     * New Randomizer, generating values between 0 and 1.
      */
     private Random random = new Random();
 
     /**
      *
-     * @param parentModel
-     * @param name
-     * @param sseed
+     * @param parentModel : reference to the model this distribution belongs to
+     * @param name : name of this distribution
+     * @param seed : seed for which numbers are generated
      */
-    public Distribution(Model parentModel, String name, long sseed) {
+    public Distribution(Model parentModel, String name, long seed) {
         super(parentModel, name);
 
-        this.seed = sseed;
+        this.seed = seed;
     }
 
     /**
-     *
-     * @return
+     * Method is implemented in each distribution
+     * @return sample of a given distribution
      */
     public abstract double sample();
 
     /**
      *
-     * @return
+     * @return the seed used for number generation
      */
     public long getSeed() {
 
@@ -56,7 +57,7 @@ abstract class Distribution extends Reportable {
     }
 
     /**
-     *
+     * Resets the seed
      */
     public void reset() {
         super.reset();
@@ -66,7 +67,7 @@ abstract class Distribution extends Reportable {
 
     /**
      *
-     * @return
+     * @return next random value between 0 and 1
      */
     protected double nextRandomDouble() {
 

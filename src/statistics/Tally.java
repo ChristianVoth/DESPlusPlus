@@ -16,19 +16,19 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
+ * Tally class is used to store non-time-weighted values and calculating statistically relevant data.
  */
 public class Tally extends Statistic {
 
     /**
-     *
+     * List to store values.
      */
     private List<Double> tally = new ArrayList<>();
 
     /**
      *
-     * @param parentModel
-     * @param name
+     * @param parentModel : model this object belongs to
+     * @param name : name of this object
      */
     public Tally(Model parentModel, String name) {
         super(parentModel, name);
@@ -36,13 +36,13 @@ public class Tally extends Statistic {
     }
 
     /**
-     *
+     * Reference to a sorting object.
      */
     private Sorting sorting = new Sorting();
 
     /**
-     *
-     * @param val
+     *  Adds passed value to the list.
+     * @param val : passed value
      */
     public void update(double val) {
         tally.add(val);
@@ -51,7 +51,7 @@ public class Tally extends Statistic {
 
     /**
      *
-     * @return
+     * @return maximum queue length
      */
     public double getMaxQueueLength() {
         sorting.sortList(tally);
@@ -60,7 +60,7 @@ public class Tally extends Statistic {
 
     /**
      *
-     * @return
+     * @return mean queue length
      */
     public double getMean() {
 
@@ -76,7 +76,7 @@ public class Tally extends Statistic {
 
     /**
      *
-     * @return
+     * @return standard deviation from given mean
      */
     public double getStdDev() {
         double stdDev;
@@ -92,29 +92,19 @@ public class Tally extends Statistic {
 
     /**
      *
-     * @return
+     * @return calculated quantiles, including the median
      */
     public Quantiles getQuantiles() {
+
+        double median;
+
+        double firstQuantile;
+
+        double thirdQuantile;
+
         Collections.sort(tally);
         int npFirstQuantile = (int) (tally.size() * 0.25d);
         int npThirdQuantile = (int) (tally.size() * 0.75d);
-
-        /**
-         *
-         */
-        double median;
-
-        /**
-         *
-         */
-        double firstQuantile;
-
-        /**
-         *
-         */
-        double thirdQuantile;
-
-
         if (tally.size() % 2 != 0) {
             median = tally.get(tally.size() / 2);
             firstQuantile = tally.get(npFirstQuantile);
@@ -128,14 +118,12 @@ public class Tally extends Statistic {
                     + tally.get(npThirdQuantile - 1)) * 0.5d;
 
         }
-
         return new Quantiles(median, firstQuantile, thirdQuantile);
-
 
     }
 
     /**
-     *
+     * @return the tally list
      */
     public List getTally() {
         return tally;
@@ -145,9 +133,14 @@ public class Tally extends Statistic {
      *
      */
     @Override
-    public QueueLengthReport getReport() {
+    public QueueLengthReport getQueueReport() {
         return new QueueLengthReport(getMean(), getQuantiles(),
                 getMaxQueueLength());
 
+    }
+
+    @Override
+    public Report getReport() {
+        return null;
     }
 }

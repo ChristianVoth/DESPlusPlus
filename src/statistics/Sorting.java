@@ -15,21 +15,21 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
+ * Custom Objext used to sort Lists
  */
 public class Sorting {
 
     /**
-     *
-     * @param unsortedList
+     * Sorts given list.
+     * @param unsortedList : list to be sorted
      */
      public void sortList(List<Double> unsortedList) {
         Collections.sort(unsortedList);
     }
 
     /**
-     *
-     * @param unsortedEntry
+     * Sorts given entry.
+     * @param unsortedEntry : ListEntry which needs to be sorted
      */
     public void sortListEntry(List<ListEntry> unsortedEntry) {
          Collections.sort(unsortedEntry);

@@ -11,33 +11,33 @@
 package statistics;
 
 /**
- *
+ * Custom Object to store the value and it's time of change.
  */
 public class ListEntry implements Comparable<ListEntry> {
     /**
-     *
+     * Value which is to be stored.
      */
     double value;
     /**
-     *
+     * Time at which a change in value occurred.
      */
     double timeOfChange;
 
     /**
      *
-     * @param v1
-     * @param v2
+     * @param value : passed value
+     * @param timeOfChange : time at which value change occurred
      */
-    public ListEntry(double v1, double v2) {
+    public ListEntry(double value, double timeOfChange) {
 
-        value = v1;
-        timeOfChange = v2;
+        this.value = value;
+        this.timeOfChange = timeOfChange;
     }
 
     /**
      *
-     * @param listOne
-     * @return
+     * @param listOne : different list entry
+     * @return negative, 0 or positive value depending on the comparision of two values
      */
     @Override
     public int compareTo(ListEntry listOne) {
