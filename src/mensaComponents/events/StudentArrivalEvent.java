@@ -20,7 +20,7 @@ import mensaComponents.*;
 public class StudentArrivalEvent extends Event {
 
     /**
-     * A reference to the model this event is a port of.
+     * A reference to the model this event is a part of.
      */
     private Mensa currentModel;
 
@@ -93,7 +93,7 @@ public class StudentArrivalEvent extends Event {
                 currentModel.schedule(gotFood);
 
 
-          //  }
+
         }
     }
 }

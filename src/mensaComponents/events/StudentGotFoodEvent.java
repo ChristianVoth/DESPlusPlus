@@ -24,47 +24,55 @@ import mensaComponents.Student;
 public class StudentGotFoodEvent extends Event {
 
     /**
-     *
+     * A reference to the model this event is a part of.
      */
     private Mensa currentModel;
 
     /**
-     *
+     * A variable to store the name of the event.
      */
     private String name;
 
     /**
-     *
+     * Current Student is a reference to the entity which is initially going
+     * trough the eventRoutine().
      */
     private Student currentStudent;
 
     /**
-     *
+     * A variable to store the first entry of the idleFDQueue.
      */
     private FoodDistribution currentOther;
 
     /**
-     *
+     * A variable to store the first entry of the idleCOQueue.
      */
     private Checkout checkout;
 
     /**
-     *
+     * A reference to the student entity which is the first entry of the
+     * studentFDQueue.
      */
     private Student nextInLine;
 
     /**
-     *
+     * A reference to the student entity which is the first entry of the
+     * studentCOQueue.
      */
     private Student nextForCheckout;
 
     /**
      *
      * @param parentModel
+     *      core.Model : The model this events belongs to
      * @param name
+     *      java.lang.String : The name of the event
      * @param time
+     *      double : The time when the event will occur
      * @param entity
+     *      Entity : The entity which is associated with the event
      * @param currentOther
+     *      Food Distribution : The Food Distribution which is associated with event
      */
     public StudentGotFoodEvent(Model parentModel, String name,
                                double time, Entity entity,
@@ -78,7 +86,7 @@ public class StudentGotFoodEvent extends Event {
     }
 
     /**
-     *
+     * This eventRoutine() describes what happens when a student got their food
      */
     @Override
     protected void eventRoutine() {

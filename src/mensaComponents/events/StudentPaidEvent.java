@@ -86,7 +86,5 @@ public class StudentPaidEvent extends Event {
                     currentStudent, currentCheckout));
 
         }
-
-        }
-
+    }
 }
