@@ -23,37 +23,53 @@ import java.util.concurrent.*;
 public class Multithreading {
 
     /**
-     *
+     * A variable to store the number of Threads.
      */
     private int numOfThreads;
 
     /**
-     *
+     * A variable to store number of simulations.
      */
     private int numOfSimulations;
 
     /**
-     *
+     * A variable to store the number of food distributions.
      */
     private int numOfFD;
 
     /**
-     *
+     * A variable to store the number of checkouts.
      */
     private int numOfCO;
 
     /**
-     *
+     * A variable to store the integer value of the student generator.
      */
     private int studentGenerator;
 
-
+    /**
+     * A variable to store the number of staff.
+     */
     private int numOfStaff;
 
+    /**
+     * Create a FinalReport object to use.
+     */
     private FinalReport finalReport;
 
     LogHandler myLog = new LogHandler();
 
+    /**
+     * Multithreading Constructor.
+     * @param numOfThreads
+     *      int : The number of Threads
+     * @param numOfSimulations
+     *      int : The number of Simulations
+     * @param numOfStaff
+     *      int : The number of staff
+     * @param studentGenerator
+     *      int : The int value of the student generator
+     */
     public Multithreading(int numOfThreads, int numOfSimulations, int numOfStaff, int studentGenerator) {
         this.numOfThreads = numOfThreads;
         this.numOfSimulations = numOfSimulations;
@@ -62,10 +78,19 @@ public class Multithreading {
     }
 
     /**
+     * Multithreading Constructor.
      * @param nnumOfThreads
+     *      int : The number of Threads
      * @param nnumOfSimulations
+     *      int : The number of Simulations
      * @param nnumOfFD
+     *      int : The number of food distributions
      * @param nnumOfCO
+     *      int : The number of checkouts
+     * @param numOfStaff
+     *      int : The number if staff
+     * @param studentGenerator
+     *      int : The int value of the student generator
      */
     public Multithreading(int nnumOfThreads, int nnumOfSimulations,
                           int nnumOfFD, int nnumOfCO, int numOfStaff, int studentGenerator) {
@@ -77,18 +102,22 @@ public class Multithreading {
         this.studentGenerator = studentGenerator;
     }
 
+    /**
+     * Get Method for final report.
+     * @return a FinalReport object
+     */
     public FinalReport getFinalReport() {
         return finalReport;
     }
+
     /**
-     *
+     * In this method multithreading can be started.
      */
     public void startMultithreading() throws
             ExecutionException, InterruptedException {
 
         int counter1 = 0;
         int counter2 = 0;
-
 
         //Threads --> Simulations --> QueueReports
         double meanQueueLength1 = 0;
@@ -198,7 +227,6 @@ public class Multithreading {
                         maxQueueLength1, maxQueueLength2, meanWaitingTime1, meanWaitingTime2, medianWaitingTime1,
                         medianWaitingTime2, maxWaitingTime1, maxWaitingTime2);
 
-
                 System.out.println("\n" + "Mean Queue Length Food Distribution: " + meanQueueLength1);
                 System.out.println("Mean Queue Length Checkout: " + meanQueueLength2);
                 System.out.println("Median Queue Length Food Distribution: " + medianQueueLength1);
@@ -212,11 +240,7 @@ public class Multithreading {
                 System.out.println("Max Waiting Time Food Distribution: " + maxWaitingTime1);
                 System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
 
-
-
-
                 break;
-
             case 2:
 
                 for (int i = 0; i < numOfThreads; i++) {
@@ -310,8 +334,6 @@ public class Multithreading {
                 System.out.println("Median Waiting Time Checkout: " + medianWaitingTime2);
                 System.out.println("Max Waiting Time Food Distribution: " + maxWaitingTime1);
                 System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
-
-
 
                 break;
             default:
