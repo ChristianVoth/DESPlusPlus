@@ -11,6 +11,7 @@
 package Multithreading;
 
 
+import core.LogHandler;
 import statistics.QueueReport;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,8 @@ public class Multithreading {
     private int numOfStaff;
 
     private FinalReport finalReport;
+
+    LogHandler myLog = new LogHandler();
 
     public Multithreading(int numOfThreads, int numOfSimulations, int numOfStaff, int studentGenerator) {
         this.numOfThreads = numOfThreads;
@@ -210,6 +213,20 @@ public class Multithreading {
                 System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
 
 
+                myLog.logger.severe("It seems an Exception has been thrown. Your Values are "
+                        + " Mean Queue Length Food Distribution: " + meanQueueLength1
+                        + " Mean Queue Length Checkout:" + meanQueueLength2
+                        + " Median Queue Length Food Distribution: " + medianQueueLength1
+                        + " Median Queue Length Checkout: " + meanQueueLength2
+                        + " Max Queue Length Food Distribution: " + maxQueueLength1
+                        + " Max Queue Length Checkout: " + maxQueueLength2
+                        + " Mean Waiting Time Food Distribution: " + meanWaitingTime1
+                        + " Mean Waiting Time Checkout: " + meanWaitingTime2
+                        + " Median Waiting Time Food Distribution: "  + medianWaitingTime1
+                        + " Median Waiting Time Checkout: " + medianWaitingTime2
+                        + " Max Waiting Time Food Distribution: " + maxWaitingTime1
+                        + " Max Waiting Time Checkout: " + maxWaitingTime2
+                );
 
                 break;
 
@@ -307,6 +324,20 @@ public class Multithreading {
                 System.out.println("Max Waiting Time Food Distribution: " + maxWaitingTime1);
                 System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
 
+                myLog.logger.severe("It seems an Exception has been thrown. Your Values are "
+                        + " Mean Queue Length Food Distribution: " + meanQueueLength1
+                        + " Mean Queue Length Checkout:" + meanQueueLength2
+                        + " Median Queue Length Food Distribution: " + medianQueueLength1
+                        + " Median Queue Length Checkout: " + meanQueueLength2
+                        + " Max Queue Length Food Distribution: " + maxQueueLength1
+                        + " Max Queue Length Checkout: " + maxQueueLength2
+                        + " Mean Waiting Time Food Distribution: " + meanWaitingTime1
+                        + " Mean Waiting Time Checkout: " + meanWaitingTime2
+                        + " Median Waiting Time Food Distribution: "  + medianWaitingTime1
+                        + " Median Waiting Time Checkout: " + medianWaitingTime2
+                        + " Max Waiting Time Food Distribution: " + maxWaitingTime1
+                        + " Max Waiting Time Checkout: " + maxWaitingTime2
+                );
 
                 break;
             default:
