@@ -13,32 +13,27 @@ package statistics;
 import core.Model;
 
 /**
- *
+ * Class in order to generate uniformly distributed values.
  */
 public class UniformDistribution extends Distribution {
 
     /**
-     *
+     * Defines upper limit.
      */
     private double max;
 
     /**
-     *
+     * Defines lower limit.
      */
     private double min;
 
     /**
      *
-     */
-    private double sample;
-
-    /**
-     *
-     * @param parentModel
-     * @param name
-     * @param seed
-     * @param mmin
-     * @param mmax
+     * @param parentModel : model this distribution belongs to
+     * @param name : name of this distribution
+     * @param seed : seed used for java.util.Random generator
+     * @param mmin : defined upper limit
+     * @param mmax : defined lower limit
      */
     public UniformDistribution(Model parentModel, String name, long seed,
                                double mmin, double mmax) {
@@ -49,22 +44,22 @@ public class UniformDistribution extends Distribution {
     }
 
     /**
-     *
+     * Returns value of determined distribution.
      */
     public double sample() {
-        return sample = min + ((max - min) * nextRandomDouble());
+        return min + ((max - min) * nextRandomDouble());
 
     }
 
     /**
-     *
+     * Return current minimum
      */
     public double getMin() {
         return this.min;
     }
 
     /**
-     *
+     * Return current maximum
      */
     public double getMax() {
         return this.max;
@@ -73,7 +68,12 @@ public class UniformDistribution extends Distribution {
     /**
      *
      */
-    public QueueReport getReport() {
+    public QueueReport getQueueReport() {
+        return null;
+    }
+
+    @Override
+    public Report getReport() {
         return null;
     }
 

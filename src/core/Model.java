@@ -245,7 +245,7 @@ public abstract class Model {
      */
     public ArrayList report() {
         for (Reportable r: reportables) {
-            listOfReports.add(r.getReport());
+            listOfReports.add(r.getQueueReport());
         }
     return listOfReports;
     }
