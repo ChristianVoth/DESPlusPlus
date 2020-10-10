@@ -91,15 +91,11 @@ public class StudentGotFoodEvent extends Event {
 
             if (!currentModel.idleCOQueue.isEmpty()) {
 
-                System.out.println(currentModel.idleCOQueue.isEmpty());
-
                 checkout = currentModel.idleCOQueue.getFirst();
                 currentModel.idleCOQueue.remove(checkout);
 
                 nextForCheckout = currentModel.studentCOQueue.getFirst();
                 currentModel.studentCOQueue.remove(nextForCheckout);
-
-                System.out.println(currentModel.studentCOQueue.size());
 
                 StudentPaidEvent studentPaid
                         = new StudentPaidEvent(currentModel, "Student Paid Event",

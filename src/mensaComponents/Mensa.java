@@ -280,8 +280,6 @@ public class Mensa extends core.Model {
 
 
         // initialise the studentArrivalTime
-        //studentArrivalTime = new ExponentialDistribution(this,
-               // "Student Arrival Generator", 1, 5);
         studentArrivalTime = new ExponentialDistribution(this, "SAG", 1, 180);
         // initialise the choosingFoodTime
         choosingFoodTime = new UniformDistribution(this,
