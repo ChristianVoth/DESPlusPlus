@@ -154,6 +154,7 @@ public abstract class Model {
                         "Make sure Distributions are used properly!",
                         currentTime);
                 throw new NegativeRunTimeException(error);
+
             } else {
 
 

@@ -295,10 +295,12 @@ public class Mensa extends core.Model {
         idleFDQueue = new Queue<>(this, "Idle Food Distribution Queue");
         // initialise the studentFDQueue
         studentFDQueue = new Queue<>(this, "Student Food Distribution Queue");
+        studentFDQueue.initQueue();
         // initialise the idleCOQueue
         idleCOQueue = new Queue<>(this, "Idle Checkout Queue");
         // initialise the studentCOQueue
         studentCOQueue = new Queue<>(this, "Student Checkout Queue");
+        studentCOQueue.initQueue();
 
         closedStaffQueue = new Queue<>(this, "Not Working Staff");
         closedFDQueue = new Queue<>(this, "Closed Food Distribution");

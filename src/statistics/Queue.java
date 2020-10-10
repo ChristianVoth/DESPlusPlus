@@ -208,6 +208,10 @@ public class Queue<Entity> extends Reportable {
         return waitingTime.getMaximumWaitTime();
     }
 
+    public void initQueue() {
+        waitingTime.initQueue();
+    }
+
     /**
      *
      * @return

@@ -197,23 +197,29 @@ public class Accumulate extends Statistic {
     public void calculateTimeDifferences() {
 
         findExits();
+        System.out.println("Ausgänge" + timeOfExists.size());
+        int counter = 0;
 
-        int exitNumber = 0;
 
         if (accumulate.size() > 0) {
 
             for (int i = 1; i < accumulate.size() - 1; i++) {
 
                 if (accumulate.get(i).value > accumulate.get(i - 1).value) {
+                    counter++;
+                    if(timeOfExists.size() > 0){
                     double timeOfEntry = accumulate.get(i).timeOfChange;
-                    double timeOfExit = timeOfExists.get(exitNumber);
-                    timeOfChanges.add(timeOfEntry - timeOfExit);
-                    exitNumber++;
+                    double timeOfExit = timeOfExists.get(0);
+                    timeOfExists.remove(timeOfExit);
+                    System.out.println(timeOfExit);
+                    timeOfChanges.add(timeOfExit - timeOfEntry);
+                    }
+
 
                 }
             }
         }
-
+        System.out.println("Eingänge" + counter);
 
     }
 
@@ -236,6 +242,11 @@ public class Accumulate extends Statistic {
                 timeOfExists.add(accumulate.get(i).timeOfChange);
             }
         }
+    }
+    public void initQueue() {
+        ListEntry defaultEntry = new ListEntry(0,0);
+        accumulate.add(defaultEntry);
+        System.out.println(accumulate);
     }
 
     /**

@@ -2,15 +2,14 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-10-10T06:38:56.706337800Z</date>
-  <millis>1602311936706</millis>
-  <nanos>337800</nanos>
-  <sequence>15</sequence>
+  <date>2020-10-10T06:38:56.712328100Z</date>
+  <millis>1602311936712</millis>
+  <nanos>328100</nanos>
+  <sequence>16</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>core.Model</class>
   <method>run</method>
-  <thread>27</thread>
+  <thread>25</thread>
   <message>Simulation start.</message>
 </record>
-</log>
