@@ -24,7 +24,7 @@ import java.time.Instant;
 public class Student extends Entity {
 
     /**
-     *
+     * A variable to store the Id of the student.
      */
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,28 +32,31 @@ public class Student extends Entity {
     private int Id;
 
     /**
-     *
+     * A variable to store the name of the student.
      */
     @Column(name = "studentname")
     private String studentName;
     /**
-     *
+     * A variable to store the student arrival time.
      */
     @Column(name = "arrival")
     private Instant studentArrival;
 
     /**
-     *
+     * Default Constructor.
      */
     public Student() {
 
     }
 
     /**
-     *
+     * Constructor of the student entity.
      * @param parentModel
+     *          Model : The model the entity belongs to
      * @param name
+     *          java.lang.String : The name of the student
      * @param studentArrival
+     *          Instant : A time instant when the student arrives
      */
     public Student(Model parentModel, String name, Instant studentArrival) {
         super(parentModel, name);
@@ -84,48 +87,51 @@ public class Student extends Entity {
     }
 
     /**
-     *
-     * @return
+     * Get Method for the Id.
+     * @return an integer value (the id)
      */
     public int getId() {
         return Id;
     }
 
     /**
-     *
+     * Set Method for the Id.
      * @param id
+     *      int : The id of the student
      */
     public void setId(int id) {
         Id = id;
     }
 
     /**
-     *
-     * @return
+     * Get Method for the name of the student.
+     * @return java.lang.String the name of the student
      */
     public String getStudentName() {
         return studentName;
     }
 
     /**
-     *
+     * Set Method to name the student.
      * @param studentName
+     *      java.lang.String : The name of the student
      */
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
 
     /**
-     *
-     * @return
+     * Get Method for the student arrival time.
+     * @return a time instant for the arrival time
      */
     public Instant getStudentArrival() {
         return studentArrival;
     }
 
     /**
-     *
+     * Set Method for the student arrival time.
      * @param studentArrival
+     *          Instant : A time instant for the student arrival time
      */
     public void setStudentArrival(Instant studentArrival) {
         this.studentArrival = studentArrival;

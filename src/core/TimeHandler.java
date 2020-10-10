@@ -25,9 +25,9 @@ public class TimeHandler {
     /**
      * Method to calculate the Difference between the start date and a date given to it.
      * @param startDate
-     *      Instant :
+     *      Instant : A time instant for the start date
      * @param date
-     *      Instant :
+     *      Instant : A time instant for the date
      * @return
      *      The difference as int value
      */

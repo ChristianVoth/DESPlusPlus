@@ -30,7 +30,7 @@ public class EventListImpl implements EventList {
     LogHandler myLogger = new LogHandler();
 
     /**
-     * A simple counter
+     * A simple counter.
      */
     private int counter = 0;
 
@@ -53,11 +53,14 @@ public class EventListImpl implements EventList {
      */
     @Override
     public void insert(Event e) {
-        if(e == null){
-            myLogger.logger.severe("Cannot insert Event e:"+ e.getModel().getName() +" into Queue. Value of e was null");
-            ErrorMessage error = new ErrorMessage((Model)null, "The Event that you wanted to to insert has a " +
-                    "Value of null!",
-                    "EventName: "+ e.getName()+ " Entity: " + e.getEntity().getName(),
+        if (e == null) {
+            myLogger.logger.severe("Cannot insert Event e:"
+                + e.getModel().getName() + " into Queue. Value of e was null");
+            ErrorMessage error = new ErrorMessage((Model) null,
+                    "The Event that you wanted to to insert has a "
+                            + "Value of null!",
+                    "EventName: " + e.getName() + " Entity: "
+                            + e.getEntity().getName(),
                     "Event e: " + e.getName() + " has a Value of null",
                     "SomethingSomething null prevention", e.getTime());
 
@@ -96,18 +99,22 @@ public class EventListImpl implements EventList {
      */
     @Override
     public int remove(Event e) {
-        if(eventList.isEmpty()){
-            myLogger.logger.info("You tried to remove an Event but your List is Empty");
+        if (eventList.isEmpty()) {
+            myLogger.logger.info(
+                    "You tried to remove an Event but your List is Empty");
             return -1;
         }
 
-        if(e == null){
-            myLogger.logger.severe("Cannot remove Event e:"+ e.getName() +" from Queue. Value of e was null");
-            ErrorMessage error = new ErrorMessage((Model)null, "The Event that you wanted to to remove has a " +
-                    "Value of null!",
-                    "Eventname: "+ e.getName()+ " Entity: " + e.getEntity().getName(),
+        if (e == null) {
+            myLogger.logger.severe("Cannot remove Event e:"
+                    + e.getName() + " from Queue. Value of e was null");
+            ErrorMessage error = new ErrorMessage((Model) null,
+            "The Event that you wanted to to remove has a "
+                    + "Value of null!",
+              "Eventname: " + e.getName() + " Entity: "
+                      + e.getEntity().getName(),
                     "Event e: " + e.getName() + " has a Value of null",
-                    "SomethingSomething null prevention", e.getTime());
+            "SomethingSomething null prevention", e.getTime());
 
             throw new NullEventException(error);
         }

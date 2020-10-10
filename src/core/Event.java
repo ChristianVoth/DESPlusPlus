@@ -19,11 +19,11 @@ package core;
 public abstract class Event extends DynamicObject {
 
     /**
-     * A store variable for the entity which the event is associated with
+     * A store variable for the entity which the event is associated with.
      */
     private Entity entity;
     /**
-     *  A store variable for the name of the event;
+     *  A store variable for the name of the event.
      */
     private String eventName;
 
@@ -49,7 +49,7 @@ public abstract class Event extends DynamicObject {
     /**
      *
      * Creates a new event of the given model, with the given name and
-     * a given time
+     * a given time.
      * @param parentModel
      *      core.Model : The model this event is associated to
      * @param name
