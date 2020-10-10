@@ -2,14 +2,5042 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-10-10T06:38:56.712328100Z</date>
-  <millis>1602311936712</millis>
-  <nanos>328100</nanos>
-  <sequence>16</sequence>
+  <date>2020-10-10T07:18:23.787047Z</date>
+  <millis>1602314303787</millis>
+  <nanos>47000</nanos>
+  <sequence>434</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:15:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.787228500Z</date>
+  <millis>1602314303787</millis>
+  <nanos>228500</nanos>
+  <sequence>435</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:15:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.787228500Z</date>
+  <millis>1602314303787</millis>
+  <nanos>228500</nanos>
+  <sequence>436</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:15:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.787228500Z</date>
+  <millis>1602314303787</millis>
+  <nanos>228500</nanos>
+  <sequence>437</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:17:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.787228500Z</date>
+  <millis>1602314303787</millis>
+  <nanos>228500</nanos>
+  <sequence>438</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:20:55Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.787228500Z</date>
+  <millis>1602314303787</millis>
+  <nanos>228500</nanos>
+  <sequence>439</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:21:08Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>440</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:25:18Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>441</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:25:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>442</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:30:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>443</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:47:56Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>444</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:55:20Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>445</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T06:58:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>446</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:10:10Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>447</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:15:19Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>448</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:15:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.788225Z</date>
+  <millis>1602314303788</millis>
+  <nanos>225000</nanos>
+  <sequence>449</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:30:50Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>450</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:30:59Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>451</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:30:59Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>452</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:30:38Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>453</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:42:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>454</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:43:03Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>455</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:43:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>456</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:44:03Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789222900Z</date>
+  <millis>1602314303789</millis>
+  <nanos>222900</nanos>
+  <sequence>457</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:44:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>458</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:45:03Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>459</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:45:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>460</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:45:38Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>461</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>462</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>463</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>464</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>465</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>466</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>467</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.789909600Z</date>
+  <millis>1602314303789</millis>
+  <nanos>909600</nanos>
+  <sequence>468</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>469</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:24Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>470</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:24Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>471</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:24Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>472</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:26Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>473</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:50Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>474</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:50Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>475</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:50Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>476</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:50Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>477</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:46:55Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>478</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:47:16Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>479</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:47:16Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>480</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:47:31Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>481</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:47:43Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>482</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:48:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>483</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:48:04Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>484</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:48:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>485</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:48:06Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>486</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:48:07Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>487</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:50:44Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>488</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:50:59Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>489</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>490</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>491</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:03Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>492</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:18Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>493</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>494</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:36Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>495</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:51:40Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.790906800Z</date>
+  <millis>1602314303790</millis>
+  <nanos>906800</nanos>
+  <sequence>496</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:52:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>497</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:52:56Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>498</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:53:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>499</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:53:30Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>500</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:53:43Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>501</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:54:07Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>502</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:56:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>503</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:57:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>504</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:58:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.793349300Z</date>
+  <millis>1602314303793</millis>
+  <nanos>349300</nanos>
+  <sequence>505</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T07:59:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>506</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:22:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>507</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:24:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>508</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:26:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>509</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:28:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>510</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:30:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>511</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:32:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>512</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:34:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>513</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:36:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.794346900Z</date>
+  <millis>1602314303794</millis>
+  <nanos>346900</nanos>
+  <sequence>514</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:38:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>515</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:40:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>516</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:42:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>517</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:44:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>518</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:46:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>519</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:48:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795347100Z</date>
+  <millis>1602314303795</millis>
+  <nanos>347100</nanos>
+  <sequence>520</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:50:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>521</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:52:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>522</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:54:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>523</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:56:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>524</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T08:58:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>525</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:00:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>526</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:02:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>527</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:04:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.795890500Z</date>
+  <millis>1602314303795</millis>
+  <nanos>890500</nanos>
+  <sequence>528</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:06:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796887900Z</date>
+  <millis>1602314303796</millis>
+  <nanos>887900</nanos>
+  <sequence>529</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:08:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>530</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:10:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>531</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:12:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>532</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:14:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>533</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:16:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>534</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:18:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>535</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:20:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>536</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:22:54Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>537</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>538</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>539</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>540</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>541</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>542</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:30:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>543</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>544</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>545</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>546</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>547</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>548</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>549</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.796902200Z</date>
+  <millis>1602314303796</millis>
+  <nanos>902200</nanos>
+  <sequence>550</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:31:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>551</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>552</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>553</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>554</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>555</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>556</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>557</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:32:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>558</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.798835400Z</date>
+  <millis>1602314303798</millis>
+  <nanos>835400</nanos>
+  <sequence>559</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.799832300Z</date>
+  <millis>1602314303799</millis>
+  <nanos>832300</nanos>
+  <sequence>560</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.799832300Z</date>
+  <millis>1602314303799</millis>
+  <nanos>832300</nanos>
+  <sequence>561</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.799832300Z</date>
+  <millis>1602314303799</millis>
+  <nanos>832300</nanos>
+  <sequence>562</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>563</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>564</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>565</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:33:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>566</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>567</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>568</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>569</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>570</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>571</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>572</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:34:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>573</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>574</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>575</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>576</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>577</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>578</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>579</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>580</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:35:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>581</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>582</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>583</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>584</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>585</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>586</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>587</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:36:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>588</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>589</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>590</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>591</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>592</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>593</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>594</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>595</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:37:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>596</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>597</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>598</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>599</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>600</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>601</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>602</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:38:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>603</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>604</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>605</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>606</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>607</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>608</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>609</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>610</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:39:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>611</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>612</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>613</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>614</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>615</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>616</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>617</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:40:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>618</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:41:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>619</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:41:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>620</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:41:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>621</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:41:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>622</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:41:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>623</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:43:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>624</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:44:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>625</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:44:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>626</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:45:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>627</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:45:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>628</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:46:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.800114100Z</date>
+  <millis>1602314303800</millis>
+  <nanos>114100</nanos>
+  <sequence>629</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:46:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>630</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:47:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>631</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:47:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>632</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:48:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>633</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:48:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>634</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:49:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>635</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:49:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.806232Z</date>
+  <millis>1602314303806</millis>
+  <nanos>232000</nanos>
+  <sequence>636</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:50:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>637</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:50:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>638</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:51:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>639</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:51:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>640</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:52:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>641</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:52:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>642</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:53:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>643</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:53:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>644</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:54:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>645</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:54:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.807231100Z</date>
+  <millis>1602314303807</millis>
+  <nanos>231100</nanos>
+  <sequence>646</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:55:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>647</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:55:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>648</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:56:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>649</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:56:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>650</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:57:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>651</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:57:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>652</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:58:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>653</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:58:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>654</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:59:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>655</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T09:59:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>656</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:00:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>657</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:00:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>658</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:01:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>659</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:01:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>660</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:02:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>661</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:02:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>662</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:03:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>663</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:03:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.808227400Z</date>
+  <millis>1602314303808</millis>
+  <nanos>227400</nanos>
+  <sequence>664</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:04:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>665</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:04:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>666</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:05:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>667</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:05:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>668</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:09:35Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>669</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:13:48Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>670</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:16:00Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>671</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:16:12Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>672</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:20:42Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>673</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:25:59Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>674</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>675</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.810064800Z</date>
+  <millis>1602314303810</millis>
+  <nanos>64800</nanos>
+  <sequence>676</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>677</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>678</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>679</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:30:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>680</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>681</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>682</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>683</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>684</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>685</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>686</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>687</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:31:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>688</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>689</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>690</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>691</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>692</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>693</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>694</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:32:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>695</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.811061Z</date>
+  <millis>1602314303811</millis>
+  <nanos>61000</nanos>
+  <sequence>696</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>697</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>698</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>699</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>700</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>701</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>702</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:33:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>703</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>704</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>705</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>706</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.812626500Z</date>
+  <millis>1602314303812</millis>
+  <nanos>626500</nanos>
+  <sequence>707</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>708</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>709</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:34:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>710</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>711</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>712</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>713</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>714</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>715</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>716</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>717</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:35:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>718</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>719</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>720</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>721</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.813625900Z</date>
+  <millis>1602314303813</millis>
+  <nanos>625900</nanos>
+  <sequence>722</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814622300Z</date>
+  <millis>1602314303814</millis>
+  <nanos>622300</nanos>
+  <sequence>723</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814622300Z</date>
+  <millis>1602314303814</millis>
+  <nanos>622300</nanos>
+  <sequence>724</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:36:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814622300Z</date>
+  <millis>1602314303814</millis>
+  <nanos>622300</nanos>
+  <sequence>725</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>726</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>727</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>728</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>729</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>730</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>731</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.814920700Z</date>
+  <millis>1602314303814</millis>
+  <nanos>920700</nanos>
+  <sequence>732</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:37:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>733</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>734</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>735</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>736</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>737</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>738</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>739</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:38:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>740</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>741</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>742</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>743</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>744</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>745</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>746</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.815619200Z</date>
+  <millis>1602314303815</millis>
+  <nanos>619200</nanos>
+  <sequence>747</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:39:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>748</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>749</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>750</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>751</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>752</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>753</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>754</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:40:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>755</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>756</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>757</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.816645900Z</date>
+  <millis>1602314303816</millis>
+  <nanos>645900</nanos>
+  <sequence>758</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>759</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:33Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>760</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:41Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>761</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:49Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>762</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:41:57Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>763</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>764</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:13Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>765</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:21Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.817646300Z</date>
+  <millis>1602314303817</millis>
+  <nanos>646300</nanos>
+  <sequence>766</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:29Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>767</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:37Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>768</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:45Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>769</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:42:53Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>770</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:43:01Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>771</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:43:09Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>772</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:43:17Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>773</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:43:25Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>774</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:53:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>775</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:55:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>776</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:57:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.819900100Z</date>
+  <millis>1602314303819</millis>
+  <nanos>900100</nanos>
+  <sequence>777</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T10:59:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>778</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:01:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>779</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:03:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>780</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:05:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>781</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:07:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>782</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:09:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>783</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:11:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>784</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:13:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>785</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:15:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>786</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:17:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>787</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:19:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>788</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:21:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.820895800Z</date>
+  <millis>1602314303820</millis>
+  <nanos>895800</nanos>
+  <sequence>789</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:23:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>790</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:25:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>791</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:27:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>792</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:29:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>793</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:31:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>794</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:33:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>795</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:35:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>796</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:37:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>797</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:39:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>798</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:41:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>799</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:43:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>800</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:45:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>801</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:47:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>802</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:49:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>803</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:51:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>804</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:53:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>805</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:55:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>806</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:57:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>807</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T11:59:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>808</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:01:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>809</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:03:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>810</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:05:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>811</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:07:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>812</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:09:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>813</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:11:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>814</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:13:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>815</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:15:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>816</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:17:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>817</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:19:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>818</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:21:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>819</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:23:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>820</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:25:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>821</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:27:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>822</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:29:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>823</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:31:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>824</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:33:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>825</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:35:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>826</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:37:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>827</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:39:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>828</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:41:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>829</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:43:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>830</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:45:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>831</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:47:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>832</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:49:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>833</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:51:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>834</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:53:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>835</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:55:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>836</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:57:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>837</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T12:59:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>838</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:01:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>839</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:03:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>840</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:05:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>841</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:07:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>842</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:09:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>843</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:11:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>844</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:13:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>845</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:15:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>846</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:17:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>847</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:19:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>848</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:21:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>849</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:23:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>850</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:25:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>851</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:27:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.821893200Z</date>
+  <millis>1602314303821</millis>
+  <nanos>893200</nanos>
+  <sequence>852</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>core.TimeHandler</class>
+  <method>calculateDifference</method>
+  <thread>26</thread>
+  <message>Your Date is greater than your startDate.startDate: 2020-06-10T06:00:00Z date: 2020-06-10T13:29:05Z</message>
+</record>
+<record>
+  <date>2020-10-10T07:18:23.832777200Z</date>
+  <millis>1602314303832</millis>
+  <nanos>777200</nanos>
+  <sequence>853</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>core.Model</class>
   <method>run</method>
-  <thread>25</thread>
+  <thread>26</thread>
   <message>Simulation start.</message>
 </record>

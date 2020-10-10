@@ -83,9 +83,7 @@ public class CustomThread implements Callable {
         @Override
         public Object call() throws Exception {
 
-
-                System.out.println(numOfFD + " " + numOfCO);
-                System.out.println(name + " gestartet");
+                System.out.println(name + " gestartet\n" );
                 switch (studentGenerator) {
                         case 1:
                                 for (int i = 0; i < numOfSimulations; i++) {
@@ -94,7 +92,7 @@ public class CustomThread implements Callable {
                                                 + this.name + i, numOfStaff, studentGenerator);
                                         listOfReports.add(mensa.simulate(mensa));
                                 }
-                                System.out.println(name + " beendet");
+                                System.out.println(name + " beendet\n");
                         break;
                         case 2:
                                 for (int i = 0; i < numOfSimulations; i++) {
@@ -104,7 +102,7 @@ public class CustomThread implements Callable {
                                         listOfReports.add(mensa.simulate(mensa));
 
                                 }
-                                System.out.println(name + " beendet");
+                                System.out.println(name + " beendet\n");
                         break;
                         default:
                 }

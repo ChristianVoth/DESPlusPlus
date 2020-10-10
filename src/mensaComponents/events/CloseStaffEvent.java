@@ -118,7 +118,6 @@ public class CloseStaffEvent extends Event {
      */
     private boolean checkClosedQueue(Entity e) {
 
-        System.out.println(e.getClass());
         if (e.getClass() == FoodDistribution.class) {
             int countFD = 0;
             for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
@@ -133,13 +132,12 @@ public class CloseStaffEvent extends Event {
         } else {
             int countCO = 0;
             for (int i = 0; i < currentModel.closedStaffQueue.size(); i++) {
-                System.out.println(currentModel.closedStaffQueue.get(i));
                 Object current = currentModel.closedStaffQueue.get(i);
                 if (current.getClass() == Checkout.class) {
                     countCO += 1;
                 }
             }
-            System.out.println(countCO);
+
             if (countCO < currentModel.NUM_CO - 1) {
                 return true;
             }

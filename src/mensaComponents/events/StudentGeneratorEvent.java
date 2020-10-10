@@ -27,10 +27,7 @@ public class StudentGeneratorEvent extends Event {
      * represent the current model.
      */
     private Mensa currentModel;
-    /**
-     *
-     */
-    private int num;
+
 
 
     /**
@@ -69,13 +66,11 @@ public class StudentGeneratorEvent extends Event {
             currentModel.schedule(new StudentArrivalEvent(currentModel,
                     "Student Arrival Event",
                     currentModel.currentTime(), student));
-            System.out.println(currentModel.getIsOpen());
+
         if (currentModel.getIsOpen()) {
-            double testTime = currentModel.getStudentArrivalTime();
                 currentModel.schedule(new StudentGeneratorEvent(currentModel,
                         "StudentGeneratorEvent", currentModel.currentTime()
-                        + testTime, null));
-                System.out.println("Test: " + testTime);
+                        + currentModel.getStudentArrivalTime(), null));
         }
     }
 }

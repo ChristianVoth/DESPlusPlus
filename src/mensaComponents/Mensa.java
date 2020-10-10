@@ -313,7 +313,6 @@ public class Mensa extends core.Model {
         switch (studentGenerator) {
             case 1:
                 // gets the students from a database
-                System.out.println(NUM_FD + " " + NUM_CO);
                 SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(FoodDistribution.class).addAnnotatedClass(Student.class).addAnnotatedClass(Checkout.class).buildSessionFactory();
 
 
@@ -355,8 +354,6 @@ public class Mensa extends core.Model {
                     double studentArrivalTime = timeHandler.
                             calculateDifference(getStartDate(),
                             tempStudent.getStudentArrival());
-                    System.out.println(getStartDate());
-                    System.out.println(studentArrivalTime);
                     schedule(new StudentArrivalEvent(this,
                             "StudentArrivalEvent",
                             studentArrivalTime, student));
@@ -396,28 +393,14 @@ public class Mensa extends core.Model {
      * Runs the model.
      */
     public ArrayList simulate(Model m) {
-        // create model
-        //Mensa mensa = new Mensa("Mensa Model");
-        // check if start time is bigger than the stop time
-        //if (startTime > mensa.getDifference()) {
-            // yes, it is
-            // print error
-           // System.out.println("The start time cannot be larger "
-                              //  + "than the stop time."
-                               // + " Please make sure to change one of the"
-                                //+ " values before starting the simulation!");
-       // } else {
-            // it is not
 
-            // start the simulation
-            m.run();
-        //}
+        m.run();
+
         // generate the report
-
         return m.report();
 
 
-        //System.out.println(m.queueLengths);
+
     }
 
 

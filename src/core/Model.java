@@ -129,7 +129,7 @@ public abstract class Model {
         myLogger.logger.info("Simulation start.");
 
         while (running && !eventListImpl.isEmpty()) {
-            //System.out.println(currentTime);
+
 
 
 
@@ -139,8 +139,7 @@ public abstract class Model {
 
 
 
-            //System.out.println(currentTime());
-            //System.out.println(currentEvent.getTime());
+
 
 
             if (currentEvent.getTime() < currentTime) {
@@ -185,7 +184,6 @@ public abstract class Model {
      */
     public void setStopTime(double time) {
         stopTime = getStartDate().plusSeconds((long) time);
-        System.out.println(stopTime);
     }
 
     /**
@@ -245,7 +243,6 @@ public abstract class Model {
      */
     public long getDifference(Instant instant1, Instant instant2) {
         long difference = ChronoUnit.SECONDS.between(instant1, instant2);
-        System.out.println(difference);
 
         return difference;
     }
@@ -256,12 +253,8 @@ public abstract class Model {
     public ArrayList report() {
         for (Reportable r: reportables) {
             listOfReports.add(r.getReport());
-            System.out.println(listOfReports);
-
         }
-        return listOfReports;
-
-
+    return listOfReports;
     }
 
     /**
@@ -270,7 +263,6 @@ public abstract class Model {
      */
     public void registerReportable(Reportable r) {
         reportables.add(r);
-        System.out.println(reportables);
     }
 
     /**

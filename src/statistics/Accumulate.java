@@ -240,7 +240,7 @@ public class Accumulate extends Statistic {
     public void initQueue() {
         ListEntry defaultEntry = new ListEntry(0,0);
         accumulate.add(defaultEntry);
-        System.out.println(accumulate);
+
     }
 
     /**

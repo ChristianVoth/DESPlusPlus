@@ -137,7 +137,6 @@ public class Multithreading {
 
                         counter2++;
                         for (int n = 0; n < future.get().get(i).size(); n++) {
-                            System.out.println(future.get().get(i));
                             if (n == 0) {
                                 meanQueueLength1 += future.get().get(i).
                                         get(n).queueLengthReport.meanQueueLength;
@@ -197,21 +196,20 @@ public class Multithreading {
                         medianWaitingTime2, maxWaitingTime1, maxWaitingTime2);
 
 
-                System.out.println("\n" + "Mean Queue1 Length " + meanQueueLength1);
-                System.out.println("Mean Queue2 Length " + meanQueueLength2);
-                System.out.println("Median Queue1 Length " + medianQueueLength1);
-                System.out.println("Median Queue2 Length " + medianQueueLength2);
-                System.out.println("Max Queue1 Length " + maxQueueLength1);
-                System.out.println("Max Queue2 Length " + maxQueueLength2);
-                System.out.println("Mean Waiting1 Time " + meanWaitingTime1);
-                System.out.println("Mean Waiting2 Time " + meanWaitingTime2);
-                System.out.println("Median Waiting1 Time " + medianWaitingTime1);
-                System.out.println("Median Waiting2 Time " + medianWaitingTime2);
-                System.out.println("Max Waiting1 Time " + maxWaitingTime1);
-                System.out.println("Max Waiting2 Time " + maxWaitingTime2);
+                System.out.println("\n" + "Mean Queue Length Food Distribution: " + meanQueueLength1);
+                System.out.println("Mean Queue Length Checkout: " + meanQueueLength2);
+                System.out.println("Median Queue Length Food Distribution: " + medianQueueLength1);
+                System.out.println("Median Queue Length Checkout: " + medianQueueLength2);
+                System.out.println("Max Queue Length Food Distribution: " + maxQueueLength1);
+                System.out.println("Max Queue Length Checkout: " + maxQueueLength2);
+                System.out.println("Mean Waiting Time Food Distribution: " + meanWaitingTime1);
+                System.out.println("Mean Waiting Time Checkout: " + meanWaitingTime2);
+                System.out.println("Median Waiting Time Food Distribution: " + medianWaitingTime1);
+                System.out.println("Median Waiting Time Checkout: " + medianWaitingTime2);
+                System.out.println("Max Waiting Time Food Distribution: " + maxWaitingTime1);
+                System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
 
-                System.out.println(counter1);
-                System.out.println(counter2);
+
 
                 break;
 
@@ -234,7 +232,6 @@ public class Multithreading {
 
                         counter2++;
                         for (int n = 0; n < future.get().get(i).size(); n++) {
-                            System.out.println(future.get().get(i));
                             if (n == 0) {
                                 meanQueueLength1 += future.get().get(i).
                                         get(n).queueLengthReport.meanQueueLength;
@@ -266,8 +263,7 @@ public class Multithreading {
                                         get(n).waitingTimeReport.maximumWaitingTime;
                             }
 
-                            System.out.println(meanWaitingTime1);
-                            System.out.println(meanWaitingTime2);
+
                             counter1++;
                         }
                     }
@@ -298,21 +294,19 @@ public class Multithreading {
                         medianWaitingTime2, maxWaitingTime1, maxWaitingTime2);
 
 
-                System.out.println("\n" + "Mean Queue1 Length " + meanQueueLength1);
-                System.out.println("Mean Queue2 Length " + meanQueueLength2);
-                System.out.println("Median Queue1 Length " + medianQueueLength1);
-                System.out.println("Median Queue2 Length " + medianQueueLength2);
-                System.out.println("Max Queue1 Length " + maxQueueLength1);
-                System.out.println("Max Queue2 Length " + maxQueueLength2);
-                System.out.println("Mean Waiting1 Time " + meanWaitingTime1);
-                System.out.println("Mean Waiting2 Time " + meanWaitingTime2);
-                System.out.println("Median Waiting1 Time " + medianWaitingTime1);
-                System.out.println("Median Waiting2 Time " + medianWaitingTime2);
-                System.out.println("Max Waiting1 Time " + maxWaitingTime1);
-                System.out.println("Max Waiting2 Time " + maxWaitingTime2);
+                System.out.println("\n" + "Mean Queue Length Food Distribution: " + meanQueueLength1);
+                System.out.println("Mean Queue Length Checkout: " + meanQueueLength2);
+                System.out.println("Median Queue Length Food Distribution: " + medianQueueLength1);
+                System.out.println("Median Queue Length Checkout: " + medianQueueLength2);
+                System.out.println("Max Queue Length Food Distribution: " + maxQueueLength1);
+                System.out.println("Max Queue Length Checkout: " + maxQueueLength2);
+                System.out.println("Mean Waiting Time Food Distribution: " + meanWaitingTime1);
+                System.out.println("Mean Waiting Time Checkout: " + meanWaitingTime2);
+                System.out.println("Median Waiting Time Food Distribution: " + medianWaitingTime1);
+                System.out.println("Median Waiting Time Checkout: " + medianWaitingTime2);
+                System.out.println("Max Waiting Time Food Distribution: " + maxWaitingTime1);
+                System.out.println("Max Waiting Time Checkout: " + maxWaitingTime2);
 
-                System.out.println(counter1);
-                System.out.println(counter2);
 
                 break;
             default:

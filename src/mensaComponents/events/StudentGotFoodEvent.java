@@ -85,7 +85,6 @@ public class StudentGotFoodEvent extends Event {
 
         if (currentModel.foodResource > 0) {
             currentModel.foodResource--;
-            System.out.println(currentModel.foodResource);
             currentModel.idleFDQueue.enqueue(currentOther);
             currentModel.studentCOQueue.enqueue(currentStudent);
 
