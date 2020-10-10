@@ -19,17 +19,21 @@
 -- Table structure for table `staff`
 --
 
+DROP SCHEMA IF EXISTS studentSep;
+CREATE SCHEMA studentSep;
+USE studentSep;
+
 DROP TABLE IF EXISTS `staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `staff` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `workBegin` datetime DEFAULT NULL,
-  `workEnd` datetime DEFAULT NULL,
-  `department` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                         `id` int NOT NULL AUTO_INCREMENT,
+                         `name` varchar(45) DEFAULT NULL,
+                         `workBegin` datetime DEFAULT NULL,
+                         `workEnd` datetime DEFAULT NULL,
+                         `department` varchar(45) DEFAULT NULL,
+                         PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,11 +54,11 @@ DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `studentname` varchar(45) DEFAULT NULL,
-  `arrival` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=407 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                           `id` int NOT NULL AUTO_INCREMENT,
+                           `studentname` varchar(45) DEFAULT NULL,
+                           `arrival` datetime DEFAULT NULL,
+                           PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=407 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

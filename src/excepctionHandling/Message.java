@@ -2,6 +2,9 @@ package excepctionHandling;
 
 import core.Model;
 
+/**
+ * Message
+ */
 public class Message {
 
     private String modelName;
