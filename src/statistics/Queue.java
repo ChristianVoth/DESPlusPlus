@@ -58,16 +58,16 @@ public class Queue<Entity> extends Reportable {
      * @param e : is the passed on entity
      */
     public void enqueue(Entity e) {
-        if (e == null) {
-            myLogger.logger.severe("You tried to enqueue "
-                    + "an Entitiy with the value of null");
-            throw new NullPointerException();
+        try{
+            list.add(e);
+            queueLength.update(list.size());
+            waitingTime.update(list.size());
+            waitingTime.incTotalOfQueueEntries();
+        } catch (NullPointerException ext ){
+            myLogger.logger.severe("You tried to enqueue an Entity with a Value of null: "
+                    + getName() + " Exception: " + ext);
         }
 
-        list.add(e);
-        queueLength.update(list.size());
-        waitingTime.update(list.size());
-        waitingTime.incTotalOfQueueEntries();
     }
 
     /**
@@ -101,8 +101,8 @@ public class Queue<Entity> extends Reportable {
             queueLength.update(list.size());
             waitingTime.update(list.size());
         } catch (NullPointerException exception) {
-            myLogger.logger.severe("The Value of Entitiy e was null: "
-                    + e + " " + exception);
+            myLogger.logger.severe("You tried to remove a Entity with the Value of Null: " + getName()
+                    + "Exception: " + exception);
         }
 
     }

@@ -1,13 +1,13 @@
 <component name="libraryTable">
-  <library name="jfreechart">
+  <library name="jFreeChart">
     <CLASSES>
-      <root url="file://$USER_HOME$/Downloads/jfreechart" />
+      <root url="file://$PROJECT_DIR$/../jFreeChart" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="file://$USER_HOME$/Downloads/jfreechart" />
+      <root url="file://$PROJECT_DIR$/../jFreeChart" />
     </SOURCES>
-    <jarDirectory url="file://$USER_HOME$/Downloads/jfreechart" recursive="false" />
-    <jarDirectory url="file://$USER_HOME$/Downloads/jfreechart" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/../jFreeChart" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../jFreeChart" recursive="false" type="SOURCES" />
   </library>
 </component>

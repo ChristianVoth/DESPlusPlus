@@ -16,6 +16,7 @@ import excepctionHandling.NegativeTimeException;
 import java.time.temporal.ChronoUnit;
 import java.time.*;
 
+
 public class TimeHandler {
     /**
      *
@@ -32,21 +33,22 @@ public class TimeHandler {
      *      The difference as int value
      */
     public int calculateDifference(Instant startDate, Instant date) {
-        long difference = 0;
-        int compare = startDate.compareTo(date);
+        long difference;
+        int compare = date.compareTo(startDate);
 
-       /* if (compare < 0) {
+       if (compare < 0) {
 
-            myLog.logger.severe("Your startDate-Value:" + startDate + "is greater than your date-Value: " + date);
+            myLog.logger.severe("You picked a Date: " + date + " that lies behind your startDate: " + startDate);
 
             ErrorMessage error = new ErrorMessage(
-                    (Model) null, "Your date Value: " + date + "seems to be gerater than your startDate Value: " + startDate, "calculateDifference-Method Class: Timehandler",
-                    "Your  ", "Pick a startDate that doesn't lie in the future! ", -1
+                    null, "Your given date lies in the past", "calculateDifference-Method Class: Timehandler",
+                    "Your given date: " + date + " is lies in the Past ", "Pick a startDate that comes " +
+                    "before your Date ", -1
             );
 
             throw new NegativeTimeException(error);
 
-        } */
+        }
 
 
         difference = ChronoUnit.SECONDS.between(startDate, date);
