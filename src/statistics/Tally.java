@@ -12,7 +12,6 @@ package statistics;
 
 import core.LogHandler;
 import core.Model;
-import sun.rmi.runtime.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;
