@@ -11,7 +11,8 @@
 package statistics;
 
 /**
- * Custom object to store quantile values. Used to report quantiles as one object.
+ * Custom object to store quantile values. Used to report
+ * quantiles as one object.
  */
 public class Quantiles {
 
@@ -26,20 +27,20 @@ public class Quantiles {
     public double firstQuantile;
 
     /**
-     * Stores the value of the third quantile
+     * Stores the value of the third quantile.
      */
     public double thirdQuantile;
 
     /**
      *
-     * @param median : median passed in to be stored
-     * @param firstQuantile : first quantile passed in to be stored
-     * @param thirdQuantile : third quantile passed in to be stored
+     * @param mmedian : median passed in to be stored
+     * @param ffirstQuantile : first quantile passed in to be stored
+     * @param tthirdQuantile : third quantile passed in to be stored
      */
-    public Quantiles(double median, double firstQuantile,
-                     double thirdQuantile) {
-        this.median = median;
-        this.firstQuantile = firstQuantile;
-        this.thirdQuantile = thirdQuantile;
+    public Quantiles(double mmedian, double ffirstQuantile,
+                     double tthirdQuantile) {
+        this.median = mmedian;
+        this.firstQuantile = ffirstQuantile;
+        this.thirdQuantile = tthirdQuantile;
     }
 }

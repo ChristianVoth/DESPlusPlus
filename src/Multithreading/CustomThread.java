@@ -27,29 +27,46 @@ public class CustomThread implements Callable {
         String name;
 
         /**
-         *
+         * A variable to store the numbOfSimulations.
          */
         private int numOfSimulations;
 
         /**
-         *
+         * A variable to store the number of food distributions.
          */
         private int numOfFD;
 
         /**
-         *
+         * A variable to store the number of checkouts.
          */
         private int numOfCO;
 
+        /**
+         * A variable to store the number of staff.
+         */
         private int numOfStaff;
 
+        /**
+         * A variable to store the value of the student generator.
+         */
         private int studentGenerator;
 
         /**
-         *
+         * A List of Array Lists of Queue Reports.
          */
         List<ArrayList<QueueReport>> listOfReports = new ArrayList<>();
 
+        /**
+         * Custom Thread constructor.
+         * @param name
+ *              java.lang.String : The name of the Thread
+         * @param numOfSimulations
+ *              int : The number of simulations
+         * @param numOfStaff
+         *      int : The number of staffs
+         * @param studentGenerator
+ *              int : The int value of the student generator
+         */
         public CustomThread(String name, int numOfSimulations, int numOfStaff, int studentGenerator) {
                 this.name = name;
                 this.numOfSimulations = numOfSimulations;
@@ -58,18 +75,26 @@ public class CustomThread implements Callable {
         }
 
         /**
-         *
-         * @param nname
-         * @param nnumOfSimulations
-         * @param nnumOfFD
-         * @param nnumOfCO
+         * Custom Thread constructor.
+         * @param name
+ *             java.lang.String : The name of the Thread
+         * @param numOfSimulations
+ *             int : The number of simulations
+         * @param numOfFD
+         *      int : The number of food distribution
+         * @param numOfCO
+         *      int : The number of checkouts
+         * @param numOfStaff
+         *      int : The number of staff
+         * @param studentGenerator
+ *              int : The int value of the student generator
          */
-        CustomThread(String nname, int nnumOfSimulations,
-                     int nnumOfFD, int nnumOfCO, int numOfStaff, int studentGenerator) {
-            this.name = nname;
-            this.numOfSimulations = nnumOfSimulations;
-            this.numOfFD = nnumOfFD;
-            this.numOfCO = nnumOfCO;
+        CustomThread(String name, int numOfSimulations,
+                     int numOfFD, int numOfCO, int numOfStaff, int studentGenerator) {
+            this.name = name;
+            this.numOfSimulations = numOfSimulations;
+            this.numOfFD = numOfFD;
+            this.numOfCO = numOfCO;
             this.numOfStaff = numOfStaff;
             this.studentGenerator = studentGenerator;
         }
@@ -83,7 +108,6 @@ public class CustomThread implements Callable {
          */
         @Override
         public Object call() throws Exception {
-
 
                 System.out.println(name + " gestartet\n" );
                 switch (studentGenerator) {
@@ -102,7 +126,6 @@ public class CustomThread implements Callable {
                                         Mensa mensa = new Mensa("Mensa Model"
                                                 + this.name + i, numOfFD, numOfCO, numOfStaff, studentGenerator);
                                         listOfReports.add(mensa.simulate(mensa));
-
                                 }
                                 System.out.println(name + " beendet\n");
                         break;
@@ -110,6 +133,4 @@ public class CustomThread implements Callable {
                 }
                 return listOfReports;
         }
-
-
 }

@@ -14,15 +14,19 @@ package core;
 import java.io.IOException;
 import java.util.logging.*;
 
+/**
+ * This class is a basic implementation for a Log Handler.
+ */
 public class LogHandler {
+
     /**
-     *
+     * Create logger.
      */
     public static final Logger logger = Logger.
             getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /**
-     *
+     * Default Constructor for the logger.
      */
     public LogHandler()  {
         ConsoleHandler ch = new ConsoleHandler();

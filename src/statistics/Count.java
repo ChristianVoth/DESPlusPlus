@@ -13,7 +13,8 @@ package statistics;
 import core.Model;
 
 /**
- * Simple counter which can be implemented anywhere in a user-defined model, be it for resources or other items
+ * Simple counter which can be implemented anywhere
+ * in a user-defined model, be it for resources or other items
  * needing simple data storage.
  */
 public class Count extends Statistic {
@@ -39,7 +40,8 @@ public class Count extends Statistic {
 
     /**
      * Update method is called when changes occur to the count.
-     * @param val : indicates by how much value should be incremented or decremented
+     * @param val : indicates by how much value should be
+     *            incremented or decremented
      */
     public void update(double val) {
         value += val;

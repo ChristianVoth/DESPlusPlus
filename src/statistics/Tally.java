@@ -16,7 +16,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Tally class is used to store non-time-weighted values and calculating statistically relevant data.
+ * Tally class is used to store non-time-weighted values
+ * and calculating statistically relevant data.
  */
 public class Tally extends Statistic {
 

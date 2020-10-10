@@ -25,19 +25,20 @@ public class ListEntry implements Comparable<ListEntry> {
 
     /**
      *
-     * @param value : passed value
-     * @param timeOfChange : time at which value change occurred
+     * @param vvalue : passed value
+     * @param ttimeOfChange : time at which value change occurred
      */
-    public ListEntry(double value, double timeOfChange) {
+    public ListEntry(double vvalue, double ttimeOfChange) {
 
-        this.value = value;
-        this.timeOfChange = timeOfChange;
+        this.value = vvalue;
+        this.timeOfChange = ttimeOfChange;
     }
 
     /**
      *
      * @param listOne : different list entry
-     * @return negative, 0 or positive value depending on the comparision of two values
+     * @return negative, 0 or positive value depending on the
+     * comparision of two values
      */
     @Override
     public int compareTo(ListEntry listOne) {
