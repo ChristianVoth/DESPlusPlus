@@ -10,6 +10,9 @@
 
 package core;
 
+import excepctionHandling.ErrorMessage;
+import excepctionHandling.NullEventException;
+
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -50,13 +53,19 @@ public class EventListImpl implements EventList {
      */
     @Override
     public void insert(Event e) {
-        try {
-            eventList.add(e);
-            Collections.sort(eventList);
-        } catch (NullPointerException exception) {
-            myLogger.logger.severe("Eventvalue E: "
-                    + e + "threw a NullPointerException: " + exception);
+        if(e == null){
+            myLogger.logger.severe("Cannot insert Event e:"+ e.getModel().getName() +" into Queue. Value of e was null");
+            ErrorMessage error = new ErrorMessage((Model)null, "The Event that you wanted to to insert has a " +
+                    "Value of null!",
+                    "EventName: "+ e.getName()+ " Entity: " + e.getEntity().getName(),
+                    "Event e: " + e.getName() + " has a Value of null",
+                    "SomethingSomething null prevention", e.getTime());
+
+            throw new NullEventException(error);
         }
+        eventList.add(e);
+        Collections.sort(eventList);
+
     }
 
     /**
@@ -87,10 +96,20 @@ public class EventListImpl implements EventList {
      */
     @Override
     public int remove(Event e) {
-        if (e == null) {
-            myLogger.logger.severe("You tried to remove"
-                    + " an Event with the Value of null ");
-            throw new NullPointerException();
+        if(eventList.isEmpty()){
+            myLogger.logger.info("You tried to remove an Event but your List is Empty");
+            return -1;
+        }
+
+        if(e == null){
+            myLogger.logger.severe("Cannot remove Event e:"+ e.getName() +" from Queue. Value of e was null");
+            ErrorMessage error = new ErrorMessage((Model)null, "The Event that you wanted to to remove has a " +
+                    "Value of null!",
+                    "Eventname: "+ e.getName()+ " Entity: " + e.getEntity().getName(),
+                    "Event e: " + e.getName() + " has a Value of null",
+                    "SomethingSomething null prevention", e.getTime());
+
+            throw new NullEventException(error);
         }
         int indexOfe;
         indexOfe = eventList.indexOf(e);

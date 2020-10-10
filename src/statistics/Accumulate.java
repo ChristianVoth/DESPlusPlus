@@ -121,6 +121,9 @@ public class Accumulate extends Statistic {
                     + timeOfChanges.get((npThirdQuantile - 1)) * 0.5d);
         }
 
+        myLog.logger.finer("Value of Median: " + median + "FirstQuantile: " + firstQuantile
+                        + " thirdQuantile: " + thirdQuantile);
+
         return new Quantiles(median, firstQuantile, thirdQuantile);
 
 
@@ -140,6 +143,8 @@ public class Accumulate extends Statistic {
                     - accumulate.get(i).timeOfChange);
 
         }
+        myLog.logger.finer("timeWeightedSum Value: " + timeWeightedSum
+                + "totalOfQuueueEntries: " + totalOfQueueEntries);
         return timeWeightedSum / totalOfQueueEntries;
     }
 
@@ -151,17 +156,15 @@ public class Accumulate extends Statistic {
 
         double intermediateResult = 0;
 
-        try {
+
             for (int i = 0; i < accumulate.size() - 1; i++) {
                 intermediateResult += (Math.pow(accumulate.get(i).value
                         - getMean(), 2));
             }
 
-        } catch (Exception e) {
-            myLog.logger.info("boi, ListSize: " + accumulate.size()
-                    + "intermediateResult: " + intermediateResult
-                    + "Exception: " + e);
-        }
+            myLog.logger.finer("itermediateResult Value: " + intermediateResult
+                    + "totalOfQuueueEntries: " + totalOfQueueEntries);
+
         return Math.sqrt(intermediateResult
                 / (totalOfQueueEntries - 1));
         //-1 because we are dealing with samples
@@ -198,6 +201,8 @@ public class Accumulate extends Statistic {
 
         findExits();
 
+        try {
+
 
         if (accumulate.size() > 0) {
 
@@ -213,7 +218,10 @@ public class Accumulate extends Statistic {
                     }
 
                 }
-            }
+            } } catch (IndexOutOfBoundsException exception) {
+                myLog.logger.severe("calculateTimeDifferences Method as thrown an OutOfBoundsException: " + exception
+                        + "Your timeOfChanges seems to be null");
+        }
         }
 
 
@@ -231,10 +239,16 @@ public class Accumulate extends Statistic {
      *
      */
     public void findExits() {
+        try {
+
+
         for (int i = 1; i < accumulate.size() - 1; i++) {
             if (accumulate.get(i).value < accumulate.get(i - 1).value) {
                 timeOfExists.add(accumulate.get(i).timeOfChange);
             }
+        } } catch (IndexOutOfBoundsException exception) {
+            myLog.logger.severe("findExits Method as thrown an OutOfBoundsException: " + exception
+                + "Your timeOfExists seems to be null");
         }
     }
     public void initQueue() {

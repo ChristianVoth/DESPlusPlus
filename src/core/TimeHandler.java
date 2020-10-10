@@ -10,6 +10,9 @@
 
 package core;
 
+import excepctionHandling.ErrorMessage;
+import excepctionHandling.NegativeTimeException;
+
 import java.time.temporal.ChronoUnit;
 import java.time.*;
 
@@ -30,29 +33,23 @@ public class TimeHandler {
         int compare = startDate.compareTo(date);
 
         if (compare < 0) {
-            myLog.logger.info("Your Date is greater than your startDate."
-                    + "startDate: " + startDate + " date: " + date);
+
+            myLog.logger.severe("Your startDate-Value:" + startDate + "is greater than your date-Value: " + date);
+
+            ErrorMessage error = new ErrorMessage(
+                    (Model) null, "Your date Value: " + date + "seems to be gerater than your startDate Value: " + startDate, "calculateDifference-Method Class: Timehandler",
+                    "Your ", "Pick a startDate that doesn't lie in the future! ", -1
+            );
+
+            throw new NegativeTimeException(error);
+
         }
 
-        try {
-            difference = ChronoUnit.SECONDS.between(startDate, date);
-        } catch (NullPointerException e) {
-            myLog.logger.info("You tried to pase in an null value. startDate: "
-                    + startDate + " date: " + date);
-        } finally {
-            return (int) difference;
-        }
 
+        difference = ChronoUnit.SECONDS.between(startDate, date);
+        myLog.logger.finer("Value between startDate und date: " + difference);
 
-
-
-
-
-
-
-
-
+        return (int) difference;
     }
-
 
 }
